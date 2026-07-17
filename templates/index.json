@@ -1,52 +1,5 @@
 {
   "sections": {
-    "hero_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Fusion Shoe Cabinet - Ultimate Steal Deal",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Rs. 6999 - Only Rs. 5,999. Limited time only.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Now",
-            "button_link_1": "shopify://collections/storage-units",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-left",
-        "show_text_box": true,
-        "image_behavior": "none",
-        "desktop_content_alignment": "left",
-        "color_scheme": "scheme-2",
-        "mobile_content_alignment": "left",
-        "stack_images_on_mobile": false,
-        "show_text_below": true
-      }
-    },
     "shoe_racks": {
       "type": "featured-collection",
       "settings": {
@@ -65,7 +18,9 @@
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
         "image_ratio": "square",
-        "image_shape": "default"
+        "image_shape": "default",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "beds_row": {
@@ -86,7 +41,9 @@
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
         "image_ratio": "square",
-        "image_shape": "default"
+        "image_shape": "default",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "tv_units_row": {
@@ -107,7 +64,9 @@
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
         "image_ratio": "square",
-        "image_shape": "default"
+        "image_shape": "default",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "lifestyle_banner": {
@@ -157,7 +116,9 @@
         "image_width": "full",
         "image_ratio": "landscape",
         "columns_mobile": "1",
-        "swipe_on_mobile": false
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 32
       }
     },
     "study_row": {
@@ -178,7 +139,9 @@
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
         "image_ratio": "square",
-        "image_shape": "default"
+        "image_shape": "default",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "dining_row": {
@@ -199,79 +162,72 @@
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
         "image_ratio": "square",
-        "image_shape": "default"
+        "image_shape": "default",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "seo_text": {
-      "type": "rich-text",
+      "type": "custom-liquid",
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "custom_liquid": "<div style=\"max-width:900px;margin:0 auto;padding:0 1.5rem;\">\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;margin:0 0 10px;\">Buy Wooden Furniture Online for Modern and Stylish Homes</h2>\n  <div style=\"font-size:12.5px;line-height:1.7;color:#555;\">\n    <p style=\"margin:0 0 10px;\">Looking to upgrade your space with beautiful and bold furniture? Explore our handpicked collection of wooden and engineered wood furniture made for modern homes and busy offices. From wooden shoe racks to compact cabinets and spacious wardrobes, we have everything you need to stay organized in style.</p>\n    <p style=\"margin:0 0 10px;\">Are you a new Furniva customer in need of a stylish shoe organizer? Look no more &mdash; our wooden shoe racks offer sleek solutions to keep your footwear in place while adding charm to your hallway or even bedroom.</p>\n    <p style=\"margin:0;\">Our furniture is crafted from premium engineered wood, ensuring quality as well as durability without compromising on style, with multiple finishes and sizes to suit any home.</p>\n  </div>\n</div>",
         "color_scheme": "scheme-4",
-        "full_width": true,
-        "page_width": "normal",
-        "padding_top": 36,
-        "padding_bottom": 36
-      },
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Buy Wooden Furniture Online for Modern and Stylish Homes"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Looking to upgrade your space with beautiful and bold furniture? Explore our handpicked collection of wooden and engineered wood furniture made for modern homes and busy offices. From wooden shoe racks to compact cabinets and spacious wardrobes, we have everything you need to stay organized in style.</p><p>Are you a new Furniva customer in need of a stylish shoe organizer? Look no more - our wooden shoe racks offer sleek solutions to keep your footwear in place while adding charm to your hallway or even bedroom.</p><p>Planning a bedroom makeover or bookroom? Choose from our range of engineered wood cabinets - perfect for books, crockery, files, or everyday essentials.</p><p>Our furniture is crafted from premium engineered wood, ensuring quality as well as durability without compromising on style. We offer multiple finishes and sizes - from bold geometric patterns to aesthetic yet simple pieces to suit all types of apartments or a spacious villa.</p><p>So whether you're furnishing a new home or just adding that perfect cabinet or shoe rack, browse our range today. Your perfect piece is just a click away.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ]
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     },
     "reviews_bar": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:12px;\">\n    <div style=\"background:#F7F5F1;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Amazon</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;\">Coming soon</div>\n      <div style=\"font-size:11px;color:#666;margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:#F7F5F1;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Flipkart</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;\">Coming soon</div>\n      <div style=\"font-size:11px;color:#666;margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:#1A1A1A;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-family:'Poppins',sans-serif;font-size:26px;font-weight:600;color:#E8D5B0;\">0</div>\n      <div style=\"font-size:11px;color:#A89070;margin-top:2px;\">Reviews collected so far &middot; Since 2024</div>\n    </div>\n  </div>\n</div>",
-        "color_scheme": "scheme-1"
+        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:12px;\">\n    <div style=\"background:#F7F5F1;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Amazon</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;\">Coming soon</div>\n      <div style=\"font-size:11px;color:#666;margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:#F7F5F1;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Flipkart</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;\">Coming soon</div>\n      <div style=\"font-size:11px;color:#666;margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:#1A1A1A;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-family:'Poppins',sans-serif;font-size:20px;font-weight:600;color:#E8D5B0;\">0</div>\n      <div style=\"font-size:11px;color:#A89070;margin-top:2px;\">Reviews collected so far &middot; Since 2024</div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 32,
+        "padding_bottom": 16
       }
     },
     "testimonials": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;text-align:center;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Customer stories</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;margin:0 0 8px;\">What our buyers say</h2>\n  <p style=\"font-size:13px;color:#666;margin-bottom:24px;\">No reviews published yet &mdash; check back soon as real customer stories come in.</p>\n</div>",
-        "color_scheme": "scheme-4"
+        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;text-align:center;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Customer stories</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;margin:0 0 8px;\">What our buyers say</h2>\n  <p style=\"font-size:13px;color:#666;margin-bottom:24px;\">No reviews published yet &mdash; check back soon as real customer stories come in.</p>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 32,
+        "padding_bottom": 16
       }
     },
     "as_seen_on": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;text-align:center;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">As seen on</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;margin:0 0 8px;\">Real unboxings. Real homes.</h2>\n  <p style=\"font-size:13px;color:#666;\">No creator content published yet &mdash; this section is ready for real customer/creator videos once available.</p>\n</div>",
-        "color_scheme": "scheme-1"
+        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;text-align:center;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">As seen on</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;margin:0 0 8px;\">Real unboxings. Real homes.</h2>\n  <p style=\"font-size:13px;color:#666;\">No creator content published yet &mdash; this section is ready for real customer/creator videos once available.</p>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 16,
+        "padding_bottom": 40
       }
     },
     "trust_bar": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;text-align:center;\">\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">Free Delivery</div>\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">Free Installation</div>\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">COD Available</div>\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">3-Day Returns</div>\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">Warranty Included</div>\n  </div>\n</div>",
-        "color_scheme": "scheme-1"
+        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;\">\n    <div style=\"flex:1;min-width:110px;text-align:center;\"><div style=\"color:#1A1A1A;margin-bottom:6px;display:flex;justify-content:center;\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M1 3h13v13H1z\"/><path d=\"M14 8h4l3 3v5h-7z\"/><circle cx=\"6\" cy=\"18\" r=\"2\"/><circle cx=\"17\" cy=\"18\" r=\"2\"/></svg></div><div style=\"font-size:12px;font-weight:600;\">Free Delivery</div></div><div style=\"flex:1;min-width:110px;text-align:center;\"><div style=\"color:#1A1A1A;margin-bottom:6px;display:flex;justify-content:center;\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M14.7 6.3a4 4 0 0 0-5.4 5.4L2 19l3 3 7.3-7.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2z\"/></svg></div><div style=\"font-size:12px;font-weight:600;\">Free Installation</div></div><div style=\"flex:1;min-width:110px;text-align:center;\"><div style=\"color:#1A1A1A;margin-bottom:6px;display:flex;justify-content:center;\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg></div><div style=\"font-size:12px;font-weight:600;\">COD Available</div></div><div style=\"flex:1;min-width:110px;text-align:center;\"><div style=\"color:#1A1A1A;margin-bottom:6px;display:flex;justify-content:center;\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M21 12a9 9 0 1 1-3-6.7\"/><path d=\"M21 3v6h-6\"/></svg></div><div style=\"font-size:12px;font-weight:600;\">3-Day Returns</div></div><div style=\"flex:1;min-width:110px;text-align:center;\"><div style=\"color:#1A1A1A;margin-bottom:6px;display:flex;justify-content:center;\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z\"/><path d=\"M9 12l2 2 4-4\"/></svg></div><div style=\"font-size:12px;font-weight:600;\">Warranty Included</div></div>\n  </div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "category_grid": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Browse by category</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:24px;font-weight:600;margin:0 0 4px;\">Shop every room</h2>\n  <p style=\"font-size:13px;color:#666;margin-bottom:20px;\">Curated furniture for every corner of your home</p>\n  <div style=\"display:grid;grid-template-columns:repeat(5,1fr);gap:10px;\">\n    {% assign cats = 'beds,storage-units,dining-kitchen,work-study,tv-entertainment-units' | split: ',' %}\n    {% assign cat_labels = 'Beds,Storage,Dining,Study,TV Units' | split: ',' %}\n    {% for handle in cats %}\n      {% assign collection = collections[handle] %}\n      {% if collection %}\n      <a href=\"{{ collection.url }}\" style=\"text-decoration:none;color:inherit;border:1px solid #EAEAEA;border-radius:8px;overflow:hidden;display:block;\">\n        {% if collection.image %}\n          <img src=\"{{ collection.image | image_url: width: 300 }}\" alt=\"{{ collection.title }}\" style=\"width:100%;height:110px;object-fit:cover;display:block;\">\n        {% else %}\n          <div style=\"width:100%;height:110px;background:#F7F5F1;\"></div>\n        {% endif %}\n        <div style=\"padding:10px;\">\n          <div style=\"font-size:13px;font-weight:600;\">{{ cat_labels[forloop.index0] }}</div>\n          <div style=\"font-size:11px;color:#888;\">{{ collection.products_count }} products</div>\n        </div>\n      </a>\n      {% endif %}\n    {% endfor %}\n  </div>\n</div>",
-        "color_scheme": "scheme-1"
+        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Browse by category</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:19px;font-weight:600;margin:0 0 4px;\">Shop every room</h2>\n  <p style=\"font-size:13px;color:#666;margin-bottom:20px;\">Curated furniture for every corner of your home</p>\n  <div style=\"display:grid;grid-template-columns:repeat(5,1fr);gap:10px;\">\n    {% assign cats = 'beds,storage-units,dining-kitchen,work-study,tv-entertainment-units' | split: ',' %}\n    {% assign cat_labels = 'Beds,Storage,Dining,Study,TV Units' | split: ',' %}\n    {% for handle in cats %}\n      {% assign collection = collections[handle] %}\n      {% if collection %}\n      <a href=\"{{ collection.url }}\" style=\"text-decoration:none;color:inherit;border:1px solid #EAEAEA;border-radius:8px;overflow:hidden;display:block;\">\n        {% if collection.image %}\n          <img src=\"{{ collection.image | image_url: width: 300 }}\" alt=\"{{ collection.title }}\" style=\"width:100%;height:110px;object-fit:cover;display:block;\">\n        {% else %}\n          <div style=\"width:100%;height:110px;background:#F7F5F1;\"></div>\n        {% endif %}\n        <div style=\"padding:10px;\">\n          <div style=\"font-size:13px;font-weight:600;\">{{ cat_labels[forloop.index0] }}</div>\n          <div style=\"font-size:11px;color:#888;\">{{ collection.products_count }} products</div>\n        </div>\n      </a>\n      {% endif %}\n    {% endfor %}\n  </div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 32,
+        "padding_bottom": 8
       }
     },
     "edit_banners": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:grid;grid-template-columns:1fr 1fr;gap:10px;\">\n    <a href=\"/collections/beds\" style=\"text-decoration:none;color:inherit;background:#F0E8D8;border-radius:8px;padding:28px 24px;display:block;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8A6E4A;margin-bottom:8px;\">Bedroom Edit</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;\">Sleep in style.<br>Wake up inspired.</div>\n      <div style=\"font-size:12px;font-weight:600;color:#8A6E4A;\">Shop Beds &rarr;</div>\n    </a>\n    <a href=\"/collections/storage-units\" style=\"text-decoration:none;color:inherit;background:#E0EAE8;border-radius:8px;padding:28px 24px;display:block;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#3B6D11;margin-bottom:8px;\">Storage Edit</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;\">Storage that looks<br>like it belongs.</div>\n      <div style=\"font-size:12px;font-weight:600;color:#3B6D11;\">Shop Shoe Racks &amp; Cabinets &rarr;</div>\n    </a>\n  </div>\n</div>",
-        "color_scheme": "scheme-1"
+        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:grid;grid-template-columns:1fr 1fr;gap:10px;\">\n    <a href=\"/collections/beds\" style=\"text-decoration:none;color:inherit;background:#F0E8D8;border-radius:8px;padding:28px 24px;display:block;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8A6E4A;margin-bottom:8px;\">Bedroom Edit</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;line-height:1.3;margin-bottom:10px;\">Sleep in style.<br>Wake up inspired.</div>\n      <div style=\"font-size:12px;font-weight:600;color:#8A6E4A;\">Shop Beds &rarr;</div>\n    </a>\n    <a href=\"/collections/storage-units\" style=\"text-decoration:none;color:inherit;background:#E0EAE8;border-radius:8px;padding:28px 24px;display:block;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#3B6D11;margin-bottom:8px;\">Storage Edit</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;line-height:1.3;margin-bottom:10px;\">Storage that looks<br>like it belongs.</div>\n      <div style=\"font-size:12px;font-weight:600;color:#3B6D11;\">Shop Shoe Racks &amp; Cabinets &rarr;</div>\n    </a>\n  </div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 8,
+        "padding_bottom": 32
       }
     },
     "bestsellers": {
@@ -292,12 +248,23 @@
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
         "image_ratio": "square",
-        "image_shape": "default"
+        "image_shape": "default",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "hero_new": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width:1280px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:grid;grid-template-columns:2fr 1fr;gap:12px;\">\n    <a href=\"/collections/dining-kitchen\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:340px;background:#EFE9DD url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-QuattroDine-Solid-Wood-4-Seater-Dining-Table-Set-Four-Seater-Dining-Table-Set-for-Homes-Free-Assembly-White-Cushion-Dark-Walnut-Finish-1-800x813.jpg?v=1784275500') center/cover;\">\n      <div style=\"position:absolute;inset:0;background:linear-gradient(90deg, rgba(26,26,26,0.55) 0%, rgba(26,26,26,0.05) 60%);\"></div>\n      <div style=\"position:relative;padding:36px;color:#fff;max-width:340px;\">\n        <div style=\"font-family:'Poppins',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#E8D5B0;margin-bottom:6px;\">GIF 2026 Early Access</div>\n        <div style=\"font-family:'Poppins',sans-serif;font-size:30px;font-weight:600;line-height:1.2;margin-bottom:10px;\">Dining Sets</div>\n        <div style=\"font-size:14px;background:rgba(0,0,0,0.35);display:inline-block;padding:6px 14px;border-radius:4px;\">Starting from &#8377;11,999</div>\n      </div>\n    </a>\n    <div style=\"display:flex;flex-direction:column;gap:12px;\">\n      <a href=\"/collections/storage-units\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:164px;background:#E6ECE4 url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-Skyline-6-Feet-Wooden-Two-Door-Utility-Shoe-Rack-for-Home-EntrancesHallways-Engineered-Wood-Nine-Adjustable-Shelves-with-Airflow-Slots-Multipurpose-Shoe-Cabinet-Organizer-Weng_281de8bf-191f-4b83-857c-937e895ebf5f.webp?v=1784275549') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(26,26,26,0.05) 30%, rgba(26,26,26,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;\">Shop Storage</div>\n          <div style=\"font-size:12px;\">Shoe racks &amp; cabinets</div>\n        </div>\n      </a>\n      <a href=\"/collections/bestsellers\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:164px;background:#EFE4DC url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/1202-800x800.jpg?v=1784275793') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(26,26,26,0.05) 30%, rgba(26,26,26,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;\">Bestsellers</div>\n          <div style=\"font-size:12px;\">Up to 60% off</div>\n        </div>\n      </a>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     }
   },
   "order": [
-    "hero_banner",
+    "hero_new",
     "trust_bar",
     "category_grid",
     "edit_banners",
