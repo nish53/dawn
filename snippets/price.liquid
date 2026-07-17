@@ -26,6 +26,10 @@
   assign price_min = product.price_min
   assign price_max = product.price_max
   assign available = target.available | default: false
+  assign percent_off = 0
+  if compare_at_price > price and compare_at_price > 0
+    assign percent_off = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round
+  endif
   assign money_price = price | money
   assign money_price_min = price_min | money
   assign money_price_max = price_max | money
@@ -114,7 +118,11 @@
     </div>
     {%- if show_badges -%}
       <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-        {{ 'products.product.on_sale' | t }}
+        {%- if percent_off > 0 -%}
+          {{ percent_off }}% {{ 'products.product.off' | t | default: 'off' }}
+        {%- else -%}
+          {{ 'products.product.on_sale' | t }}
+        {%- endif -%}
       </span>
 
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">

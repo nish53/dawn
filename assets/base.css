@@ -3629,3 +3629,17 @@ details-disclosure > details {
     margin: 2rem 0;
   }
 }
+
+/* ==========================================================================
+   Furniva: truncate long product card titles instead of wrapping into a
+   wall of text. Matches the real site's behavior (title + "..." then
+   price/badges below), especially important since our titles are kept
+   long/keyword-rich on purpose for Amazon-matching and SEO.
+   ========================================================================== */
+.card__information .card__heading {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
