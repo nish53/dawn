@@ -1,75 +1,155 @@
 {
   "sections": {
-    "image_banner": {
+    "hero_banner": {
       "type": "image-banner",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Furniture that fits your life, not the other way around",
             "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Ready-to-plug home furniture, designed for busy schedules and small budgets. No carpenter needed.",
+            "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Shop Bestsellers",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_1": false,
+            "button_label_2": "Browse Dining & Kitchen",
+            "button_link_2": "shopify://collections/dining-kitchen",
+            "button_style_secondary_2": true
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+      "block_order": ["heading", "text", "button"],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 30,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
         "image_behavior": "none",
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": true
       }
     },
-    "featured_collection": {
+    "shelf_line_1": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"shelf-line shelf-line--center\"></div>",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "shop_by_room": {
+      "type": "collection-list",
+      "blocks": {
+        "dining": { "type": "featured_collection", "settings": { "collection": "dining-kitchen" } },
+        "storage": { "type": "featured_collection", "settings": { "collection": "storage-units" } },
+        "tv-units": { "type": "featured_collection", "settings": { "collection": "tv-entertainment-units" } },
+        "study": { "type": "featured_collection", "settings": { "collection": "work-study" } },
+        "beds": { "type": "featured_collection", "settings": { "collection": "beds" } }
+      },
+      "block_order": ["dining", "storage", "tv-units", "study", "beds"],
+      "settings": {
+        "title": "Shop by room",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
+        "columns_mobile_small": "2"
+      }
+    },
+    "shelf_line_2": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"shelf-line shelf-line--center\"></div>",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "bestsellers": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
+        "title": "This week's bestsellers",
+        "heading_size": "h1",
+        "description": "The SKUs our customers keep coming back for.",
+        "show_description": true,
         "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "enable_desktop_slider": true,
+        "swipe_on_mobile": true,
         "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "image_shape": "default"
+      }
+    },
+    "why_furniva": {
+      "type": "multicolumn",
+      "blocks": {
+        "assembly": {
+          "type": "column",
+          "settings": {
+            "title": "Zero assembly stress",
+            "text": "Every piece arrives ready to plug in, or with free installation across India. No carpenter, no calling around.",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "budget": {
+          "type": "column",
+          "settings": {
+            "title": "Built for real budgets",
+            "text": "Aesthetic, durable furniture priced for people who just moved, not people furnishing a showroom.",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "speed": {
+          "type": "column",
+          "settings": {
+            "title": "Fast, no fuss",
+            "text": "Pan-India delivery, COD available, and a WhatsApp line if anything needs sorting out.",
+            "link_label": "Chat on WhatsApp",
+            "link": "https://wa.link/fwjc7x"
+          }
+        }
+      },
+      "block_order": ["assembly", "budget", "speed"],
+      "settings": {
+        "title": "Why Furniva",
+        "heading_size": "h1",
+        "background_style": "none",
+        "color_scheme": "scheme-4",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style_column": "none",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "hero_banner",
+    "shelf_line_1",
+    "shop_by_room",
+    "shelf_line_2",
+    "bestsellers",
+    "why_furniva"
   ]
 }
