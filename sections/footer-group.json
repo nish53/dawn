@@ -13,7 +13,7 @@
           "type": "text",
           "settings": {
             "heading": "About",
-            "subtext": "<ul><li><a href=\"/pages/about-us\">About Furniva</a></li><li><a href=\"/pages/careers\">Careers | Find Opportunities</a></li><li><a href=\"/policies/privacy-policy\">Privacy Policy</a></li><li><a href=\"/blogs/news\">News &amp; Blogs</a></li><li><a href=\"/pages/help-center\">Help Center</a></li><li><a href=\"/policies/terms-of-service\">Terms and Conditions</a></li><li><a href=\"/pages/warranty-policy\">Warranty Policy</a></li><li><a href=\"/policies/refund-policy\">Payment Policy</a></li><li><a href=\"/collections/all\">Best Sellers</a></li></ul>"
+            "subtext": "<ul><li><a href=\"/pages/about-us\">About Furniva</a></li><li><a href=\"/pages/careers\">Careers | Find Opportunities</a></li><li><a href=\"/policies/privacy-policy\">Privacy Policy</a></li><li><a href=\"/blogs/news\">News &amp; Blogs</a></li><li><a href=\"/pages/help-center\">Help Center</a></li><li><a href=\"/policies/terms-of-service\">Terms and Conditions</a></li><li><a href=\"/pages/warranty-policy\">Warranty Policy</a></li><li><a href=\"/pages/payment-policy\">Payment Policy</a></li><li><a href=\"/collections/all\">Best Sellers</a></li></ul>"
           }
         },
         "support_text": {
