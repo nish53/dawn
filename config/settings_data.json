@@ -159,13 +159,13 @@
       "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
-      "social_facebook_link": "",
-      "social_pinterest_link": "",
-      "social_instagram_link": "",
+      "social_facebook_link": "https://www.facebook.com/furniva.in",
+      "social_pinterest_link": "https://in.pinterest.com/infurniva",
+      "social_instagram_link": "https://www.instagram.com/furniva.in/",
       "social_tiktok_link": "",
       "social_tumblr_link": "",
       "social_snapchat_link": "",
-      "social_youtube_link": "",
+      "social_youtube_link": "https://www.youtube.com/@Furniva",
       "social_vimeo_link": "",
       "predictive_search_enabled": true,
       "predictive_search_show_vendor": false,
@@ -189,7 +189,8 @@
             "color_scheme": "scheme-1"
           }
         }
-      }
+      },
+      "social_x_link": "https://x.com/Furniva_in"
     }
   }
 }

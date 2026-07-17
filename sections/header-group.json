@@ -5,10 +5,10 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "show_line_separator": true,
         "show_social": false,
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "enable_country_selector": false,
         "enable_language_selector": false
@@ -17,15 +17,25 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "\ud83c\uddee\ud83c\uddf3 Free delivery across India \u00b7 Free installation \u00b7 COD available",
             "text_alignment": "center",
-            "color_scheme": "scheme-1",
+            "color_scheme": "scheme-3",
             "link": ""
+          }
+        },
+        "announcement-bar-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Questions? WhatsApp us anytime \u2014 no carpenter needed, ever.",
+            "text_alignment": "center",
+            "color_scheme": "scheme-3",
+            "link": "https://wa.link/fwjc7x"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement-bar-1"
       ]
     },
     "header": {
@@ -38,8 +48,8 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "enable_customer_avatar": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
