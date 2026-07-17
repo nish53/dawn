@@ -8,7 +8,7 @@
         "color_scheme": "scheme-3",
         "show_line_separator": true,
         "show_social": false,
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 5,
         "enable_country_selector": false,
         "enable_language_selector": false
@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "\ud83c\uddee\ud83c\uddf3 Free delivery across India \u00b7 Free installation \u00b7 COD available",
+            "text": "Free delivery across India \u00b7 Free installation \u00b7 COD available",
             "text_alignment": "center",
             "color_scheme": "scheme-3",
             "link": ""
@@ -26,7 +26,7 @@
         "announcement-bar-1": {
           "type": "announcement",
           "settings": {
-            "text": "Questions? WhatsApp us anytime \u2014 no carpenter needed, ever.",
+            "text": "Questions? Message us on WhatsApp",
             "text_alignment": "center",
             "color_scheme": "scheme-3",
             "link": "https://wa.link/fwjc7x"
