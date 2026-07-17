@@ -13,7 +13,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Launched in 2024 out of Jaipur, Rajasthan \u2014 built for people who need furniture to just work, fast.",
+            "text": "<p>Launched in 2024 out of Jaipur, Rajasthan \u2014 built for people who need furniture to just work, fast.</p>",
             "text_style": "body"
           }
         }
@@ -23,7 +23,7 @@
         "text"
       ],
       "settings": {
-        "image_overlay_opacity": 35,
+        "image_overlay_opacity": 30,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
@@ -56,7 +56,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Most furniture shopping in India means one of two things: booking a carpenter and waiting weeks, or paying showroom prices. Furniva exists for everything in between \u2014 DIY furniture you assemble yourself in under an hour, designed for small apartments and busy schedules, priced for people who just moved and don't want to furnish a museum."
+            "text": "<p>Most furniture shopping in India means one of two things: booking a carpenter and waiting weeks, or paying showroom prices. Furniva exists for everything in between \u2014 DIY furniture you assemble yourself in under an hour, designed for small apartments and busy schedules, priced for people who just moved and don't want to furnish a museum.</p>"
           }
         }
       },
@@ -72,7 +72,7 @@
           "type": "column",
           "settings": {
             "title": "DIY, done right",
-            "text": "Everything you need to assemble it yourself is in the box \u2014 clear instructions, all hardware included, no tradesperson's schedule to wait on.",
+            "text": "<p>Everything you need to assemble it yourself is in the box \u2014 clear instructions, all hardware included, no tradesperson's schedule to wait on.</p>",
             "link_label": "",
             "link": ""
           }
@@ -81,7 +81,7 @@
           "type": "column",
           "settings": {
             "title": "Priced for real life",
-            "text": "Aesthetic doesn't have to mean expensive. We design for people furnishing their first place on their own money.",
+            "text": "<p>Aesthetic doesn't have to mean expensive. We design for people furnishing their first place on their own money.</p>",
             "link_label": "",
             "link": ""
           }
@@ -90,7 +90,7 @@
           "type": "column",
           "settings": {
             "title": "Actually fast",
-            "text": "Free delivery and installation across India, with a real person on WhatsApp if something needs sorting.",
+            "text": "<p>Free delivery and installation across India, with a real person on WhatsApp if something needs sorting out.</p>",
             "link_label": "Chat with us",
             "link": "https://wa.link/fwjc7x"
           }

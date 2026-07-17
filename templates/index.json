@@ -13,7 +13,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "DIY-assembly furniture designed for busy schedules and real budgets \u2014 skip the weeks-long wait (and cost) of booking a carpenter.",
+            "text": "<p>DIY-assembly furniture designed for busy schedules and real budgets \u2014 skip the weeks-long wait (and cost) of booking a carpenter.</p>",
             "text_style": "body"
           }
         },
@@ -116,7 +116,7 @@
       "settings": {
         "title": "This week's bestsellers",
         "heading_size": "h1",
-        "description": "The SKUs our customers keep coming back for.",
+        "description": "<p>The SKUs our customers keep coming back for.</p>",
         "show_description": true,
         "description_style": "body",
         "collection": "all",
@@ -139,7 +139,7 @@
           "type": "column",
           "settings": {
             "title": "Simple DIY assembly",
-            "text": "Comes with clear instructions and every bit of hardware included \u2014 set it up yourself in under an hour, no carpenter's schedule to work around.",
+            "text": "<p>Comes with clear instructions and every bit of hardware included \u2014 set it up yourself in under an hour, no carpenter's schedule to work around.</p>",
             "link_label": "",
             "link": ""
           }
@@ -148,7 +148,7 @@
           "type": "column",
           "settings": {
             "title": "Built for real budgets",
-            "text": "Aesthetic, durable furniture priced for people who just moved, not people furnishing a showroom.",
+            "text": "<p>Aesthetic, durable furniture priced for people who just moved, not people furnishing a showroom.</p>",
             "link_label": "",
             "link": ""
           }
@@ -157,7 +157,7 @@
           "type": "column",
           "settings": {
             "title": "Fast, no fuss",
-            "text": "Pan-India delivery, COD available, and a WhatsApp line if anything needs sorting out.",
+            "text": "<p>Pan-India delivery, COD available, and a WhatsApp line if anything needs sorting out.</p>",
             "link_label": "Chat on WhatsApp",
             "link": "https://wa.link/fwjc7x"
           }
