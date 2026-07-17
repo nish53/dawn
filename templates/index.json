@@ -6,26 +6,26 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Furniture that fits your life, not the other way around",
-            "heading_size": "h0"
+            "heading": "Fusion Shoe Cabinet - Ultimate Steal Deal",
+            "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "DIY-assembly furniture designed for busy schedules and real budgets \u2014 skip the weeks-long wait (and cost) of booking a carpenter.",
+            "text": "Rs. 6999 - Only Rs. 5,999. Limited time only.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Bestsellers",
-            "button_link_1": "shopify://collections/all",
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/storage-units",
             "button_style_secondary_1": false,
-            "button_label_2": "Browse Dining & Kitchen",
-            "button_link_2": "shopify://collections/dining-kitchen",
-            "button_style_secondary_2": true
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
@@ -35,160 +35,212 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 30,
-        "image_height": "large",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
         "desktop_content_position": "middle-left",
         "show_text_box": true,
         "image_behavior": "none",
         "desktop_content_alignment": "left",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
         "show_text_below": true
       }
     },
-    "shelf_line_1": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"shelf-line shelf-line--center\"></div>",
-        "color_scheme": "scheme-1"
-      }
-    },
-    "shop_by_room": {
-      "type": "collection-list",
-      "blocks": {
-        "dining": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "dining-kitchen"
-          }
-        },
-        "storage": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "storage-units"
-          }
-        },
-        "tv-units": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "tv-entertainment-units"
-          }
-        },
-        "study": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "work-study"
-          }
-        },
-        "beds": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "beds"
-          }
-        }
-      },
-      "block_order": [
-        "dining",
-        "storage",
-        "tv-units",
-        "study",
-        "beds"
-      ],
-      "settings": {
-        "title": "Shop by room",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 5,
-        "color_scheme": "scheme-1",
-        "columns_mobile_small": "2"
-      }
-    },
-    "shelf_line_2": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"shelf-line shelf-line--center\"></div>",
-        "color_scheme": "scheme-1"
-      }
-    },
-    "bestsellers": {
+    "shoe_racks": {
       "type": "featured-collection",
       "settings": {
-        "title": "This week's bestsellers",
-        "heading_size": "h1",
-        "description": "<p>The SKUs our customers keep coming back for.</p>",
+        "title": "Wooden Shoe Racks",
+        "heading_size": "h2",
+        "description": "<p>Shoe racks featuring multiple shelves, adding a touch of warmth to any space.</p>",
         "show_description": true,
         "description_style": "body",
-        "collection": "all",
+        "collection": "storage-units",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default"
       }
     },
-    "why_furniva": {
+    "beds_row": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Beds - Hydraulic, Bunk & Kids",
+        "heading_size": "h2",
+        "description": "<p>Premium engineered wood beds that combine comfort and contemporary style.</p>",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "beds",
+        "products_to_show": 8,
+        "columns_desktop": 5,
+        "color_scheme": "scheme-4",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "image_shape": "default"
+      }
+    },
+    "tv_units_row": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Television and Entertainment Units",
+        "heading_size": "h2",
+        "description": "<p>Elevate your entertainment experience with our stylish television and entertainment units.</p>",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "tv-entertainment-units",
+        "products_to_show": 8,
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "image_shape": "default"
+      }
+    },
+    "lifestyle_banner": {
       "type": "multicolumn",
       "blocks": {
-        "assembly": {
+        "chest": {
           "type": "column",
           "settings": {
-            "title": "Simple DIY assembly",
-            "text": "<p>Comes with clear instructions and every bit of hardware included \u2014 set it up yourself in under an hour, no carpenter's schedule to work around.</p>",
-            "link_label": "",
-            "link": ""
+            "title": "Organize in Style: Six Drawer Chest",
+            "text": "<p>Spacious storage for every corner.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/storage-units"
           }
         },
-        "budget": {
+        "cabinets": {
           "type": "column",
           "settings": {
-            "title": "Built for real budgets",
-            "text": "<p>Aesthetic, durable furniture priced for people who just moved, not people furnishing a showroom.</p>",
-            "link_label": "",
-            "link": ""
+            "title": "Stylish Storage Cabinets for Home",
+            "text": "<p>Perfect shoe racks and cabinets. Order today.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/storage-units"
           }
         },
-        "speed": {
+        "bookshelves": {
           "type": "column",
           "settings": {
-            "title": "Fast, no fuss",
-            "text": "<p>Pan-India delivery, COD available, and a WhatsApp line if anything needs sorting out.</p>",
-            "link_label": "Chat on WhatsApp",
-            "link": "https://wa.link/fwjc7x"
+            "title": "Bookshelves for Every Home",
+            "text": "<p>Three, four, or five-layer designs.</p>",
+            "link_label": "Shop Now",
+            "link": "shopify://collections/work-study"
           }
         }
       },
       "block_order": [
-        "assembly",
-        "budget",
-        "speed"
+        "chest",
+        "cabinets",
+        "bookshelves"
       ],
       "settings": {
-        "title": "Why Furniva",
-        "heading_size": "h1",
+        "title": "",
+        "heading_size": "h2",
         "background_style": "none",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "columns_desktop": 3,
         "column_alignment": "left",
-        "background_style_column": "none",
-        "image_width": "third",
-        "image_ratio": "adapt",
+        "background_style_column": "primary",
+        "image_width": "full",
+        "image_ratio": "landscape",
         "columns_mobile": "1",
         "swipe_on_mobile": false
       }
+    },
+    "study_row": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Study and Home Office",
+        "heading_size": "h2",
+        "description": "<p>Discover the perfect study and home desk for your space.</p>",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "work-study",
+        "products_to_show": 8,
+        "columns_desktop": 5,
+        "color_scheme": "scheme-4",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "image_shape": "default"
+      }
+    },
+    "dining_row": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Dining Sets",
+        "heading_size": "h2",
+        "description": "<p>Stylish and durable engineered wood dining sets designed for modern spaces.</p>",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "dining-kitchen",
+        "products_to_show": 8,
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "image_shape": "default"
+      }
+    },
+    "seo_text": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "page_width": "normal",
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Buy Wooden Furniture Online for Modern and Stylish Homes"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Looking to upgrade your space with beautiful and bold furniture? Explore our handpicked collection of wooden and engineered wood furniture made for modern homes and busy offices. From wooden shoe racks to compact cabinets and spacious wardrobes, we have everything you need to stay organized in style.</p><p>Are you a new Furniva customer in need of a stylish shoe organizer? Look no more - our wooden shoe racks offer sleek solutions to keep your footwear in place while adding charm to your hallway or even bedroom.</p><p>Planning a bedroom makeover or bookroom? Choose from our range of engineered wood cabinets - perfect for books, crockery, files, or everyday essentials.</p><p>Our furniture is crafted from premium engineered wood, ensuring quality as well as durability without compromising on style. We offer multiple finishes and sizes - from bold geometric patterns to aesthetic yet simple pieces to suit all types of apartments or a spacious villa.</p><p>So whether you're furnishing a new home or just adding that perfect cabinet or shoe rack, browse our range today. Your perfect piece is just a click away.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ]
     }
   },
   "order": [
     "hero_banner",
-    "shelf_line_1",
-    "shop_by_room",
-    "shelf_line_2",
-    "bestsellers",
-    "why_furniva"
+    "shoe_racks",
+    "beds_row",
+    "tv_units_row",
+    "lifestyle_banner",
+    "study_row",
+    "dining_row",
+    "seo_text"
   ]
 }
