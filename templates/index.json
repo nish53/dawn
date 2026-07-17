@@ -17,10 +17,10 @@
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
-        "image_ratio": "square",
+        "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "beds_row": {
@@ -40,10 +40,10 @@
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
-        "image_ratio": "square",
+        "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "tv_units_row": {
@@ -63,10 +63,10 @@
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
-        "image_ratio": "square",
+        "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "lifestyle_banner": {
@@ -138,10 +138,10 @@
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
-        "image_ratio": "square",
+        "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "dining_row": {
@@ -161,10 +161,10 @@
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
-        "image_ratio": "square",
+        "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "seo_text": {
@@ -247,16 +247,16 @@
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "swipe_on_mobile": true,
-        "image_ratio": "square",
+        "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "hero_new": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1280px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:grid;grid-template-columns:2fr 1fr;gap:12px;\">\n    <a href=\"/collections/dining-kitchen\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:340px;background:#EFE9DD url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-QuattroDine-Solid-Wood-4-Seater-Dining-Table-Set-Four-Seater-Dining-Table-Set-for-Homes-Free-Assembly-White-Cushion-Dark-Walnut-Finish-1-800x813.jpg?v=1784275500') center/cover;\">\n      <div style=\"position:absolute;inset:0;background:linear-gradient(90deg, rgba(26,26,26,0.55) 0%, rgba(26,26,26,0.05) 60%);\"></div>\n      <div style=\"position:relative;padding:36px;color:#fff;max-width:340px;\">\n        <div style=\"font-family:'Poppins',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#E8D5B0;margin-bottom:6px;\">GIF 2026 Early Access</div>\n        <div style=\"font-family:'Poppins',sans-serif;font-size:30px;font-weight:600;line-height:1.2;margin-bottom:10px;\">Dining Sets</div>\n        <div style=\"font-size:14px;background:rgba(0,0,0,0.35);display:inline-block;padding:6px 14px;border-radius:4px;\">Starting from &#8377;11,999</div>\n      </div>\n    </a>\n    <div style=\"display:flex;flex-direction:column;gap:12px;\">\n      <a href=\"/collections/storage-units\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:164px;background:#E6ECE4 url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-Skyline-6-Feet-Wooden-Two-Door-Utility-Shoe-Rack-for-Home-EntrancesHallways-Engineered-Wood-Nine-Adjustable-Shelves-with-Airflow-Slots-Multipurpose-Shoe-Cabinet-Organizer-Weng_281de8bf-191f-4b83-857c-937e895ebf5f.webp?v=1784275549') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(26,26,26,0.05) 30%, rgba(26,26,26,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;\">Shop Storage</div>\n          <div style=\"font-size:12px;\">Shoe racks &amp; cabinets</div>\n        </div>\n      </a>\n      <a href=\"/collections/bestsellers\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:164px;background:#EFE4DC url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/1202-800x800.jpg?v=1784275793') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(26,26,26,0.05) 30%, rgba(26,26,26,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;\">Bestsellers</div>\n          <div style=\"font-size:12px;\">Up to 60% off</div>\n        </div>\n      </a>\n    </div>\n  </div>\n</div>",
+        "custom_liquid": "<div style=\"max-width:1280px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:grid;grid-template-columns:2fr 1fr;gap:12px;\">\n    <a href=\"/collections/dining-kitchen\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:420px;background:#EFE9DD url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-QuattroDine-Solid-Wood-4-Seater-Dining-Table-Set-Four-Seater-Dining-Table-Set-for-Homes-Free-Assembly-White-Cushion-Dark-Walnut-Finish-1-800x813.jpg?v=1784275500') center/cover;\">\n      <div style=\"position:absolute;inset:0;background:linear-gradient(90deg, rgba(26,26,26,0.55) 0%, rgba(26,26,26,0.05) 60%);\"></div>\n      <div style=\"position:relative;padding:36px;color:#fff;max-width:340px;\">\n        <div style=\"font-family:'Poppins',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#E8D5B0;margin-bottom:6px;\">GIF 2026 Early Access</div>\n        <div style=\"font-family:'Poppins',sans-serif;font-size:30px;font-weight:600;line-height:1.2;margin-bottom:10px;\">Dining Sets</div>\n        <div style=\"font-size:14px;background:rgba(0,0,0,0.35);display:inline-block;padding:6px 14px;border-radius:4px;\">Starting from &#8377;11,999</div>\n      </div>\n    </a>\n    <div style=\"display:flex;flex-direction:column;gap:12px;\">\n      <a href=\"/collections/storage-units\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:204px;background:#E6ECE4 url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-Skyline-6-Feet-Wooden-Two-Door-Utility-Shoe-Rack-for-Home-EntrancesHallways-Engineered-Wood-Nine-Adjustable-Shelves-with-Airflow-Slots-Multipurpose-Shoe-Cabinet-Organizer-Weng_281de8bf-191f-4b83-857c-937e895ebf5f.webp?v=1784275549') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(26,26,26,0.05) 30%, rgba(26,26,26,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;\">Shop Storage</div>\n          <div style=\"font-size:12px;\">Shoe racks &amp; cabinets</div>\n        </div>\n      </a>\n      <a href=\"/collections/bestsellers\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:204px;background:#EFE4DC url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/1202-800x800.jpg?v=1784275793') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(26,26,26,0.05) 30%, rgba(26,26,26,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;\">Bestsellers</div>\n          <div style=\"font-size:12px;\">Up to 60% off</div>\n        </div>\n      </a>\n    </div>\n  </div>\n</div>",
         "color_scheme": "scheme-1",
         "padding_top": 24,
         "padding_bottom": 24
