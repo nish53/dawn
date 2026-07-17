@@ -36,7 +36,7 @@
       ],
       "settings": {
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "desktop_content_position": "middle-left",
         "show_text_box": true,
         "image_behavior": "none",
@@ -252,10 +252,56 @@
         "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;text-align:center;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">As seen on</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;margin:0 0 8px;\">Real unboxings. Real homes.</h2>\n  <p style=\"font-size:13px;color:#666;\">No creator content published yet &mdash; this section is ready for real customer/creator videos once available.</p>\n</div>",
         "color_scheme": "scheme-1"
       }
+    },
+    "trust_bar": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;text-align:center;\">\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">Free Delivery</div>\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">Free Installation</div>\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">COD Available</div>\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">3-Day Returns</div>\n    <div style=\"flex:1;min-width:120px;font-size:12px;font-weight:600;\">Warranty Included</div>\n  </div>\n</div>",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "category_grid": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Browse by category</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:24px;font-weight:600;margin:0 0 4px;\">Shop every room</h2>\n  <p style=\"font-size:13px;color:#666;margin-bottom:20px;\">Curated furniture for every corner of your home</p>\n  <div style=\"display:grid;grid-template-columns:repeat(5,1fr);gap:10px;\">\n    {% assign cats = 'beds,storage-units,dining-kitchen,work-study,tv-entertainment-units' | split: ',' %}\n    {% assign cat_labels = 'Beds,Storage,Dining,Study,TV Units' | split: ',' %}\n    {% for handle in cats %}\n      {% assign collection = collections[handle] %}\n      {% if collection %}\n      <a href=\"{{ collection.url }}\" style=\"text-decoration:none;color:inherit;border:1px solid #EAEAEA;border-radius:8px;overflow:hidden;display:block;\">\n        {% if collection.image %}\n          <img src=\"{{ collection.image | image_url: width: 300 }}\" alt=\"{{ collection.title }}\" style=\"width:100%;height:110px;object-fit:cover;display:block;\">\n        {% else %}\n          <div style=\"width:100%;height:110px;background:#F7F5F1;\"></div>\n        {% endif %}\n        <div style=\"padding:10px;\">\n          <div style=\"font-size:13px;font-weight:600;\">{{ cat_labels[forloop.index0] }}</div>\n          <div style=\"font-size:11px;color:#888;\">{{ collection.products_count }} products</div>\n        </div>\n      </a>\n      {% endif %}\n    {% endfor %}\n  </div>\n</div>",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "edit_banners": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:grid;grid-template-columns:1fr 1fr;gap:10px;\">\n    <a href=\"/collections/beds\" style=\"text-decoration:none;color:inherit;background:#F0E8D8;border-radius:8px;padding:28px 24px;display:block;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8A6E4A;margin-bottom:8px;\">Bedroom Edit</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;\">Sleep in style.<br>Wake up inspired.</div>\n      <div style=\"font-size:12px;font-weight:600;color:#8A6E4A;\">Shop Beds &rarr;</div>\n    </a>\n    <a href=\"/collections/storage-units\" style=\"text-decoration:none;color:inherit;background:#E0EAE8;border-radius:8px;padding:28px 24px;display:block;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#3B6D11;margin-bottom:8px;\">Storage Edit</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;\">Storage that looks<br>like it belongs.</div>\n      <div style=\"font-size:12px;font-weight:600;color:#3B6D11;\">Shop Shoe Racks &amp; Cabinets &rarr;</div>\n    </a>\n  </div>\n</div>",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "bestsellers": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Bestsellers",
+        "heading_size": "h2",
+        "description": "<p>Our most-loved pieces &mdash; free delivery and installation on all orders.</p>",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "bestsellers",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "image_shape": "default"
+      }
     }
   },
   "order": [
     "hero_banner",
+    "trust_bar",
+    "category_grid",
+    "edit_banners",
+    "bestsellers",
     "shoe_racks",
     "beds_row",
     "tv_units_row",
