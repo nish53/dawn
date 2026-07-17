@@ -19,15 +19,15 @@
         "support_text": {
           "type": "text",
           "settings": {
-            "heading": "Support",
+            "heading": "Contact",
             "subtext": "<ul><li><a href=\"/policies/shipping-policy\">Shipping Policy</a></li><li><a href=\"/policies/refund-policy\">Returns Policy</a></li><li><a href=\"/pages/installation-policy\">Installation Policy</a></li><li><a href=\"/account\">My Account</a></li><li><a href=\"/pages/wishlist\">Wishlist</a></li><li><a href=\"/pages/contact\">Contact Us</a></li><li><a href=\"/pages/track-order\">Track Order</a></li></ul>"
           }
         },
         "contact_text": {
           "type": "text",
           "settings": {
-            "heading": "Contact",
-            "subtext": "<p>Phone: +91 8929722253</p><p>Corporate Office:<br>Plot No. 33B, Manyawas, Jaipur, Rajasthan, India 302020</p>"
+            "heading": "Support",
+            "subtext": "<p><strong>Email:</strong> info@furniva.in</p><p><strong>Phone:</strong> +91 8929722253</p><p><strong>Corporate Office:</strong><br>Plot No. 33B, Manyawas, Jaipur, Rajasthan, India 302020</p>"
           }
         }
       },

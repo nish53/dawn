@@ -158,7 +158,7 @@
       "brand_headline": "",
       "brand_description": "<p></p>",
       "brand_image_width": 100,
-      "social_twitter_link": "",
+      "social_twitter_link": "https://x.com/Furniva_in",
       "social_facebook_link": "https://www.facebook.com/furniva.in",
       "social_pinterest_link": "https://in.pinterest.com/infurniva",
       "social_instagram_link": "https://www.instagram.com/furniva.in/",
@@ -190,7 +190,8 @@
           }
         }
       },
-      "social_x_link": "https://x.com/Furniva_in"
+      "social_linkedin_link": "https://www.linkedin.com/company/furniva",
+      "social_whatsapp_link": "https://wa.link/fwjc7x"
     }
   }
 }

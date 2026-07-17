@@ -1335,6 +1335,16 @@
       },
       {
         "type": "text",
+        "id": "social_linkedin_link",
+        "label": "LinkedIn"
+      },
+      {
+        "type": "text",
+        "id": "social_whatsapp_link",
+        "label": "WhatsApp"
+      },
+      {
+        "type": "text",
         "id": "social_snapchat_link",
         "label": "t:settings_schema.social-media.settings.social_snapchat_link.label",
         "placeholder": "t:settings_schema.social-media.settings.social_snapchat_link.info"

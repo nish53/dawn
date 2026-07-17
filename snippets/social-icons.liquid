@@ -60,6 +60,26 @@
       </a>
     </li>
   {%- endif -%}
+  {%- if settings.social_linkedin_link != blank -%}
+    <li class="list-social__item">
+      <a href="{{ settings.social_linkedin_link }}" class="link list-social__link">
+        <span class="svg-wrapper">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </span>
+        <span class="visually-hidden">LinkedIn</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_whatsapp_link != blank -%}
+    <li class="list-social__item">
+      <a href="{{ settings.social_whatsapp_link }}" class="link list-social__link">
+        <span class="svg-wrapper">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.78 14.02c-.24.68-1.4 1.3-1.93 1.38-.49.08-1.11.11-1.79-.11a12.9 12.9 0 0 1-1.98-.73c-3.48-1.51-5.75-5.01-5.92-5.24-.17-.23-1.42-1.89-1.42-3.61 0-1.72.9-2.56 1.22-2.91.32-.35.7-.44.93-.44.24 0 .47 0 .68.01.22.01.51-.08.8.61.29.7 1 2.41 1.08 2.58.09.17.14.37.03.6-.11.23-.17.37-.33.57-.17.2-.35.44-.5.6-.17.17-.34.35-.15.68.19.33.86 1.42 1.85 2.3 1.27 1.13 2.34 1.48 2.67 1.65.32.17.51.14.7-.09.19-.23.81-.94 1.03-1.26.22-.32.44-.27.73-.16.29.11 1.85.87 2.17 1.03.32.17.53.25.61.38.08.14.08.79-.16 1.46z"/></svg>
+        </span>
+        <span class="visually-hidden">WhatsApp</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_pinterest_link != blank -%}
     <li class="list-social__item">
       <a href="{{ settings.social_pinterest_link }}" class="link list-social__link">
