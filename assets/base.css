@@ -3643,3 +3643,46 @@ details-disclosure > details {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* ==========================================================================
+   Furniva footer: strip default .rte list styling (bullets, underlines,
+   indent) on the About/Contact/Support link lists - scoped to the footer
+   only so product-description bullet lists elsewhere are unaffected.
+   ========================================================================== */
+.footer-block__details-content.rte ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-block__details-content.rte ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-block__details-content.rte a {
+  text-decoration: none;
+}
+
+.footer-block__details-content.rte a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Furniva footer: visually reorder newsletter ABOVE the columns (matching
+   the real site) without risky restructuring of Dawn's nested Liquid -
+   the newsletter and columns share a parent wrapper, so this uses flex
+   order instead of moving the actual markup.
+   ========================================================================== */
+.footer__content-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-block--newsletter {
+  order: -1;
+  margin-bottom: 4rem;
+}
+
+.footer__blocks-wrapper {
+  order: 1;
+}

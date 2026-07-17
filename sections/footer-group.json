@@ -5,9 +5,12 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "brand": {
-          "type": "brand_information",
-          "settings": {}
+        "brand_logo": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p><img src=\"{{ 'furniva-logo-white.png' | asset_url }}\" alt=\"Furniva\" style=\"height:34px;width:auto;\" loading=\"lazy\"></p><p>Launched in 2024, Furniva is your go-to online store for all your furniture needs. Furniva offers its consumers a world-class stage for a seamless shopping experience.</p>"
+          }
         },
         "about_text": {
           "type": "text",
@@ -32,7 +35,7 @@
         }
       },
       "block_order": [
-        "brand",
+        "brand_logo",
         "about_text",
         "support_text",
         "contact_text"
