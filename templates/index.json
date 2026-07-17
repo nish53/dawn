@@ -181,8 +181,8 @@
       "settings": {
         "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:12px;\">\n    <div style=\"background:#F7F5F1;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Amazon</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;\">Coming soon</div>\n      <div style=\"font-size:11px;color:#666;margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:#F7F5F1;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Flipkart</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;\">Coming soon</div>\n      <div style=\"font-size:11px;color:#666;margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:#1A1A1A;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-family:'Poppins',sans-serif;font-size:20px;font-weight:600;color:#E8D5B0;\">0</div>\n      <div style=\"font-size:11px;color:#A89070;margin-top:2px;\">Reviews collected so far &middot; Since 2024</div>\n    </div>\n  </div>\n</div>",
         "color_scheme": "scheme-1",
-        "padding_top": 32,
-        "padding_bottom": 16
+        "padding_top": 56,
+        "padding_bottom": 40
       }
     },
     "testimonials": {
@@ -190,8 +190,8 @@
       "settings": {
         "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;text-align:center;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Customer stories</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;margin:0 0 8px;\">What our buyers say</h2>\n  <p style=\"font-size:13px;color:#666;margin-bottom:24px;\">No reviews published yet &mdash; check back soon as real customer stories come in.</p>\n</div>",
         "color_scheme": "scheme-4",
-        "padding_top": 32,
-        "padding_bottom": 16
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "as_seen_on": {
@@ -199,8 +199,8 @@
       "settings": {
         "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;text-align:center;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">As seen on</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;margin:0 0 8px;\">Real unboxings. Real homes.</h2>\n  <p style=\"font-size:13px;color:#666;\">No creator content published yet &mdash; this section is ready for real customer/creator videos once available.</p>\n</div>",
         "color_scheme": "scheme-1",
-        "padding_top": 16,
-        "padding_bottom": 40
+        "padding_top": 56,
+        "padding_bottom": 64
       }
     },
     "trust_bar": {
@@ -215,10 +215,10 @@
     "category_grid": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"max-width:1200px;margin:0 auto;padding:0 1.5rem;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A6E4A;margin-bottom:4px;\">Browse by category</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:19px;font-weight:600;margin:0 0 4px;\">Shop every room</h2>\n  <p style=\"font-size:13px;color:#666;margin-bottom:20px;\">Curated furniture for every corner of your home</p>\n  <div style=\"display:grid;grid-template-columns:repeat(5,1fr);gap:10px;\">\n    {% assign cats = 'beds,storage-units,dining-kitchen,work-study,tv-entertainment-units' | split: ',' %}\n    {% assign cat_labels = 'Beds,Storage,Dining,Study,TV Units' | split: ',' %}\n    {% for handle in cats %}\n      {% assign collection = collections[handle] %}\n      {% if collection %}\n      <a href=\"{{ collection.url }}\" style=\"text-decoration:none;color:inherit;border:1px solid #EAEAEA;border-radius:8px;overflow:hidden;display:block;\">\n        {% if collection.image %}\n          <img src=\"{{ collection.image | image_url: width: 300 }}\" alt=\"{{ collection.title }}\" style=\"width:100%;height:110px;object-fit:cover;display:block;\">\n        {% else %}\n          <div style=\"width:100%;height:110px;background:#F7F5F1;\"></div>\n        {% endif %}\n        <div style=\"padding:10px;\">\n          <div style=\"font-size:13px;font-weight:600;\">{{ cat_labels[forloop.index0] }}</div>\n          <div style=\"font-size:11px;color:#888;\">{{ collection.products_count }} products</div>\n        </div>\n      </a>\n      {% endif %}\n    {% endfor %}\n  </div>\n</div>",
-        "color_scheme": "scheme-1",
-        "padding_top": 32,
-        "padding_bottom": 8
+        "custom_liquid": "<div style=\"max-width:1280px;margin:0 auto;padding:0 1.5rem;\">\n  <p style=\"font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#8A6E4A;margin-bottom:6px;\">Browse by category</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;margin:0 0 4px;\">Shop every room</h2>\n  <p style=\"font-size:14px;color:#666;margin-bottom:24px;\">Curated furniture for every corner of your home</p>\n  <div style=\"display:grid;grid-template-columns:repeat(5,1fr);gap:14px;\">\n    {% assign cats = 'beds,shoe-racks,chest-of-drawers,kitchen-cabinets,4-seater-dining-sets,6-seater-dining-sets,work-study,tv-entertainment-units,side-tables,coffee-tables,bookshelves,chairs,tables' | split: ',' %}\n    {% assign cat_labels = 'Bunk Beds,Shoe Racks,Chest of Drawers,Kitchen Cabinets,4-Seater Dining,6-Seater Dining,Study,TV Units,Side Tables,Coffee Tables,Bookshelves,Chairs,Tables' | split: ',' %}\n    {% for handle in cats %}\n      {% assign collection = collections[handle] %}\n      {% if collection %}\n      <a href=\"{{ collection.url }}\" style=\"text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1px solid #EDEBE5;transition:box-shadow 0.2s;\">\n        {% if collection.image %}\n          <img src=\"{{ collection.image | image_url: width: 400 }}\" alt=\"{{ collection.title }}\" style=\"width:100%;height:140px;object-fit:cover;display:block;\">\n        {% else %}\n          <div style=\"width:100%;height:140px;background:#F7F5F1;\"></div>\n        {% endif %}\n        <div style=\"padding:12px 14px;\">\n          <div style=\"font-size:14px;font-weight:700;\">{{ cat_labels[forloop.index0] }}</div>\n          <div style=\"font-size:11.5px;color:#888;margin-top:2px;\">{{ collection.products_count }} products</div>\n        </div>\n      </a>\n      {% endif %}\n    {% endfor %}\n  </div>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 48,
+        "padding_bottom": 16
       }
     },
     "edit_banners": {
