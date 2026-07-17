@@ -1,25 +1,48 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "contact_info": {
+      "type": "rich-text",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "page_width": "normal",
+        "padding_top": 48,
+        "padding_bottom": 12
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get in Touch"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Questions about an order, a product, or GIF delivery timelines? Reach us directly \u2014 we're fastest on WhatsApp.\n\nEmail: info@furniva.in\nPhone: +91 8929722253\nWhatsApp: wa.link/fwjc7x\n\nCorporate Office:\nPlot No. 33B, Manyawas, Jaipur, Rajasthan, India 302020"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ]
     },
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
+        "heading": "Or send us a message",
+        "heading_size": "h2",
         "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 24,
+        "padding_bottom": 48
       }
     }
   },
   "order": [
-    "main",
+    "contact_info",
     "form"
   ]
 }

@@ -16,6 +16,12 @@
         "price": {
           "type": "price"
         },
+        "sku": {
+          "type": "sku",
+          "settings": {
+            "text_style": "uppercase"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -33,8 +39,44 @@
             "show_gift_card_recipient": true
           }
         },
+        "trust_badges": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "truck",
+            "heading_1": "Free delivery across India",
+            "icon_2": "box",
+            "heading_2": "Free installation included",
+            "icon_3": "return",
+            "heading_3": "3-day easy returns"
+          }
+        },
         "description": {
           "type": "description"
+        },
+        "shipping_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Delivery",
+            "icon": "truck",
+            "content": "<p>Free delivery across India. Most orders dispatch within 2-5 business days depending on stock and location.</p>"
+          }
+        },
+        "installation_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Assembly & Installation",
+            "icon": "box",
+            "content": "<p>Ships knockdown (ready to assemble). Free installation is included where noted, or follow the included DIY assembly guide - most pieces take under an hour with the included hardware.</p>"
+          }
+        },
+        "warranty_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Warranty & Returns",
+            "icon": "check_mark",
+            "content": "<p>Backed by a manufacturer warranty (see product specifications for duration). 3-day return window from delivery if something isn't right.</p>"
+          }
         },
         "share": {
           "type": "share",
@@ -47,10 +89,15 @@
         "vendor",
         "title",
         "price",
+        "sku",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "trust_badges",
         "description",
+        "shipping_tab",
+        "installation_tab",
+        "warranty_tab",
         "share"
       ],
       "settings": {

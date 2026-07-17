@@ -1,0 +1,126 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Furniture, without the runaround",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Launched in 2024 out of Jaipur, Rajasthan \u2014 built for people who need furniture to just work, fast.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image_overlay_opacity": 35,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "image_behavior": "none",
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": true
+      }
+    },
+    "story": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "page_width": "normal",
+        "padding_top": 48,
+        "padding_bottom": 24
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why we exist"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Most furniture shopping in India means one of two things: paying a carpenter and waiting weeks, or paying showroom prices for something you could've built yourself. Furniva exists for everything in between - ready-to-plug pieces, designed for small apartments and busy schedules, priced for people who just moved and don't want to furnish a museum."
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ]
+    },
+    "values": {
+      "type": "multicolumn",
+      "blocks": {
+        "no_carpenter": {
+          "type": "column",
+          "settings": {
+            "title": "No carpenter, ever",
+            "text": "Every piece ships ready to plug in or with clear DIY assembly - no waiting on a tradesperson's schedule.",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "real_budgets": {
+          "type": "column",
+          "settings": {
+            "title": "Priced for real life",
+            "text": "Aesthetic doesn't have to mean expensive. We design for people furnishing their first place on their own money.",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "actually_fast": {
+          "type": "column",
+          "settings": {
+            "title": "Actually fast",
+            "text": "Free delivery and installation across India, with a real person on WhatsApp if something needs sorting.",
+            "link_label": "Chat with us",
+            "link": "https://wa.link/fwjc7x"
+          }
+        }
+      },
+      "block_order": [
+        "no_carpenter",
+        "real_budgets",
+        "actually_fast"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "background_style": "none",
+        "color_scheme": "scheme-2",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style_column": "none",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "story",
+    "values"
+  ]
+}
