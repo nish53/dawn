@@ -12,35 +12,35 @@
         "about_text": {
           "type": "text",
           "settings": {
-            "heading": "About Furniva",
-            "subtext": "<p>Launched in 2024, Furniva is your go-to online store for ready-to-plug home furniture across India. Designed for busy schedules and real budgets \u2014 no carpenter required.</p>"
+            "heading": "About",
+            "subtext": "<ul><li><a href=\"/pages/about-us\">About Furniva</a></li><li><a href=\"/pages/careers\">Careers | Find Opportunities</a></li><li><a href=\"/policies/privacy-policy\">Privacy Policy</a></li><li><a href=\"/blogs/news\">News &amp; Blogs</a></li><li><a href=\"/pages/help-center\">Help Center</a></li><li><a href=\"/policies/terms-of-service\">Terms and Conditions</a></li><li><a href=\"/pages/warranty-policy\">Warranty Policy</a></li><li><a href=\"/policies/refund-policy\">Payment Policy</a></li><li><a href=\"/collections/all\">Best Sellers</a></li></ul>"
+          }
+        },
+        "support_text": {
+          "type": "text",
+          "settings": {
+            "heading": "Support",
+            "subtext": "<ul><li><a href=\"/policies/shipping-policy\">Shipping Policy</a></li><li><a href=\"/policies/refund-policy\">Returns Policy</a></li><li><a href=\"/pages/installation-policy\">Installation Policy</a></li><li><a href=\"/account\">My Account</a></li><li><a href=\"/pages/wishlist\">Wishlist</a></li><li><a href=\"/pages/contact\">Contact Us</a></li><li><a href=\"/pages/track-order\">Track Order</a></li></ul>"
           }
         },
         "contact_text": {
           "type": "text",
           "settings": {
-            "heading": "Contact & Support",
-            "subtext": "<p>Email: info@furniva.in<br>Phone: +91 8929722253<br>WhatsApp: <a href=\"https://wa.link/fwjc7x\">Chat with us</a></p><p>Corporate Office:<br>Plot No. 33B, Manyawas, Jaipur, Rajasthan, India 302020</p>"
-          }
-        },
-        "trust_text": {
-          "type": "text",
-          "settings": {
-            "heading": "Why Shop With Us",
-            "subtext": "<p>Free delivery across India<br>Free installation<br>COD available<br>Easy returns within 3 days</p>"
+            "heading": "Contact",
+            "subtext": "<p>Phone: +91 8929722253</p><p>Corporate Office:<br>Plot No. 33B, Manyawas, Jaipur, Rajasthan, India 302020</p>"
           }
         }
       },
       "block_order": [
         "brand",
         "about_text",
-        "contact_text",
-        "trust_text"
+        "support_text",
+        "contact_text"
       ],
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": true,
-        "newsletter_heading": "Get restock alerts and festival deals first",
+        "newsletter_heading": "Important updates waiting for you!",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
