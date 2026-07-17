@@ -13,7 +13,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Ready-to-plug home furniture, designed for busy schedules and small budgets. No carpenter needed.",
+            "text": "DIY-assembly furniture designed for busy schedules and real budgets \u2014 skip the weeks-long wait (and cost) of booking a carpenter.",
             "text_style": "body"
           }
         },
@@ -29,7 +29,11 @@
           }
         }
       },
-      "block_order": ["heading", "text", "button"],
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
       "settings": {
         "image_overlay_opacity": 30,
         "image_height": "large",
@@ -53,13 +57,44 @@
     "shop_by_room": {
       "type": "collection-list",
       "blocks": {
-        "dining": { "type": "featured_collection", "settings": { "collection": "dining-kitchen" } },
-        "storage": { "type": "featured_collection", "settings": { "collection": "storage-units" } },
-        "tv-units": { "type": "featured_collection", "settings": { "collection": "tv-entertainment-units" } },
-        "study": { "type": "featured_collection", "settings": { "collection": "work-study" } },
-        "beds": { "type": "featured_collection", "settings": { "collection": "beds" } }
+        "dining": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dining-kitchen"
+          }
+        },
+        "storage": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "storage-units"
+          }
+        },
+        "tv-units": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tv-entertainment-units"
+          }
+        },
+        "study": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "work-study"
+          }
+        },
+        "beds": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "beds"
+          }
+        }
       },
-      "block_order": ["dining", "storage", "tv-units", "study", "beds"],
+      "block_order": [
+        "dining",
+        "storage",
+        "tv-units",
+        "study",
+        "beds"
+      ],
       "settings": {
         "title": "Shop by room",
         "heading_size": "h1",
@@ -103,8 +138,8 @@
         "assembly": {
           "type": "column",
           "settings": {
-            "title": "Zero assembly stress",
-            "text": "Every piece arrives ready to plug in, or with free installation across India. No carpenter, no calling around.",
+            "title": "Simple DIY assembly",
+            "text": "Comes with clear instructions and every bit of hardware included \u2014 set it up yourself in under an hour, no carpenter's schedule to work around.",
             "link_label": "",
             "link": ""
           }
@@ -128,7 +163,11 @@
           }
         }
       },
-      "block_order": ["assembly", "budget", "speed"],
+      "block_order": [
+        "assembly",
+        "budget",
+        "speed"
+      ],
       "settings": {
         "title": "Why Furniva",
         "heading_size": "h1",
