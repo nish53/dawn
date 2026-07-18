@@ -3712,10 +3712,7 @@ details-disclosure > details {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card-wrapper:hover .card {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-}
+/* card lift removed per feedback - keeping only image zoom + title color change */
 
 .card__media img {
   transition: transform 0.5s ease;
@@ -3775,4 +3772,100 @@ a.button:hover {
   .card-wrapper:hover .card__media img {
     transform: none;
   }
+}
+
+/* ==========================================================================
+   Furniva: consistent hover polish across every interactive area -
+   hero tiles, category grid, footer, header nav. Same language throughout:
+   subtle image zoom + color shift, never a jarring lift/shadow.
+   ========================================================================== */
+
+/* Hero tiles (large left banner + 2 stacked right banners) */
+#shopify-section-hero_new a[style*="background"] {
+  transition: filter 0.3s ease;
+  overflow: hidden;
+}
+
+#shopify-section-hero_new a[style*="background"]:hover {
+  filter: brightness(1.06);
+}
+
+/* Category grid tiles */
+#shopify-section-category_grid a {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+#shopify-section-category_grid a:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+#shopify-section-category_grid a img {
+  transition: transform 0.5s ease;
+}
+
+#shopify-section-category_grid a:hover img {
+  transform: scale(1.03);
+}
+
+/* Edit banner tiles (Bedroom Edit / Storage Edit) */
+#shopify-section-edit_banners a {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#shopify-section-edit_banners a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Header nav links - color shift to brass on hover */
+.fv-nav-item > a,
+header a[href^="/collections/beds"],
+header a[href^="/collections/tv-entertainment-units"],
+header a[href^="/collections/work-study"] {
+  transition: color 0.2s ease;
+}
+
+#shopify-section-header .fv-nav-item > a:hover,
+#shopify-section-header nav > a:hover {
+  color: rgb(184, 134, 59) !important;
+}
+
+#shopify-section-header .fv-dropdown a {
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+#shopify-section-header .fv-dropdown a:hover {
+  color: rgb(184, 134, 59) !important;
+  padding-left: 4px;
+}
+
+/* Footer links - color shift, no underline jump */
+#shopify-section-footer a {
+  transition: color 0.2s ease;
+}
+
+#shopify-section-footer ul a:hover {
+  color: #E8A33D !important;
+}
+
+/* Footer subscribe button */
+.furniva-newsletter-form button[type="submit"] {
+  transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.furniva-newsletter-form button[type="submit"]:hover {
+  background-color: #F2B458;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(232, 163, 61, 0.35);
+}
+
+/* Back-to-top button */
+#fv-back-to-top {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#fv-back-to-top:hover {
+  transform: translateY(-3px);
+  background-color: #F2B458;
 }
