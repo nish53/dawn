@@ -3778,84 +3778,81 @@ a.button:hover {
    Furniva: consistent hover polish across every interactive area -
    hero tiles, category grid, footer, header nav. Same language throughout:
    subtle image zoom + color shift, never a jarring lift/shadow.
+   Targets explicit classes added directly in the markup (not guessed
+   Shopify auto-generated wrapper IDs) so these are guaranteed to match.
    ========================================================================== */
 
 /* Hero tiles (large left banner + 2 stacked right banners) */
-#shopify-section-hero_new a[style*="background"] {
+.fv-hero-tile {
   transition: filter 0.3s ease;
-  overflow: hidden;
 }
 
-#shopify-section-hero_new a[style*="background"]:hover {
-  filter: brightness(1.06);
+.fv-hero-tile:hover {
+  filter: brightness(1.08);
 }
 
 /* Category grid tiles */
-#shopify-section-category_grid a {
+.fv-category-tile {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-#shopify-section-category_grid a:hover {
+.fv-category-tile:hover {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
 }
 
-#shopify-section-category_grid a img {
+.fv-category-tile img {
   transition: transform 0.5s ease;
 }
 
-#shopify-section-category_grid a:hover img {
+.fv-category-tile:hover img {
   transform: scale(1.03);
 }
 
 /* Edit banner tiles (Bedroom Edit / Storage Edit) */
-#shopify-section-edit_banners a {
+.fv-edit-tile {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-#shopify-section-edit_banners a:hover {
+.fv-edit-tile:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Header nav links - color shift to brass on hover */
-.fv-nav-item > a,
-header a[href^="/collections/beds"],
-header a[href^="/collections/tv-entertainment-units"],
-header a[href^="/collections/work-study"] {
+/* Header nav links + dropdown items - color shift to brass on hover */
+.fv-nav-link {
   transition: color 0.2s ease;
 }
 
-#shopify-section-header .fv-nav-item > a:hover,
-#shopify-section-header nav > a:hover {
+.fv-nav-link:hover {
   color: rgb(184, 134, 59) !important;
 }
 
-#shopify-section-header .fv-dropdown a {
+.fv-dropdown-link {
   transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
-#shopify-section-header .fv-dropdown a:hover {
+.fv-dropdown-link:hover {
   color: rgb(184, 134, 59) !important;
   padding-left: 4px;
 }
 
 /* Footer links - color shift, no underline jump */
-#shopify-section-footer a {
+.fv-footer-link {
   transition: color 0.2s ease;
 }
 
-#shopify-section-footer ul a:hover {
+.fv-footer-link:hover {
   color: #E8A33D !important;
 }
 
 /* Footer subscribe button */
-.furniva-newsletter-form button[type="submit"] {
+.fv-subscribe-btn {
   transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.furniva-newsletter-form button[type="submit"]:hover {
-  background-color: #F2B458;
+.fv-subscribe-btn:hover {
+  background-color: #F2B458 !important;
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(232, 163, 61, 0.35);
 }
