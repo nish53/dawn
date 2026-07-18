@@ -3686,3 +3686,88 @@ details-disclosure > details {
 .footer__blocks-wrapper {
   order: 1;
 }
+
+/* ==========================================================================
+   Furniva: hover polish - no underlines anywhere, color/lift transitions
+   instead. Scoped overrides so this never regresses regardless of which
+   Dawn rule was adding the underline.
+   ========================================================================== */
+.card__heading a,
+.card__heading a:hover,
+.card__heading a:focus {
+  text-decoration: none;
+}
+
+.card__heading a {
+  transition: color 0.2s ease;
+}
+
+.card-wrapper:hover .card__heading a {
+  color: rgb(184, 134, 59);
+}
+
+/* Product card: gentle lift + shadow on hover instead of any underline */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-wrapper:hover .card {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.card__media img {
+  transition: transform 0.5s ease;
+}
+
+.card-wrapper:hover .card__media img {
+  transform: scale(1.04);
+}
+
+/* Buttons and links: smooth color/lift transitions, never abrupt */
+.button,
+a.button,
+.shopify-payment-button__button {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover,
+a.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Nav links: color transition, no underline jump */
+.fv-nav-item a {
+  transition: color 0.2s ease;
+}
+
+/* ==========================================================================
+   Scroll-reveal animation system - fade + slide up as sections enter view.
+   Driven by a tiny IntersectionObserver script (see snippet fv-animations),
+   not scroll-jank-prone JS. Respects prefers-reduced-motion for
+   accessibility and to avoid feeling laggy on lower-end devices.
+   ========================================================================== */
+.fv-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.6, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.6, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.fv-reveal.fv-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fv-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card-wrapper:hover .card,
+  .card-wrapper:hover .card__media img {
+    transform: none;
+  }
+}
