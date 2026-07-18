@@ -242,7 +242,7 @@
         "description_style": "body",
         "collection": "bestsellers",
         "products_to_show": 12,
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "color_scheme": "scheme-4",
         "full_width": false,
         "show_view_all": true,
