@@ -3866,3 +3866,45 @@ a.button:hover {
   transform: translateY(-3px);
   background-color: #F2B458;
 }
+
+/* Trust bar cards */
+.fv-trust-card {
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.fv-trust-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  border-color: rgba(184, 134, 59, 0.4);
+}
+
+/* Top bar links (Track Order, phone number) */
+.fv-topbar-link {
+  transition: color 0.2s ease;
+}
+
+.fv-topbar-link:hover {
+  color: #E8A33D !important;
+}
+
+/* Header right-side icons (search, account, wishlist, compare, cart) */
+.fv-icon-link {
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+}
+
+.fv-icon-link:hover {
+  color: rgb(184, 134, 59) !important;
+  transform: translateY(-2px);
+}
+
+/* Footer social icons */
+.fv-social-icon {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.fv-social-icon:hover {
+  background-color: #E8A33D !important;
+  color: #1A1A1A !important;
+  transform: translateY(-2px);
+}
