@@ -3906,3 +3906,10 @@ a.button:hover {
   color: #1A1A1A !important;
   transform: translateY(-2px);
 }
+
+/* Furniva: hide the "Sold out" badge on product cards per feedback -
+   the underlying out-of-stock behavior (disabled Add to Cart, etc.)
+   stays intact, just the visual badge overlay is removed. */
+.card__badge {
+  display: none !important;
+}
