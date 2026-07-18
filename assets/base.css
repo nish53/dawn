@@ -3869,13 +3869,11 @@ a.button:hover {
 
 /* Trust bar cards */
 .fv-trust-card {
-  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .fv-trust-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
-  border-color: rgba(184, 134, 59, 0.4);
 }
 
 /* Top bar links (Track Order, phone number) */
