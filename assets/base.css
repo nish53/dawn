@@ -3704,7 +3704,7 @@ details-disclosure > details {
 }
 
 .card-wrapper:hover .card__heading a {
-  color: rgb(184, 134, 59);
+  color: rgb(31, 58, 95);
 }
 
 /* Product card: gentle lift + shadow on hover instead of any underline */
@@ -3825,7 +3825,7 @@ a.button:hover {
 }
 
 .fv-nav-link:hover {
-  color: rgb(184, 134, 59) !important;
+  color: rgb(31, 58, 95) !important;
 }
 
 .fv-dropdown-link {
@@ -3833,7 +3833,7 @@ a.button:hover {
 }
 
 .fv-dropdown-link:hover {
-  color: rgb(184, 134, 59) !important;
+  color: rgb(31, 58, 95) !important;
   padding-left: 4px;
 }
 
@@ -3843,7 +3843,7 @@ a.button:hover {
 }
 
 .fv-footer-link:hover {
-  color: #E8A33D !important;
+  color: #2C5F8A !important;
 }
 
 /* Footer subscribe button */
@@ -3852,9 +3852,9 @@ a.button:hover {
 }
 
 .fv-subscribe-btn:hover {
-  background-color: #F2B458 !important;
+  background-color: #3D72A4 !important;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(232, 163, 61, 0.35);
+  box-shadow: 0 6px 16px rgba(44, 95, 138, 0.35);
 }
 
 /* Back-to-top button */
@@ -3864,7 +3864,7 @@ a.button:hover {
 
 #fv-back-to-top:hover {
   transform: translateY(-3px);
-  background-color: #F2B458;
+  background-color: #3D72A4;
 }
 
 /* Trust bar cards */
@@ -3882,7 +3882,7 @@ a.button:hover {
 }
 
 .fv-topbar-link:hover {
-  color: #E8A33D !important;
+  color: #2C5F8A !important;
 }
 
 /* Header right-side icons (search, account, wishlist, compare, cart) */
@@ -3892,7 +3892,7 @@ a.button:hover {
 }
 
 .fv-icon-link:hover {
-  color: rgb(184, 134, 59) !important;
+  color: rgb(31, 58, 95) !important;
   transform: translateY(-2px);
 }
 
@@ -3902,14 +3902,17 @@ a.button:hover {
 }
 
 .fv-social-icon:hover {
-  background-color: #E8A33D !important;
+  background-color: #2C5F8A !important;
   color: #1A1A1A !important;
   transform: translateY(-2px);
 }
 
-/* Furniva: hide the "Sold out" badge on product cards per feedback -
-   the underlying out-of-stock behavior (disabled Add to Cart, etc.)
-   stays intact, just the visual badge overlay is removed. */
-.card__badge {
+/* Sold out badge restored - see quick-add button hide rule below instead */
+
+/* Hide the disabled "Sold out" quick-add button on product cards specifically
+   (the small badge overlay stays - this only removes the boxed button below
+   the price on out-of-stock items). Product page's own sold-out button is
+   untouched since that context still needs it. */
+.quick-add__submit:disabled {
   display: none !important;
 }
