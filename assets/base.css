@@ -3704,7 +3704,7 @@ details-disclosure > details {
 }
 
 .card-wrapper:hover .card__heading a {
-  color: rgb(31, 58, 95);
+  color: rgb(244, 165, 28);
 }
 
 /* Product card: gentle lift + shadow on hover instead of any underline */
@@ -3825,7 +3825,7 @@ a.button:hover {
 }
 
 .fv-nav-link:hover {
-  color: rgb(31, 58, 95) !important;
+  color: rgb(244, 165, 28) !important;
 }
 
 .fv-dropdown-link {
@@ -3833,7 +3833,7 @@ a.button:hover {
 }
 
 .fv-dropdown-link:hover {
-  color: rgb(31, 58, 95) !important;
+  color: rgb(244, 165, 28) !important;
   padding-left: 4px;
 }
 
@@ -3843,7 +3843,7 @@ a.button:hover {
 }
 
 .fv-footer-link:hover {
-  color: #2C5F8A !important;
+  color: #f4a51c !important;
 }
 
 /* Footer subscribe button */
@@ -3852,9 +3852,9 @@ a.button:hover {
 }
 
 .fv-subscribe-btn:hover {
-  background-color: #3D72A4 !important;
+  background-color: #f7b649 !important;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(44, 95, 138, 0.35);
+  box-shadow: 0 6px 16px rgba(244, 165, 28, 0.35);
 }
 
 /* Back-to-top button */
@@ -3864,7 +3864,7 @@ a.button:hover {
 
 #fv-back-to-top:hover {
   transform: translateY(-3px);
-  background-color: #3D72A4;
+  background-color: #f7b649;
 }
 
 /* Trust bar cards */
@@ -3882,7 +3882,7 @@ a.button:hover {
 }
 
 .fv-topbar-link:hover {
-  color: #2C5F8A !important;
+  color: #f4a51c !important;
 }
 
 /* Header right-side icons (search, account, wishlist, compare, cart) */
@@ -3892,7 +3892,7 @@ a.button:hover {
 }
 
 .fv-icon-link:hover {
-  color: rgb(31, 58, 95) !important;
+  color: rgb(244, 165, 28) !important;
   transform: translateY(-2px);
 }
 
@@ -3902,8 +3902,8 @@ a.button:hover {
 }
 
 .fv-social-icon:hover {
-  background-color: #2C5F8A !important;
-  color: #1A1A1A !important;
+  background-color: #f4a51c !important;
+  color: #152420 !important;
   transform: translateY(-2px);
 }
 
