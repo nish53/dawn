@@ -3916,3 +3916,47 @@ a.button:hover {
 .quick-add__submit:disabled {
   display: none !important;
 }
+
+/* ==========================================================================
+   Furniva collection page: restyle Dawn's native facets/filters/sort/
+   pagination to match the pill aesthetic. This only changes appearance -
+   the underlying filtering, sorting, and pagination remain Dawn's real,
+   fully functional faceted search system.
+   ========================================================================== */
+.facets__disclosure .facets__summary,
+.facets-pill .facets__disclosure {
+  border-radius: 20px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background: #F7F5F1 !important;
+  border: 1px solid #EDEBE5 !important;
+}
+
+.active-facets__button-inner.button--tertiary {
+  border-radius: 6px !important;
+  background: #EAF3E4 !important;
+  color: #3D6B1F !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  border-color: transparent !important;
+}
+
+.facets__sort {
+  border-radius: 8px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 12px !important;
+}
+
+.pagination__list .pagination__item {
+  border-radius: 8px !important;
+}
+
+.pagination a,
+.pagination span {
+  font-weight: 600 !important;
+}
+
+/* Collection product grid: use the same landscape ratio + tighter padding as homepage rows */
+.collection .product-grid {
+  gap: 14px !important;
+}
