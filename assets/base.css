@@ -3971,4 +3971,8 @@ a.button:hover {
   position: sticky !important;
   top: 0 !important;
   z-index: 60 !important;
+  transition: box-shadow 0.2s ease;
+}
+#shopify-section-sections--19686409142385__header.fv-is-stuck {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
