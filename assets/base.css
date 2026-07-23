@@ -3969,6 +3969,8 @@ a.button:hover {
    position:sticky regardless of the sticky element's own CSS. */
 .shopify-section-group-header-group,
 .shopify-section-group-header-group .section,
+.shopify-section-group-header-group .gradient,
+.shopify-section-group-header-group .color-scheme-1,
 [class*="__header-padding"],
 [class*="-header-padding"] {
   overflow: visible !important;
