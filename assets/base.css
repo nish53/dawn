@@ -3976,3 +3976,26 @@ a.button:hover {
 #shopify-section-sections--19686409142385__header.fv-is-stuck {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
+
+/* Force single-row horizontal slider behavior on all product-row carousels
+   (Bestsellers, Shoe Racks, Beds, TV Units, Study, Dining on homepage, and
+   any other section with the desktop slider enabled). Dawn's base .grid
+   class sets flex-wrap:wrap by default, which can win the cascade over the
+   slider's own flex-wrap:inherit depending on stylesheet load order -
+   forcing nowrap + horizontal-only overflow here removes any ambiguity so
+   these never wrap into multiple vertical rows. */
+.slider--desktop,
+.slider--tablet,
+.slider--mobile,
+.slider--everywhere {
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
+/* Hide the slider's numeric pagination counter (e.g. "1 / 5") on product
+   row carousels - keep the prev/next arrow buttons, just remove the
+   counter text since no pagination indicator is wanted. */
+.slider-counter {
+  display: none !important;
+}
