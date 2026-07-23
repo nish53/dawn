@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_liquid": "<div class=\"page-width\" style=\"padding:30px 0 60px;max-width:760px;\">\n  <h1 style=\"font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#152420;margin-bottom:8px;\">Returns Policy</h1>\n  <p style=\"font-size:14px;color:#666;margin-bottom:28px;\">Free replacement within 3 days for damaged, defective, or incorrect items.</p>\n  <div style=\"font-size:14px;color:#3a3a3a;line-height:1.8;\">\n<p style=\"margin-bottom:10px;\">Here's a summary of Furniva's refund and return process.</p><p style=\"margin-bottom:10px;\">We offer a free replacement within 3 days of delivery in the unlikely event that you receive a damaged, defective, or incorrect item.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">How to Report an Issue</h3><p style=\"margin-bottom:10px;\">Email us at support@furniva.in with details and images of the product. In some cases, we may schedule a technician visit to evaluate the product. Based on the technician's report, we will offer a replacement, repair, or a partial refund as per your choice. Full replacements are offered if a repair isn't feasible.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">If We Cannot Replace the Product</h3><p style=\"margin-bottom:10px;\">We'll arrange a free return pickup and process a full refund once the item arrives back at our warehouse. To ensure a smooth return, please keep the item in its original condition with all original packaging, manuals, warranty cards, and accessories intact.</p><p style=\"margin-bottom:10px;\">For any additional questions, feel free to contact us at support@furniva.in.</p>\n  </div>\n</div>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

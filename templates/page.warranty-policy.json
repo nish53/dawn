@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_liquid": "<div class=\"page-width\" style=\"padding:30px 0 60px;max-width:760px;\">\n  <h1 style=\"font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#152420;margin-bottom:8px;\">Warranty Policy</h1>\n  <p style=\"font-size:14px;color:#666;margin-bottom:28px;\">We're confident you'll love our products &mdash; here's what's covered.</p>\n  <div style=\"font-size:14px;color:#3a3a3a;line-height:1.8;\">\n<p style=\"margin-bottom:10px;\">At Furniva, our products are crafted with exceptional care and precision to ensure you get the finest experience.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">What is covered under the Furniva warranty?</h3><ul style=\"margin:0 0 12px 20px;\"><li style=\"margin-bottom:6px;\">Solid Wood Products: 2-year warranty.</li><li style=\"margin-bottom:6px;\">Engineered Wood Products: No warranty provided.</li></ul><p style=\"margin-bottom:10px;\">Our warranty covers manufacturing defects under regular and intended use during the warranty period.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">How do I inspect my product at delivery?</h3><p style=\"margin-bottom:10px;\">Please inspect your furniture thoroughly upon delivery. If you find any damaged or defective parts, notify us within 3 days of receipt.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">What if my product is damaged on arrival?</h3><ul style=\"margin:0 0 12px 20px;\"><li style=\"margin-bottom:6px;\">Contact us within 3 days of delivery.</li><li style=\"margin-bottom:6px;\">Provide photos or videos of the damage for verification.</li></ul><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">What does the warranty NOT cover?</h3><ul style=\"margin:0 0 12px 20px;\"><li style=\"margin-bottom:6px;\">Modifications or alterations made after purchase.</li><li style=\"margin-bottom:6px;\">Physical damage reported after 3 days of delivery.</li><li style=\"margin-bottom:6px;\">Natural wear and tear from daily use.</li><li style=\"margin-bottom:6px;\">Variations in wood grains, color shades, or patterns.</li><li style=\"margin-bottom:6px;\">Improper usage or damage from moving furniture between locations.</li><li style=\"margin-bottom:6px;\">Damage due to self-installation or improper handling.</li></ul><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">What is the return policy?</h3><p style=\"margin-bottom:10px;\">We do not accept returns on purchased products. However, if any parts show manufacturing defects during installation, we will replace those parts as needed.</p>\n  </div>\n</div>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

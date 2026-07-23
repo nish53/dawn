@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_liquid": "<div class=\"page-width\" style=\"padding:30px 0 60px;max-width:760px;\">\n  <h1 style=\"font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#152420;margin-bottom:8px;\">Shipping Policy</h1>\n  <p style=\"font-size:14px;color:#666;margin-bottom:28px;\">Processing times, tracking, and delivery coverage.</p>\n  <div style=\"font-size:14px;color:#3a3a3a;line-height:1.8;\">\n<p style=\"margin-bottom:10px;\">Here's everything you need to know about Furniva's shipping policy.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">Order Processing</h3><p style=\"margin-bottom:10px;\">We process all orders within 1-2 business days (excluding Sundays and public holidays). During high order volume, minor delays may occur &mdash; we'll promptly inform you of any expected delay.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">Cancellations After Shipping</h3><p style=\"margin-bottom:10px;\">Once an order has been shipped, we're unable to cancel it. If you refuse delivery on arrival, we will deduct both forward and return shipping costs before processing your refund, after the product is returned to our warehouse.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">Shipping Charges</h3><p style=\"margin-bottom:10px;\">Furniva offers free shipping on all orders within our delivery coverage areas. Products are shipped securely via major carriers like Safexpress, FedEx, BlueDart, and Delhivery. We deliver across India to pin codes covered by our delivery partners.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">Tracking Your Order</h3><p style=\"margin-bottom:10px;\">You may track your order using one of the following methods:</p><ul style=\"margin:0 0 12px 20px;\"><li style=\"margin-bottom:6px;\">Enter your registered email address or phone number and order number.</li><li style=\"margin-bottom:6px;\">Locate your unique tracking ID on the \"My Orders\" page under your \"My Account\" section, then enter it directly into the tracking page.</li></ul><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">Are there any hidden fees?</h3><p style=\"margin-bottom:10px;\">No. Furniva ensures transparent pricing &mdash; the price listed on the product page is final and inclusive of taxes. Delivery charges, if applicable, are displayed at checkout. If assembly or installation is not included with your product, additional charges may apply and will vary depending on the product and your location.</p>\n  </div>\n</div>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

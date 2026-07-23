@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_liquid": "<div class=\"page-width\" style=\"padding:30px 0 60px;max-width:760px;\">\n  <h1 style=\"font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;color:#152420;margin-bottom:8px;\">Installation Policy</h1>\n  <p style=\"font-size:14px;color:#666;margin-bottom:28px;\">How assembly and installation works on your order.</p>\n  <div style=\"font-size:14px;color:#3a3a3a;line-height:1.8;\">\n<p style=\"margin-bottom:10px;\">Here's an overview of Furniva's installation and assembly services.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">Is assembly included with my purchase?</h3><p style=\"margin-bottom:10px;\">If assembly is included with your purchase, our team will schedule it within 72 hours of product delivery. In some cases, this may take a bit longer depending on technician availability. Please allow 72 hours before reaching out for an update.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">What if assembly is on a DIY basis?</h3><p style=\"margin-bottom:10px;\">For products sold on a Do-It-Yourself (DIY) basis, free assembly is not included. These products come with detailed manuals, guides, and online resources to assist you in setting up. For any questions, feel free to call our support team.</p><h3 style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#152420;margin:22px 0 8px;\">Can I purchase assembly as an add-on service?</h3><p style=\"margin-bottom:10px;\">Yes, you can add assembly services separately if it's not included. Simply log into your account and make a request via the \"My Account\" page, or call our support team, and they'll assist you in arranging assembly for your order.</p><p style=\"margin-bottom:10px;\">For any further assistance, please contact us at support@furniva.in.</p>\n  </div>\n</div>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

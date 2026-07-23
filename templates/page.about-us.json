@@ -1,126 +1,16 @@
 {
   "sections": {
-    "hero": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Furniture, without the runaround",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Launched in 2024 out of Jaipur, Rajasthan \u2014 built for people who need furniture to just work, fast.",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+    "main": {
+      "type": "custom-liquid",
       "settings": {
-        "image_overlay_opacity": 30,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": true
-      }
-    },
-    "story": {
-      "type": "rich-text",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
         "color_scheme": "scheme-1",
-        "full_width": true,
-        "page_width": "normal",
-        "padding_top": 48,
-        "padding_bottom": 24
-      },
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why we exist"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Most furniture shopping in India means one of two things: booking a carpenter and waiting weeks, or paying showroom prices. Furniva exists for everything in between \u2014 DIY furniture you assemble yourself in under an hour, designed for small apartments and busy schedules, priced for people who just moved and don't want to furnish a museum.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ]
-    },
-    "values": {
-      "type": "multicolumn",
-      "blocks": {
-        "no_carpenter": {
-          "type": "column",
-          "settings": {
-            "title": "DIY, done right",
-            "text": "<p>Everything you need to assemble it yourself is in the box \u2014 clear instructions, all hardware included, no tradesperson's schedule to wait on.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "real_budgets": {
-          "type": "column",
-          "settings": {
-            "title": "Priced for real life",
-            "text": "<p>Aesthetic doesn't have to mean expensive. We design for people furnishing their first place on their own money.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "actually_fast": {
-          "type": "column",
-          "settings": {
-            "title": "Actually fast",
-            "text": "<p>Free delivery and installation across India, with a real person on WhatsApp if something needs sorting out.</p>",
-            "link_label": "Chat with us",
-            "link": "https://wa.link/fwjc7x"
-          }
-        }
-      },
-      "block_order": [
-        "no_carpenter",
-        "real_budgets",
-        "actually_fast"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "background_style": "none",
-        "color_scheme": "scheme-2",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style_column": "none",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 24,
-        "padding_bottom": 48
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_liquid": "<div class=\"page-width\" style=\"padding:30px 0 50px;\">\n\n  <!-- HERO -->\n  <div style=\"background:#152420;border-radius:14px;padding:44px 32px;text-align:center;margin-bottom:36px;\">\n    <div style=\"font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#f4a51c;font-weight:600;margin-bottom:10px;\">About Furniva</div>\n    <h1 style=\"font-family:'Poppins',sans-serif;font-size:32px;font-weight:700;color:#FFFFFF;margin:0 0 14px;\">Online Furniture Shopping in India</h1>\n    <p style=\"font-size:15px;color:#D8D3C8;max-width:600px;margin:0 auto;line-height:1.7;\">At Furniva, you'll find an array of styles, from understated and functional to bold, geometric designs tailored for modern and luxurious homes.</p>\n  </div>\n\n  <!-- OUR STORY -->\n  <div style=\"max-width:720px;margin:0 auto 40px;\">\n    <h2 style=\"font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:#152420;margin-bottom:16px;text-align:center;\">Our Story</h2>\n    <p style=\"font-size:14.5px;color:#444;line-height:1.8;margin-bottom:14px;\">Welcome to Furniva, your trusted source for high-quality, beautifully designed, and affordable furniture in India. Established in 2024, Furniva is driven by a mission to <strong>redefine how Indian homes and offices experience comfort and style.</strong></p>\n    <p style=\"font-size:14.5px;color:#444;line-height:1.8;margin-bottom:14px;\">We believe that great design should be accessible to all, which is why our collection offers a wide variety of <strong>premium and minimalistic furniture</strong> pieces to elevate any space without stretching your budget.</p>\n    <p style=\"font-size:14.5px;color:#444;line-height:1.8;margin-bottom:14px;\">Our product range includes everything from sleek office essentials to aesthetic home furniture that seamlessly balances form and function. At Furniva, you'll find an <strong>array of styles</strong>, from understated and functional to bold, <strong>geometric designs</strong> tailored for modern and luxurious homes.</p>\n    <p style=\"font-size:14.5px;color:#444;line-height:1.8;\">Each piece is crafted to enhance your living experience, merging quality materials with innovative design. With Furniva, it's not just furniture &mdash; it's a lifestyle upgrade.</p>\n  </div>\n\n  <!-- WHY CHOOSE FURNIVA -->\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:#152420;margin-bottom:24px;text-align:center;\">Why Choose Furniva?</h2>\n  <div style=\"display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:20px;margin-bottom:40px;\">\n    <div style=\"text-align:center;padding:20px;\">\n      <div style=\"width:52px;height:52px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#152420\" stroke-width=\"1.6\"><path d=\"M9 12l2 2 4-4\"/><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>\n      </div>\n      <div style=\"font-size:15px;font-weight:700;color:#152420;margin-bottom:6px;\">Uncompromising Quality</div>\n      <div style=\"font-size:13px;color:#666;line-height:1.6;\">We believe in delivering products that are not just beautiful but also built to last.</div>\n    </div>\n    <div style=\"text-align:center;padding:20px;\">\n      <div style=\"width:52px;height:52px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#152420\" stroke-width=\"1.6\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>\n      </div>\n      <div style=\"font-size:15px;font-weight:700;color:#152420;margin-bottom:6px;\">Affordability Redefined</div>\n      <div style=\"font-size:13px;color:#666;line-height:1.6;\">Luxury shouldn't be a luxury. Our competitive pricing ensures you can elevate your space without breaking the bank.</div>\n    </div>\n    <div style=\"text-align:center;padding:20px;\">\n      <div style=\"width:52px;height:52px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#152420\" stroke-width=\"1.6\"><path d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/></svg>\n      </div>\n      <div style=\"font-size:15px;font-weight:700;color:#152420;margin-bottom:6px;\">Customer Satisfaction</div>\n      <div style=\"font-size:13px;color:#666;line-height:1.6;\">Your satisfaction is our priority. We strive to provide exceptional customer service and a hassle-free experience.</div>\n    </div>\n    <div style=\"text-align:center;padding:20px;\">\n      <div style=\"width:52px;height:52px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#152420\" stroke-width=\"1.6\"><path d=\"M3 3h18v18H3z\"/><path d=\"M3 9h18M9 21V9\"/></svg>\n      </div>\n      <div style=\"font-size:15px;font-weight:700;color:#152420;margin-bottom:6px;\">Diverse Range</div>\n      <div style=\"font-size:13px;color:#666;line-height:1.6;\">From minimalist designs to bold geometric pieces, we offer a wide variety of furniture to suit every style.</div>\n    </div>\n  </div>\n\n  <!-- SNAPSHOT -->\n  <div style=\"background:#F7F5F1;border-radius:12px;padding:24px 20px;display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px;margin-bottom:40px;text-align:center;\">\n    <div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:#152420;\">2024</div>\n      <div style=\"font-size:12px;color:#8A6E4A;\">Est.</div>\n    </div>\n    <div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:#152420;\">{{ collections.all.products_count | default: 40 }}+</div>\n      <div style=\"font-size:12px;color:#8A6E4A;\">Products</div>\n    </div>\n    <div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:#152420;\">Pan-India</div>\n      <div style=\"font-size:12px;color:#8A6E4A;\">Delivery</div>\n    </div>\n    <div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:#152420;\">Free</div>\n      <div style=\"font-size:12px;color:#8A6E4A;\">Installation</div>\n    </div>\n  </div>\n\n  <!-- SOCIALS -->\n  <div style=\"text-align:center;\">\n    <div style=\"font-size:13px;color:#666;margin-bottom:14px;\">Find us on social networks</div>\n    <div style=\"display:flex;justify-content:center;gap:14px;\">\n      <a href=\"https://x.com/Furniva_in\" style=\"color:#152420;\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M18.9 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.65h2.039L6.486 3.24H4.298Z\"/></svg></a>\n      <a href=\"https://www.instagram.com/furniva.in/\" style=\"color:#152420;\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z\"/></svg></a>\n    </div>\n  </div>\n\n</div>"
       }
     }
   },
   "order": [
-    "hero",
-    "story",
-    "values"
+    "main"
   ]
 }
