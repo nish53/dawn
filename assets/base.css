@@ -3975,3 +3975,14 @@ a.button:hover {
 [class*="-header-padding"] {
   overflow: visible !important;
 }
+
+/* Scoped specifically to the header-group context only - .gradient and
+   .color-scheme-1 are used broadly across the whole site for other
+   sections too, so this must not apply globally or every section using
+   those classes would also become sticky. */
+.shopify-section-group-header-group .gradient,
+.shopify-section-group-header-group .color-scheme-1 {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 60 !important;
+}
