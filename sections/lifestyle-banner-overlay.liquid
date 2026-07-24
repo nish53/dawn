@@ -7,7 +7,10 @@
     <div style="display:grid;grid-template-columns:repeat({{ section.blocks.size }}, 1fr);gap:16px;">
       {%- for block in section.blocks -%}
         {%- assign bg = block.settings.background_color | default: bg_colors[forloop.index0] -%}
-        {%- assign text_right = block.settings.text_position == 'right' -%}
+        {%- assign text_right = false -%}
+        {%- if block.settings.text_position == 'right' -%}
+          {%- assign text_right = true -%}
+        {%- endif -%}
         <div
           style="background:{{ bg }};border-radius:10px;overflow:hidden;position:relative;min-height:280px;display:flex;align-items:flex-end;{% if text_right %}justify-content:flex-end;{% endif %}"
           {{ block.shopify_attributes }}
