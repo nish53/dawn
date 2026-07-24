@@ -4006,14 +4006,8 @@ a.button:hover {
    section using the desktop slider, regardless of the section's own
    full_width setting, so it can peek past the edge. Restoring it here
    since a contained, consistent layout is wanted instead. */
-.slider-component-desktop.page-width,
-.slider-component-desktop {
+.slider-component-desktop.page-width {
   max-width: var(--page-width) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
-  box-sizing: border-box !important;
 }
 
 /* View All button positioned top-right next to the row title, with
