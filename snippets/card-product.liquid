@@ -147,9 +147,6 @@
         </div>
         <div class="card__content">
           <div class="card__information">
-            {%- if card_product.type != blank -%}
-              <div style="font-size:11.5px;color:#8A8A8A;margin-bottom:4px;">Categories: {{ card_product.type }}</div>
-            {%- endif -%}
             <h3
               class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
               {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -192,14 +189,6 @@
 
 
               {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
-              <div class="fv-card-tags" style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;">
-                <span style="font-size:10px;background:#F0F5EE;color:#3B6D11;padding:3px 8px;border-radius:20px;font-weight:600;">&check; Free Delivery</span>
-                {%- if card_product.tags contains 'Free-Install' -%}
-                  <span style="font-size:10px;background:#F0F5EE;color:#3B6D11;padding:3px 8px;border-radius:20px;font-weight:600;">&check; Free Install</span>
-                {%- else -%}
-                  <span style="font-size:10px;background:#F5F3EE;color:#8A6E4A;padding:3px 8px;border-radius:20px;font-weight:600;">Paid Install</span>
-                {%- endif -%}
-              </div>
               {%- if card_product.quantity_price_breaks_configured? -%}
                 {% if card_product.variants_count == 1 and quick_add == 'bulk' %}
                   {% liquid
