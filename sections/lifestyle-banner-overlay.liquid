@@ -12,14 +12,14 @@
           {%- assign text_right = true -%}
         {%- endif -%}
         <div
-          style="background:{{ bg }};border-radius:10px;overflow:hidden;position:relative;min-height:280px;"
+          style="background:{{ bg }};border-radius:10px;overflow:hidden;position:relative;height:0;padding-bottom:75%;"
           {{ block.shopify_attributes }}
         >
           {%- if block.settings.image -%}
             <img
               src="{{ block.settings.image | image_url: width: 600 }}"
               alt="{{ block.settings.image.alt | default: block.settings.heading }}"
-              style="display:block;width:100%;height:auto;position:relative;"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;"
             >
           {%- endif -%}
           <div style="position:absolute;top:0;left:0;width:100%;height:100%;{% if text_right %}text-align:right;{% endif %}">
