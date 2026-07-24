@@ -27,8 +27,10 @@
   assign price_max = product.price_max
   assign available = target.available | default: false
   assign percent_off = 0
+  assign show_compare = false
   if compare_at_price > price and compare_at_price > 0
     assign percent_off = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round
+    assign show_compare = true
   endif
   assign money_price = price | money | replace: "Rs.", "₹" | replace: "Rs", "₹"
   assign money_price_min = price_min | money | replace: "Rs.", "₹" | replace: "Rs", "₹"
@@ -65,7 +67,7 @@
       <div class="price__regular">
         {%- if product.quantity_price_breaks_configured? -%}
           {%- if show_compare_at_price and compare_at_price -%}
-            {%- unless product.price_varies == false and product.compare_at_price_varies or compare_at_price <= price %}
+            {%- unless product.price_varies == false and product.compare_at_price_varies or show_compare == false %}
               <span class="visually-hidden visually-hidden--inline">
                 {{- 'products.product.price.regular_price' | t -}}
               </span>
@@ -95,7 +97,7 @@
         {%- endif -%}
       </div>
       <div class="price__sale">
-        {%- unless product.price_varies == false and product.compare_at_price_varies or compare_at_price <= price %}
+        {%- unless product.price_varies == false and product.compare_at_price_varies or show_compare == false %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span>
             <s class="price-item price-item--regular">

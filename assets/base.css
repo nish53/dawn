@@ -4104,3 +4104,10 @@ a.button:hover {
   font-weight: 700 !important;
   white-space: nowrap !important;
 }
+
+/* Enabling show_badges on card prices activates the %-off pill we want,
+   but also brings Dawn's own "Sold out" text badge - hide just that one
+   since we already have a separate sold-out overlay on the card image. */
+.card .price__badge-sold-out {
+  display: none !important;
+}
