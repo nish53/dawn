@@ -4129,3 +4129,17 @@ a.button:hover {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
+
+/* Accent underline beneath every section heading on the homepage */
+.title.inline-richtext {
+  display: inline-block !important;
+}
+.title.inline-richtext::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 5px;
+  background: #f4a51c;
+  border-radius: 3px;
+  margin-top: 8px;
+}
