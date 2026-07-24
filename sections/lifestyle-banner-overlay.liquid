@@ -11,15 +11,19 @@
         {%- if block.settings.text_position == 'right' -%}
           {%- assign text_right = true -%}
         {%- endif -%}
+        {%- assign box_ratio = 75 -%}
+        {%- if block.settings.image.aspect_ratio -%}
+          {%- assign box_ratio = 100.0 | divided_by: block.settings.image.aspect_ratio -%}
+        {%- endif -%}
         <div
-          style="background:{{ bg }};border-radius:10px;overflow:hidden;position:relative;height:0;padding-bottom:75%;"
+          style="background:{{ bg }};border-radius:10px;overflow:hidden;position:relative;height:0;padding-bottom:{{ box_ratio }}%;"
           {{ block.shopify_attributes }}
         >
           {%- if block.settings.image -%}
             <img
               src="{{ block.settings.image | image_url: width: 600 }}"
               alt="{{ block.settings.image.alt | default: block.settings.heading }}"
-              style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;"
             >
           {%- endif -%}
           <div style="position:absolute;top:0;left:0;width:100%;height:100%;{% if text_right %}text-align:right;{% endif %}">
