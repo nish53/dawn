@@ -4117,3 +4117,15 @@ a.button:hover {
 .price__regular {
   display: none !important;
 }
+
+/* Shop by Categories: 6 per line on desktop, collapse responsively */
+@media screen and (max-width: 989px) {
+  .fv-category-grid-6 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media screen and (max-width: 599px) {
+  .fv-category-grid-6 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
