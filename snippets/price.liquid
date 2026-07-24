@@ -30,13 +30,13 @@
   if compare_at_price > price and compare_at_price > 0
     assign percent_off = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round
   endif
-  assign money_price = price | money
-  assign money_price_min = price_min | money
-  assign money_price_max = price_max | money
+  assign money_price = price | money | replace: "Rs.", "₹" | replace: "Rs", "₹"
+  assign money_price_min = price_min | money | replace: "Rs.", "₹" | replace: "Rs", "₹"
+  assign money_price_max = price_max | money | replace: "Rs.", "₹" | replace: "Rs", "₹"
   if settings.currency_code_enabled
-    assign money_price = price | money_with_currency
-    assign money_price_min = price_min | money_with_currency
-    assign money_price_max = price_max | money_with_currency
+    assign money_price = price | money_with_currency | replace: "Rs.", "₹" | replace: "Rs", "₹"
+    assign money_price_min = price_min | money_with_currency | replace: "Rs.", "₹" | replace: "Rs", "₹"
+    assign money_price_max = price_max | money_with_currency | replace: "Rs.", "₹" | replace: "Rs", "₹"
   endif
 
   if target == product and product.price_varies
@@ -65,16 +65,16 @@
       <div class="price__regular">
         {%- if product.quantity_price_breaks_configured? -%}
           {%- if show_compare_at_price and compare_at_price -%}
-            {%- unless product.price_varies == false and product.compare_at_price_varies %}
+            {%- unless product.price_varies == false and product.compare_at_price_varies or compare_at_price <= price %}
               <span class="visually-hidden visually-hidden--inline">
                 {{- 'products.product.price.regular_price' | t -}}
               </span>
               <span>
                 <s class="price-item price-item--regular variant-item__old-price">
                   {% if settings.currency_code_enabled %}
-                    {{ compare_at_price | money_with_currency }}
+                    {{ compare_at_price | money_with_currency | replace: "Rs.", "₹" | replace: "Rs", "₹" }}
                   {% else %}
-                    {{ compare_at_price | money }}
+                    {{ compare_at_price | money | replace: "Rs.", "₹" | replace: "Rs", "₹" }}
                   {% endif %}
                 </s>
               </span>
@@ -95,14 +95,14 @@
         {%- endif -%}
       </div>
       <div class="price__sale">
-        {%- unless product.price_varies == false and product.compare_at_price_varies %}
+        {%- unless product.price_varies == false and product.compare_at_price_varies or compare_at_price <= price %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span>
             <s class="price-item price-item--regular">
               {% if settings.currency_code_enabled %}
-                {{ compare_at_price | money_with_currency }}
+                {{ compare_at_price | money_with_currency | replace: "Rs.", "₹" | replace: "Rs", "₹" }}
               {% else %}
-                {{ compare_at_price | money }}
+                {{ compare_at_price | money | replace: "Rs.", "₹" | replace: "Rs", "₹" }}
               {% endif %}
             </s>
           </span>
