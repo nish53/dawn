@@ -4117,15 +4117,3 @@ a.button:hover {
 .price__regular {
   display: none !important;
 }
-
-/* Shop By Categories grid: responsive column collapse */
-@media screen and (max-width: 989px) {
-  #shopify-section-category_grid > .page-width > div[style*="grid-template-columns:repeat(6"] {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-}
-@media screen and (max-width: 599px) {
-  #shopify-section-category_grid > .page-width > div[style*="grid-template-columns:repeat(6"] {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
