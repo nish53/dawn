@@ -149,6 +149,7 @@
           <div class="card__information">
             <h3
               class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+              style="text-align:center;font-size:15px;font-weight:700;"
               {% if card_product.featured_media or settings.card_style == 'card' %}
                 id="title-{{ section_id }}-{{ card_product.id }}"
               {% endif %}
@@ -175,16 +176,16 @@
                 assign fv_rating_count = card_product.metafields.reviews.rating_count | default: 0
                 assign fv_rating_rounded = fv_rating | round
               -%}
-              <div class="fv-stars" style="display:flex;align-items:center;gap:5px;margin:2px 0;">
-                <span style="letter-spacing:1px;font-size:13px;color:#C9A63C;">
-                  {%- for i in (1..5) -%}
-                    {%- if i <= fv_rating_rounded -%}&#9733;{%- else -%}<span style="color:#D8D3C8;">&#9733;</span>{%- endif -%}
-                  {%- endfor -%}
-                </span>
-                <span style="font-size:11px;color:#888;">
-                  {%- if fv_rating_count > 0 -%}({{ fv_rating_count }}){%- else -%}No reviews yet{%- endif -%}
-                </span>
-              </div>
+              {%- if fv_rating_count > 0 -%}
+                <div class="fv-stars" style="display:flex;align-items:center;justify-content:center;gap:5px;margin:2px 0;">
+                  <span style="letter-spacing:1px;font-size:13px;color:#C9A63C;">
+                    {%- for i in (1..5) -%}
+                      {%- if i <= fv_rating_rounded -%}&#9733;{%- else -%}<span style="color:#D8D3C8;">&#9733;</span>{%- endif -%}
+                    {%- endfor -%}
+                  </span>
+                  <span style="font-size:11px;color:#888;">({{ fv_rating_count }})</span>
+                </div>
+              {%- endif -%}
 
 
 

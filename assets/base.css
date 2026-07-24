@@ -4080,21 +4080,40 @@ a.button:hover {
 .card .price__sale {
   display: flex !important;
   align-items: center !important;
-  gap: 4px !important;
+  justify-content: center !important;
+  gap: 6px !important;
   letter-spacing: -0.02em !important;
+  flex-wrap: wrap !important;
+}
+.card .price-item--sale {
+  order: -1 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #152420 !important;
 }
 .card .price-item--regular {
   color: #999 !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
 }
 .card .price__badge-sale {
   background: #f4a51c !important;
   color: #fff !important;
+  border: none !important;
   border-radius: 20px !important;
   padding: 2px 7px !important;
   font-size: 9.5px !important;
   font-weight: 700 !important;
   white-space: nowrap !important;
   margin-left: 2px !important;
+  order: 1 !important;
+}
+.card .price {
+  justify-content: center !important;
+}
+.card .price__badge-sold-out,
+.card .price__badge-sale {
+  border: none !important;
 }
 
 /* Enabling show_badges on card prices activates the %-off pill we want,
