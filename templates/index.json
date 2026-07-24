@@ -202,6 +202,7 @@
         "chest": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/22.webp",
             "title": "Organize in Style: Six Drawer Chest",
             "text": "<p>Spacious storage for every corner.</p>",
             "link_label": "Shop Now",
@@ -211,6 +212,7 @@
         "cabinets": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/21.webp",
             "title": "Stylish Storage Cabinets for Home",
             "text": "<p>Perfect shoe racks and cabinets. Order today.</p>",
             "link_label": "Shop Now",
@@ -220,6 +222,7 @@
         "bookshelves": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/20.webp",
             "title": "Bookshelves for Every Home",
             "text": "<p>Three, four, or five-layer designs.</p>",
             "link_label": "Shop Now",
