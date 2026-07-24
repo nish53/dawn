@@ -3999,3 +3999,26 @@ a.button:hover {
 .slider-counter {
   display: none !important;
 }
+
+/* Keep product carousels contained within the site's normal page-width,
+   matching every other section - Dawn's own slider CSS intentionally
+   removes the max-width constraint on desktop (min-width:990px) for ANY
+   section using the desktop slider, regardless of the section's own
+   full_width setting, so it can peek past the edge. Restoring it here
+   since a contained, consistent layout is wanted instead. */
+@media screen and (min-width: 990px) {
+  .slider-component-desktop.page-width {
+    max-width: var(--page-width) !important;
+  }
+}
+
+/* View All button positioned top-right next to the row title, with
+   !important to guarantee this wins regardless of any other rule
+   targeting .title-wrapper or .collection__title. */
+.fv-title-with-view-all {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
