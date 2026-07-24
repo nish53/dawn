@@ -4078,18 +4078,18 @@ a.button:hover {
   display: flex !important;
   align-items: center !important;
   flex-wrap: nowrap !important;
-  gap: 8px !important;
+  gap: 4px !important;
 }
 .card .price__container {
   display: flex !important;
   align-items: center !important;
-  gap: 8px !important;
+  gap: 4px !important;
   flex-wrap: nowrap !important;
 }
 .card .price__sale {
   display: flex !important;
   align-items: center !important;
-  gap: 8px !important;
+  gap: 4px !important;
   letter-spacing: -0.02em !important;
 }
 .card .price-item--regular {
@@ -4099,10 +4099,11 @@ a.button:hover {
   background: #f4a51c !important;
   color: #fff !important;
   border-radius: 20px !important;
-  padding: 4px 10px !important;
-  font-size: 11px !important;
+  padding: 2px 7px !important;
+  font-size: 9.5px !important;
   font-weight: 700 !important;
   white-space: nowrap !important;
+  margin-left: 2px !important;
 }
 
 /* Enabling show_badges on card prices activates the %-off pill we want,
