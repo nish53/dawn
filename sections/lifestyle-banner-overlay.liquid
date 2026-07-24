@@ -1,0 +1,97 @@
+{%- liquid
+  assign bg_colors = '#EAEAEA,#B9CFCB,#B7BDD1' | split: ','
+-%}
+
+<div class="page-width">
+  {%- if section.blocks.size > 0 -%}
+    <div style="display:grid;grid-template-columns:repeat({{ section.blocks.size }}, 1fr);gap:16px;">
+      {%- for block in section.blocks -%}
+        {%- assign bg = block.settings.background_color | default: bg_colors[forloop.index0] -%}
+        <div
+          style="background:{{ bg }};border-radius:10px;overflow:hidden;position:relative;min-height:280px;display:flex;align-items:flex-end;"
+          {{ block.shopify_attributes }}
+        >
+          {%- if block.settings.image -%}
+            <img
+              src="{{ block.settings.image | image_url: width: 600 }}"
+              alt="{{ block.settings.image.alt | default: block.settings.heading }}"
+              style="position:absolute;top:0;right:0;height:100%;width:70%;object-fit:cover;"
+            >
+          {%- endif -%}
+          <div style="position:relative;padding:20px;max-width:60%;">
+            {%- if block.settings.heading != blank -%}
+              <h3 style="font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:#152420;margin:0 0 8px;line-height:1.3;">{{ block.settings.heading }}</h3>
+            {%- endif -%}
+            {%- if block.settings.link_text != blank -%}
+              <a href="{{ block.settings.link | default: '#' }}" style="font-size:13px;font-weight:600;color:#152420;text-decoration:underline;">{{ block.settings.link_text }}</a>
+            {%- endif -%}
+            {%- if block.settings.subtext != blank -%}
+              <div style="font-size:12.5px;color:#3a3a3a;margin-top:6px;">{{ block.settings.subtext }}</div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- else -%}
+    <p style="font-size:13px;color:#999;text-align:center;">No columns added yet - add a "Column" block in the theme editor to get started.</p>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Category Banner (Overlay)",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "info": "Leave unset to use the default rotating color"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Column heading"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "subtext",
+          "label": "Subtext",
+          "info": "e.g. pricing or a short offer line"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Banner (Overlay)",
+      "blocks": [
+        { "type": "column" },
+        { "type": "column" },
+        { "type": "column" }
+      ]
+    }
+  ]
+}
+{% endschema %}
