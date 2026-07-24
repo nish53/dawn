@@ -4112,3 +4112,8 @@ a.button:hover {
 .card .price__badge-sold-out {
   display: none !important;
 }
+
+.price--sold-out .price__availability,
+.price__regular {
+  display: none;
+}
