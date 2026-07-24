@@ -4006,7 +4006,7 @@ a.button:hover {
    section using the desktop slider, regardless of the section's own
    full_width setting, so it can peek past the edge. Restoring it here
    since a contained, consistent layout is wanted instead. */
-.slider-component-desktop.page-width {
+.slider-component-desktop {
   max-width: var(--page-width) !important;
   margin-left: auto !important;
   margin-right: auto !important;
