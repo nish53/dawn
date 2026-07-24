@@ -21,7 +21,7 @@
         "image_shape": "default",
         "padding_top": 40,
         "padding_bottom": 40,
-        "quick_add": "standard"
+        "quick_add": "none"
       }
     },
     "beds_row": {
@@ -45,7 +45,7 @@
         "image_shape": "default",
         "padding_top": 40,
         "padding_bottom": 40,
-        "quick_add": "standard"
+        "quick_add": "none"
       }
     },
     "tv_units_row": {
@@ -69,7 +69,7 @@
         "image_shape": "default",
         "padding_top": 40,
         "padding_bottom": 40,
-        "quick_add": "standard"
+        "quick_add": "none"
       }
     },
     "lifestyle_banner": {
@@ -147,7 +147,7 @@
         "image_shape": "default",
         "padding_top": 40,
         "padding_bottom": 40,
-        "quick_add": "standard"
+        "quick_add": "none"
       }
     },
     "dining_row": {
@@ -171,7 +171,7 @@
         "image_shape": "default",
         "padding_top": 40,
         "padding_bottom": 40,
-        "quick_add": "standard"
+        "quick_add": "none"
       }
     },
     "seo_text": {
@@ -258,7 +258,7 @@
         "image_shape": "default",
         "padding_top": 40,
         "padding_bottom": 40,
-        "quick_add": "standard"
+        "quick_add": "none"
       }
     },
     "hero_new": {
