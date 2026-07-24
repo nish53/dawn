@@ -204,6 +204,7 @@
           "settings": {
             "image": "shopify://shop_images/22.webp",
             "background_color": "",
+            "text_position": "left",
             "heading": "Organize in Style: Six Drawer Chest",
             "link_text": "Spacious storage for every corner",
             "link": "/collections/chest-of-drawers",
@@ -215,6 +216,7 @@
           "settings": {
             "image": "shopify://shop_images/21.webp",
             "background_color": "",
+            "text_position": "left",
             "heading": "Stylish Storage Cabinets for Home",
             "link_text": "Perfect shoe racks & cabinets",
             "link": "/collections/shoe-racks",
@@ -226,6 +228,7 @@
           "settings": {
             "image": "shopify://shop_images/20.webp",
             "background_color": "",
+            "text_position": "right",
             "heading": "Bookshelves for Every Home",
             "link_text": "Three, four, or five-layer designs",
             "link": "/collections/bookshelves",
