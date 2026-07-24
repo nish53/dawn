@@ -4061,3 +4061,8 @@ a.button:hover {
     width: calc(100% / 3 - var(--grid-desktop-horizontal-spacing) * 2 / 3) !important;
   }
 }
+
+/* Zero out margin on section title headings per direct instruction */
+.title.inline-richtext {
+  margin: 0 !important;
+}
