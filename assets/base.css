@@ -4009,7 +4009,8 @@ a.button:hover {
 .slider-component-desktop {
   max-width: var(--page-width) !important;
   margin: 0 auto !important;
-  padding: 0 1.5rem !important;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
 }
 
 /* View All button positioned top-right next to the row title, with
