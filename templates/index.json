@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "hero_new": {
@@ -197,56 +188,12 @@
       }
     },
     "lifestyle_banner": {
-      "type": "multicolumn",
-      "blocks": {
-        "chest": {
-          "type": "column",
-          "settings": {
-            "title": "Organize in Style: Six Drawer Chest",
-            "text": "<p>Spacious storage for every corner.</p>",
-            "link_label": "Shop Now",
-            "link": "shopify://collections/storage-units"
-          }
-        },
-        "cabinets": {
-          "type": "column",
-          "settings": {
-            "title": "Stylish Storage Cabinets for Home",
-            "text": "<p>Perfect shoe racks and cabinets. Order today.</p>",
-            "link_label": "Shop Now",
-            "link": "shopify://collections/storage-units"
-          }
-        },
-        "bookshelves": {
-          "type": "column",
-          "settings": {
-            "title": "Bookshelves for Every Home",
-            "text": "<p>Three, four, or five-layer designs.</p>",
-            "link_label": "Shop Now",
-            "link": "shopify://collections/work-study"
-          }
-        }
-      },
-      "block_order": [
-        "chest",
-        "cabinets",
-        "bookshelves"
-      ],
+      "type": "custom-liquid",
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "landscape",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
         "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "custom_liquid": "<div class=\"page-width\">\n  <div style=\"display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;\">\n\n    <div style=\"background:#EAEAEA;border-radius:10px;overflow:hidden;position:relative;min-height:280px;display:flex;align-items:flex-end;\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Regal-Best-6-Drawer-Chest-of-Drawers-800x800.webp\" alt=\"Six Drawer Chest\" style=\"position:absolute;top:0;right:0;height:100%;width:70%;object-fit:cover;\">\n      <div style=\"position:relative;padding:20px;max-width:60%;\">\n        <h3 style=\"font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:#152420;margin:0 0 8px;line-height:1.3;\">Organize in Style: Six Drawer Chest</h3>\n        <a href=\"/collections/chest-of-drawers\" style=\"font-size:13px;font-weight:600;color:#152420;text-decoration:underline;\">Spacious storage for every corner</a>\n        <div style=\"font-size:12.5px;color:#3a3a3a;margin-top:6px;\">Get yours now at just &#8377;9,999/-*</div>\n      </div>\n    </div>\n\n    <div style=\"background:#B9CFCB;border-radius:10px;overflow:hidden;position:relative;min-height:280px;display:flex;align-items:flex-end;\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-Fusion-Tall-Shoe-Cabinet-Sonoma-Oak-White-1-800x799.webp\" alt=\"Storage Cabinets\" style=\"position:absolute;top:0;right:0;height:100%;width:70%;object-fit:cover;\">\n      <div style=\"position:relative;padding:20px;max-width:60%;\">\n        <h3 style=\"font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:#152420;margin:0 0 8px;line-height:1.3;\">Stylish Storage Cabinets for Home</h3>\n        <a href=\"/collections/shoe-racks\" style=\"font-size:13px;font-weight:600;color:#152420;text-decoration:underline;\">Perfect shoe racks &amp; cabinets</a>\n        <div style=\"font-size:12.5px;color:#3a3a3a;margin-top:6px;\">Starting at just &#8377;4,299/-*. Order today!</div>\n      </div>\n    </div>\n\n    <div style=\"background:#B7BDD1;border-radius:10px;overflow:hidden;position:relative;min-height:280px;display:flex;align-items:flex-end;\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0695/6387/5441/files/1a-1-800x800.jpg\" alt=\"Bookshelves\" style=\"position:absolute;top:0;right:0;height:100%;width:70%;object-fit:cover;\">\n      <div style=\"position:relative;padding:20px;max-width:60%;\">\n        <h3 style=\"font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:#152420;margin:0 0 8px;line-height:1.3;\">Bookshelves for Every Home</h3>\n        <a href=\"/collections/bookshelves\" style=\"font-size:13px;font-weight:600;color:#152420;text-decoration:underline;\">Three, four, or five-layer designs</a>\n        <div style=\"font-size:12.5px;color:#3a3a3a;margin-top:6px;\">Starting from &#8377;3,999/-*. Shop now!</div>\n      </div>\n    </div>\n\n  </div>\n</div>"
       }
     },
     "study_row": {
