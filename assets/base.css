@@ -4006,10 +4006,14 @@ a.button:hover {
    section using the desktop slider, regardless of the section's own
    full_width setting, so it can peek past the edge. Restoring it here
    since a contained, consistent layout is wanted instead. */
-@media screen and (min-width: 990px) {
-  .slider-component-desktop.page-width {
-    max-width: var(--page-width) !important;
-  }
+.slider-component-desktop.page-width,
+.slider-component-desktop {
+  max-width: var(--page-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  box-sizing: border-box !important;
 }
 
 /* View All button positioned top-right next to the row title, with
@@ -4029,4 +4033,11 @@ a.button:hover {
 }
 .fv-title-with-view-all .collection__view-all--top {
   flex-shrink: 0 !important;
+}
+
+/* Remove the leftover margin-top Dawn applied to the View All button when
+   it sat below the grid - now that it's repositioned beside the title,
+   that margin just misaligns it and adds inconsistent extra space. */
+.fv-title-with-view-all .collection__view-all--top a:not(.link) {
+  margin-top: 0 !important;
 }
