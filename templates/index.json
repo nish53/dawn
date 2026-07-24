@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_new": {
@@ -21,51 +30,6 @@
     "as_seen_on": {
       "type": "shoppable-videos",
       "blocks": {
-        "video_nmHLTy": {
-          "type": "video",
-          "settings": {
-            "view_count": "1K",
-            "video_type": "iframe",
-            "video_url": "",
-            "product": ""
-          }
-        },
-        "video_3Xam8D": {
-          "type": "video",
-          "settings": {
-            "view_count": "1K",
-            "video_type": "iframe",
-            "video_url": "",
-            "product": ""
-          }
-        },
-        "video_EwckBT": {
-          "type": "video",
-          "settings": {
-            "view_count": "1K",
-            "video_type": "iframe",
-            "video_url": "",
-            "product": ""
-          }
-        },
-        "video_iQBT44": {
-          "type": "video",
-          "settings": {
-            "view_count": "1K",
-            "video_type": "iframe",
-            "video_url": "",
-            "product": ""
-          }
-        },
-        "video_VrmT7M": {
-          "type": "video",
-          "settings": {
-            "view_count": "1K",
-            "video_type": "iframe",
-            "video_url": "",
-            "product": ""
-          }
-        },
         "video_XUiWGf": {
           "type": "video",
           "settings": {
@@ -73,7 +37,7 @@
             "view_count": "500",
             "video_type": "iframe",
             "video_url": "https://www.instagram.com/p/DbDYISkD-Ik/",
-            "product": ""
+            "product": "furniva-skyline-6-feet-wooden-two-door-utility-shoe-rack-columbia-walnut"
           }
         },
         "video-1": {
@@ -88,11 +52,6 @@
         }
       },
       "block_order": [
-        "video_nmHLTy",
-        "video_3Xam8D",
-        "video_EwckBT",
-        "video_iQBT44",
-        "video_VrmT7M",
         "video_XUiWGf",
         "video-1"
       ],
