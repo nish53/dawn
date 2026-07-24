@@ -4159,3 +4159,15 @@ a.button:hover {
 .page-width > div[style*="overflow-x:auto"]::-webkit-scrollbar {
   display: none;
 }
+
+/* Browse by Category: fixed 6-column grid, 2 rows, no horizontal overflow */
+@media screen and (max-width: 989px) {
+  .fv-category-grid-6x2 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media screen and (max-width: 599px) {
+  .fv-category-grid-6x2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
