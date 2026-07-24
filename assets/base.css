@@ -4149,3 +4149,13 @@ a.button:hover {
 #shopify-section-category_grid {
   background: linear-gradient(180deg, rgba(21, 36, 32, 0.05) 0%, rgba(21, 36, 32, 0) 100%) !important;
 }
+
+/* Hide scrollbar on horizontally-scrolling flex rows (video carousel,
+   testimonials) while keeping the scroll functionality itself */
+.page-width > div[style*="overflow-x:auto"] {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.page-width > div[style*="overflow-x:auto"]::-webkit-scrollbar {
+  display: none;
+}
