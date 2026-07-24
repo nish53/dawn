@@ -4008,6 +4008,8 @@ a.button:hover {
    since a contained, consistent layout is wanted instead. */
 .slider-component-desktop.page-width {
   max-width: var(--page-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* View All button positioned top-right next to the row title, with
