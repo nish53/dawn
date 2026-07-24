@@ -3792,21 +3792,12 @@ a.button:hover {
 }
 
 /* Category grid tiles */
-.fv-category-tile {
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
-}
-
-.fv-category-tile:hover {
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
-}
-
 .fv-category-tile img {
   transition: transform 0.5s ease;
 }
 
 .fv-category-tile:hover img {
-  transform: scale(1.03);
+  transform: scale(1.08);
 }
 
 /* Edit banner tiles (Bedroom Edit / Storage Edit) */
