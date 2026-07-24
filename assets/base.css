@@ -4067,3 +4067,8 @@ a.button:hover {
 .title.inline-richtext {
   margin: 0 !important;
 }
+
+/* Remove slider prev/next arrow buttons per direct instruction */
+.slider-buttons {
+  display: none !important;
+}
