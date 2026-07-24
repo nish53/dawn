@@ -4037,3 +4037,27 @@ a.button:hover {
 .fv-title-with-view-all .collection__view-all--top a:not(.link) {
   margin-top: 0 !important;
 }
+
+/* Per direct instruction: neutralize Dawn's peek-effect calculations that
+   size each card based on --desktop-margin-left-first-item (designed for
+   the old full-bleed edge-peek behavior) and the extra left margin on the
+   first slide - both were causing inconsistent card sizing/spacing once
+   the carousel was made to sit within the contained page-width layout. */
+@media screen and (min-width: 990px) {
+  .slider--desktop .slider__slide:first-child {
+    margin-left: 0 !important;
+    scroll-margin-left: 0 !important;
+  }
+
+  .slider--desktop.grid--5-col-desktop .grid__item {
+    width: calc(100% / 5 - var(--grid-desktop-horizontal-spacing) * 4 / 5) !important;
+  }
+
+  .slider--desktop.grid--4-col-desktop .grid__item {
+    width: calc(100% / 4 - var(--grid-desktop-horizontal-spacing) * 3 / 4) !important;
+  }
+
+  .slider--desktop.grid--3-col-desktop .grid__item {
+    width: calc(100% / 3 - var(--grid-desktop-horizontal-spacing) * 2 / 3) !important;
+  }
+}
