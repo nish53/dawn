@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_new": {
@@ -193,28 +202,34 @@
         "chest": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/22.webp",
+            "background_color": "",
             "heading": "Organize in Style: Six Drawer Chest",
             "link_text": "Spacious storage for every corner",
             "link": "/collections/chest-of-drawers",
-            "subtext": "Get yours now at just \u20b99,999/-*"
+            "subtext": "Get yours now at just ₹9,999/-*"
           }
         },
         "cabinets": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/21.webp",
+            "background_color": "",
             "heading": "Stylish Storage Cabinets for Home",
             "link_text": "Perfect shoe racks & cabinets",
             "link": "/collections/shoe-racks",
-            "subtext": "Starting at just \u20b94,299/-*. Order today!"
+            "subtext": "Starting at just ₹4,299/-*. Order today!"
           }
         },
         "bookshelves": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/20.webp",
+            "background_color": "",
             "heading": "Bookshelves for Every Home",
             "link_text": "Three, four, or five-layer designs",
             "link": "/collections/bookshelves",
-            "subtext": "Starting from \u20b93,999/-*. Shop now!"
+            "subtext": "Starting from ₹3,999/-*. Shop now!"
           }
         }
       },
