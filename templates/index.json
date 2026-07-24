@@ -19,8 +19,8 @@
         "swipe_on_mobile": true,
         "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "quick_add": "standard"
       }
     },
@@ -35,7 +35,7 @@
         "collection": "beds",
         "products_to_show": 12,
         "columns_desktop": 5,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
@@ -43,8 +43,8 @@
         "swipe_on_mobile": true,
         "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "quick_add": "standard"
       }
     },
@@ -67,8 +67,8 @@
         "swipe_on_mobile": true,
         "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "quick_add": "standard"
       }
     },
@@ -120,8 +120,8 @@
         "image_ratio": "landscape",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 24,
-        "padding_bottom": 32,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "button_label": "",
         "button_link": ""
       }
@@ -137,7 +137,7 @@
         "collection": "work-study",
         "products_to_show": 12,
         "columns_desktop": 5,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
@@ -145,8 +145,8 @@
         "swipe_on_mobile": true,
         "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "quick_add": "standard"
       }
     },
@@ -169,8 +169,8 @@
         "swipe_on_mobile": true,
         "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "quick_add": "standard"
       }
     },
@@ -178,9 +178,9 @@
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:22px;font-weight:700;margin:0 0 16px;\">Buy Wooden Shoe Racks, Cabinets &amp; Wardrobes Online for Modern and Stylish Homes!</h2>\n  <div style=\"font-size:13px;line-height:22px;color:#3a3a3a;\">\n    <p style=\"margin:0 0 14px;\">Looking to upgrade your space with beautiful and bold furniture? Explore our handpicked yet exclusive collection of <strong>wooden and engineered wood furniture</strong> made for modern homes and busy offices. From <strong>wooden shoe racks</strong> to <strong>compact cabinets</strong> and <strong>spacious wardrobes</strong>, we have everything you need to stay organized in style.</p>\n    <p style=\"margin:0 0 14px;\">Are you a new Snicker head and in need of a stylish shoe organizer? Look no more! Our <strong>wooden shoe racks</strong> offer sleek solutions to keep your footwear in place while adding charm to your hallway or even your bedroom closets.</p>\n    <p style=\"margin:0 0 14px;\">In need of more storage in your living room or bedroom? Choose from our range of <strong>engineered wood cabinets</strong>&mdash;perfect for books, crockery, files, or everyday essentials.</p>\n    <p style=\"margin:0 0 14px;\">Planning a bedroom makeover? Check out our <strong>modern wooden wardrobes for home</strong> that combine style with smart storage. Whether you prefer a classic design or a sleek sliding-door wardrobe, you'll find plenty of options to match your space and taste.</p>\n    <p style=\"margin:0 0 14px;\">Our furniture is crafted from premium <strong>engineered wood</strong>, ensuring quality as well as durability without compromising on style. We offer multiple finishes and sizes &ndash; from bold geometric patterns to aesthetic yet simple pieces to suit all types of interiors&mdash;whether it's a cozy apartment or a spacious villa.</p>\n    <p style=\"margin:0 0 14px;\">Why shop with us? Along with top-notch collection and handpicked design, you get <strong>up to 60% off</strong>, fast delivery across India, and a smooth online shopping experience with our dedicated customer support. Each product is designed to fit right into your home.</p>\n    <p style=\"margin:0;\">So whether you're furnishing a new home or just adding that perfect cabinet or shoe rack, browse our range today. Your perfect piece is just a click away!</p>\n  </div>\n</div>",
-        "color_scheme": "scheme-4",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "reviews_bar": {
@@ -188,7 +188,7 @@
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n  <div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:12px;\">\n    <div style=\"background:#F7F5F1;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#f4a51c;margin-bottom:4px;\">Amazon</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;\">Coming soon</div>\n      <div style=\"font-size:11px;color:#666;margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:#152420;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#f4a51c;margin-bottom:4px;\">Flipkart</div>\n      <div style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;color:#FFFFFF;\">Coming soon</div>\n      <div style=\"font-size:11px;color:#D8D3C8;margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:#F7F5F1;border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-family:'Poppins',sans-serif;font-size:20px;font-weight:600;color:#152420;\">0</div>\n      <div style=\"font-size:11px;color:#666;margin-top:2px;\">Reviews collected so far &middot; Since 2024</div>\n    </div>\n  </div>\n</div>",
         "color_scheme": "scheme-1",
-        "padding_top": 56,
+        "padding_top": 40,
         "padding_bottom": 40
       }
     },
@@ -196,7 +196,7 @@
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "<div class=\"page-width\" style=\"text-align:center;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#f4a51c;margin-bottom:4px;\">Customer stories</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;margin:0 0 8px;\">What our buyers say</h2>\n  <p style=\"font-size:13px;color:#666;margin-bottom:24px;\">No reviews published yet &mdash; check back soon as real customer stories come in.</p>\n</div>",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "padding_top": 56,
         "padding_bottom": 56
       }
@@ -207,7 +207,7 @@
         "custom_liquid": "<div class=\"page-width\" style=\"text-align:center;\">\n  <p style=\"font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#f4a51c;margin-bottom:4px;\">As seen on</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;margin:0 0 8px;\">Real unboxings. Real homes.</h2>\n  <p style=\"font-size:13px;color:#666;\">No creator content published yet &mdash; this section is ready for real customer/creator videos once available.</p>\n</div>",
         "color_scheme": "scheme-1",
         "padding_top": 56,
-        "padding_bottom": 64
+        "padding_bottom": 56
       }
     },
     "trust_bar": {
@@ -216,16 +216,16 @@
         "custom_liquid": "<div class=\"page-width\">\n  <div style=\"display:flex;justify-content:space-between;flex-wrap:wrap;gap:0;\">\n    <div class=\"fv-trust-card\" style=\"flex:1;min-width:150px;text-align:center;padding:6px 16px;border-right:1px solid #EDEBE5;\">\n      <div style=\"color:#152420;margin-bottom:10px;display:flex;justify-content:center;filter:drop-shadow(0 2px 3px rgba(0,0,0,0.12));\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M1 3h13v13H1z\"/><path d=\"M14 8h4l3 3v5h-7z\"/><circle cx=\"6\" cy=\"18\" r=\"2\"/><circle cx=\"17\" cy=\"18\" r=\"2\"/></svg></div>\n      <div style=\"font-size:13px;font-weight:700;\">Free Delivery</div>\n    </div><div class=\"fv-trust-card\" style=\"flex:1;min-width:150px;text-align:center;padding:6px 16px;border-right:1px solid #EDEBE5;\">\n      <div style=\"color:#152420;margin-bottom:10px;display:flex;justify-content:center;filter:drop-shadow(0 2px 3px rgba(0,0,0,0.12));\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M14.7 6.3a4 4 0 0 0-5.4 5.4L2 19l3 3 7.3-7.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2z\"/></svg></div>\n      <div style=\"font-size:13px;font-weight:700;\">Free Installation</div>\n    </div><div class=\"fv-trust-card\" style=\"flex:1;min-width:150px;text-align:center;padding:6px 16px;border-right:1px solid #EDEBE5;\">\n      <div style=\"color:#152420;margin-bottom:10px;display:flex;justify-content:center;filter:drop-shadow(0 2px 3px rgba(0,0,0,0.12));\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg></div>\n      <div style=\"font-size:13px;font-weight:700;\">COD Available</div>\n    </div><div class=\"fv-trust-card\" style=\"flex:1;min-width:150px;text-align:center;padding:6px 16px;border-right:1px solid #EDEBE5;\">\n      <div style=\"color:#152420;margin-bottom:10px;display:flex;justify-content:center;filter:drop-shadow(0 2px 3px rgba(0,0,0,0.12));\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M21 12a9 9 0 1 1-3-6.7\"/><path d=\"M21 3v6h-6\"/></svg></div>\n      <div style=\"font-size:13px;font-weight:700;\">3-Day Returns</div>\n    </div><div class=\"fv-trust-card\" style=\"flex:1;min-width:150px;text-align:center;padding:6px 16px;\">\n      <div style=\"color:#152420;margin-bottom:10px;display:flex;justify-content:center;filter:drop-shadow(0 2px 3px rgba(0,0,0,0.12));\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z\"/><path d=\"M9 12l2 2 4-4\"/></svg></div>\n      <div style=\"font-size:13px;font-weight:700;\">Warranty Included</div>\n    </div>\n  </div>\n</div>",
         "color_scheme": "scheme-1",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 40
       }
     },
     "category_grid": {
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n  <p style=\"font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#f4a51c;margin-bottom:6px;\">Browse by category</p>\n  <h2 style=\"font-family:'Poppins',sans-serif;font-size:28px;font-weight:700;margin:0 0 4px;\">Shop every room</h2>\n  <p style=\"font-size:14px;color:#666;margin-bottom:24px;\">Curated furniture for every corner of your home</p>\n  <div style=\"display:grid;grid-template-columns:repeat(auto-fill, minmax(210px, 1fr));gap:16px;\">\n    {% assign cats = 'beds,shoe-racks,chest-of-drawers,kitchen-cabinets,4-seater-dining-sets,6-seater-dining-sets,work-study,tv-entertainment-units,side-tables,coffee-tables,bookshelves,chairs,tables' | split: ',' %}\n    {% assign cat_labels = 'Bunk Beds,Shoe Racks,Chest of Drawers,Kitchen Cabinets,4-Seater Dining,6-Seater Dining,Study,TV Units,Side Tables,Coffee Tables,Bookshelves,Chairs,Tables' | split: ',' %}\n    {% for handle in cats %}\n      {% assign collection = collections[handle] %}\n      {% if collection %}\n      <a href=\"{{ collection.url }}\" class=\"fv-category-tile\" style=\"text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1px solid #EDEBE5;transition:box-shadow 0.2s;\">\n        {% if collection.image %}\n          <img src=\"{{ collection.image | image_url: width: 400 }}\" alt=\"{{ collection.title }}\" style=\"width:100%;height:140px;object-fit:cover;display:block;\">\n        {% else %}\n          <div style=\"width:100%;height:140px;background:#F7F5F1;\"></div>\n        {% endif %}\n        <div style=\"padding:12px 14px;\">\n          <div style=\"font-size:14px;font-weight:700;\">{{ cat_labels[forloop.index0] }}</div>\n          <div style=\"font-size:11.5px;color:#888;margin-top:2px;\">{{ collection.products_count }} products</div>\n        </div>\n      </a>\n      {% endif %}\n    {% endfor %}\n  </div>\n</div>",
-        "color_scheme": "scheme-4",
-        "padding_top": 48,
-        "padding_bottom": 32
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "edit_banners": {
@@ -248,7 +248,7 @@
         "collection": "bestsellers",
         "products_to_show": 12,
         "columns_desktop": 5,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
@@ -256,8 +256,8 @@
         "swipe_on_mobile": true,
         "image_ratio": "landscape",
         "image_shape": "default",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "quick_add": "standard"
       }
     },
@@ -267,7 +267,7 @@
         "custom_liquid": "<div class=\"page-width\">\n  <div style=\"display:grid;grid-template-columns:2fr 1fr;gap:12px;\">\n    <a href=\"/collections/dining-kitchen\" class=\"fv-hero-tile\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:420px;background:#EFE9DD url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-QuattroDine-Solid-Wood-4-Seater-Dining-Table-Set-Four-Seater-Dining-Table-Set-for-Homes-Free-Assembly-White-Cushion-Dark-Walnut-Finish-1-800x813.jpg?v=1784275500') center/cover;\">\n      <div style=\"position:absolute;inset:0;background:linear-gradient(90deg, rgba(26,26,26,0.55) 0%, rgba(26,26,26,0.05) 60%);\"></div>\n      <div style=\"position:relative;padding:36px;color:#fff;max-width:340px;\">\n        <div style=\"font-family:'Poppins',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#E8D5B0;margin-bottom:6px;\">GIF 2026 Early Access</div>\n        <div style=\"font-family:'Poppins',sans-serif;font-size:30px;font-weight:600;line-height:1.2;margin-bottom:10px;\">Dining Sets</div>\n        <div style=\"font-size:14px;background:rgba(0,0,0,0.35);display:inline-block;padding:6px 14px;border-radius:4px;\">Starting from &#8377;11,999</div>\n      </div>\n    </a>\n    <div style=\"display:flex;flex-direction:column;gap:12px;\">\n      <a href=\"/collections/storage-units\" class=\"fv-hero-tile\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:204px;background:#E6ECE4 url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-Skyline-6-Feet-Wooden-Two-Door-Utility-Shoe-Rack-for-Home-EntrancesHallways-Engineered-Wood-Nine-Adjustable-Shelves-with-Airflow-Slots-Multipurpose-Shoe-Cabinet-Organizer-Weng_281de8bf-191f-4b83-857c-937e895ebf5f.webp?v=1784275549') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(26,26,26,0.05) 30%, rgba(26,26,26,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;\">Shop Storage</div>\n          <div style=\"font-size:12px;\">Shoe racks &amp; cabinets</div>\n        </div>\n      </a>\n      <a href=\"/collections/bestsellers\" class=\"fv-hero-tile\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:204px;background:#EFE4DC url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/1202-800x800.jpg?v=1784275793') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(26,26,26,0.05) 30%, rgba(26,26,26,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;\">Bestsellers</div>\n          <div style=\"font-size:12px;\">Up to 60% off</div>\n        </div>\n      </a>\n    </div>\n  </div>\n</div>",
         "color_scheme": "scheme-1",
         "padding_top": 24,
-        "padding_bottom": 24
+        "padding_bottom": 32
       }
     }
   },

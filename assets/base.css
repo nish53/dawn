@@ -4022,3 +4022,11 @@ a.button:hover {
   flex-wrap: wrap !important;
   gap: 12px !important;
 }
+.fv-title-with-view-all__text {
+  flex: 1 1 auto !important;
+  max-width: 75% !important;
+  min-width: 0 !important;
+}
+.fv-title-with-view-all .collection__view-all--top {
+  flex-shrink: 0 !important;
+}
