@@ -4081,7 +4081,7 @@ a.button:hover {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 3px !important;
+  gap: 0 !important;
   letter-spacing: -0.02em !important;
   flex-wrap: wrap !important;
 }
