@@ -4081,7 +4081,7 @@ a.button:hover {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 6px !important;
+  gap: 3px !important;
   letter-spacing: -0.02em !important;
   flex-wrap: wrap !important;
 }
@@ -4089,10 +4089,10 @@ a.button:hover {
   order: -1 !important;
   font-size: 16px !important;
   font-weight: 700 !important;
-  color: #152420 !important;
+  color: #5a5a5a !important;
 }
 .card .price-item--regular {
-  color: #999 !important;
+  color: #5a5a5a !important;
   font-size: 12px !important;
   font-weight: 400 !important;
 }
@@ -4104,8 +4104,9 @@ a.button:hover {
   padding: 2px 7px !important;
   font-size: 9.5px !important;
   font-weight: 700 !important;
+  text-transform: uppercase !important;
   white-space: nowrap !important;
-  margin-left: 2px !important;
+  margin-left: 1px !important;
   order: 1 !important;
 }
 .card .price {
