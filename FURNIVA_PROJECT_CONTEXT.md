@@ -45,23 +45,26 @@
 ### Theme Architecture
 - Dawn-based, heavily customized with custom-liquid sections throughout
 - Fully custom header (sticky, mega menu) and footer (WhatsApp widget, social icons)
-- Site-wide font: **Red Hat Display** (both theme setting AND hardcoded in custom sections)
+- Site-wide font: **Red Hat Display** (theme setting `type_header_font`/`type_body_font` AND hardcoded `font-family` replaced across every custom-liquid section/page template — went through Poppins → Jost → DM Sans → Outfit → Cabin → Red Hat Display before landing here)
 - Color palette: `#152420` (dark green, primary/foreground) + `#f4a51c` (amber, accent/highlight)
-- Homepage: hero, trust bar, "As Seen On" shoppable video section, category grid (12 categories, 6×2), edit banners, 6 product carousels (Bestsellers/Shoe Racks/Beds/TV Units/Study/Dining), 3-column lifestyle banner (editable section), reviews bar, testimonials (real customer review + photo), SEO text
-- Collection pages: custom hero with category-aware theming, real subset "Browse by type" pills, buyer-guide tips per category, cross-sell block
-- Product cards: single-line pricing (sale price first, bold, `#5a5a5a`), no borders on badges, centered 15px titles, star ratings hidden when no reviews
-- Custom sections built with proper theme-editor schema (not just custom-liquid): `sections/shoppable-videos.liquid`, `sections/lifestyle-banner-overlay.liquid`
+- Homepage section order: hero, trust bar, "As Seen On" shoppable video section, category grid, edit banners, Bestsellers carousel, Wooden Shoe Racks carousel, lifestyle banner (3-col overlay), Beds carousel, TV Units carousel, Study carousel, Dining carousel, reviews bar, testimonials, SEO text
+- **Category grid** ("Shop every room"): fixed 6-column × 2-row grid (12 categories, no horizontal overflow, responsive collapse to 3/2 cols), large rounded-square images with soft drop-shadow, 14px bold uppercase caption below, hover = image zoom only (no lift/shadow)
+- Collection pages: custom hero with category-aware theming, real subset "Browse by type" pills (including drawer-count sub-pills for Chest of Drawers), buyer-guide tips per category, cross-sell block
+- **Product cards**: centered 15px bold titles, star ratings hidden entirely when no reviews (was showing empty stars + "No reviews yet"), price reordered sale-price-first (16px bold) → small strikethrough regular price → %-off badge (no borders), all centered on one line, ₹ symbol forced via replace filter (store's Admin currency format still says "Rs.", theme files can't override that directly)
+- Custom sections built with proper theme-editor schema (not just raw custom-liquid): `sections/shoppable-videos.liquid` (image_picker, video type select, product picker per block), `sections/lifestyle-banner-overlay.liquid` (image_picker, text position L/R, color, heading/link/subtext fields per block — uses percentage-based margins matching the old WordPress site's exact responsive technique)
+- Shoppable video carousel: click opens in-page modal (no bounce), stops playback properly on close (empties the DOM node), supports both iframe embeds and self-hosted `<video>` per block
 
 ### Known Pending Items
 - [ ] Rotate GitHub PAT
 - [ ] Confirm Shopify plan (trial → paid) before going fully live
 - [ ] Create actual Shopify **Page** records in Admin for About Us, Contact, and all policy pages (templates exist, pages need to be created and assigned)
 - [ ] Wardura 3 Door Wardrobe product listing needs a real image (page was robots-blocked from fetching)
-- [ ] 3-Drawer Chests collection is empty — needs real product(s) before it'll show in pills
-- [ ] Coffee Tables and 6-Seater Dining Sets collections are empty
+- [ ] 3-Drawer Chests, Coffee Tables, and 6-Seater Dining Sets collections are empty — pills/cross-sells for these will stay hidden until real products exist
 - [ ] Add "Free-Install" tag to qualifying products (manual, API doesn't support bulk tag edit)
 - [ ] Wishlist/Compare features — explicitly deferred, not built
 - [ ] Bestseller badges (#1/#2/#3) — deferred, needs metafields
+- [ ] Lifestyle banner overlay's 3 columns currently show placeholder product photos as images — real photos need uploading via each block's Image field in the theme editor
+- [ ] Verify Shopify Admin's Store currency format (Settings → General) — theme currently force-replaces "Rs." with "₹" via a Liquid filter as a workaround; updating the actual Admin setting would be cleaner
 
 ## 5. Catalog Summary
 
