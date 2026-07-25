@@ -4191,7 +4191,7 @@ a.button:hover {
 
 /* Announcement bar marquee - continuous scrolling promo text */
 .fv-marquee-track {
-  animation: fv-marquee-scroll 16s linear infinite;
+  animation: fv-marquee-scroll 28s linear infinite;
 }
 @keyframes fv-marquee-scroll {
   0% { transform: translateX(0); }
