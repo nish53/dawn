@@ -4183,7 +4183,8 @@ a.button:hover {
   }
 }
 
-/* Top padding for the 3-column lifestyle banner section */
+/* Top and bottom padding for the 3-column lifestyle banner section */
 #shopify-section-template--19686626656369__lifestyle_banner {
   padding-top: 40px;
+  padding-bottom: 25px;
 }
