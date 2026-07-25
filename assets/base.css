@@ -4188,3 +4188,17 @@ a.button:hover {
   padding-top: 40px;
   padding-bottom: 25px;
 }
+
+/* Announcement bar marquee - continuous scrolling promo text */
+.fv-marquee-track {
+  animation: fv-marquee-scroll 22s linear infinite;
+}
+@keyframes fv-marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fv-marquee-track {
+    animation: none;
+  }
+}
