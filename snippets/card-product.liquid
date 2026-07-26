@@ -27,6 +27,7 @@
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
   {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
   {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
+  {{ 'furniva-badges.css' | asset_url | stylesheet_tag }}
 {%- endunless -%}
 {%- if card_product and card_product != empty -%}
   {%- liquid
@@ -190,6 +191,21 @@
 
 
               {% render 'price', product: card_product, price_class: '', show_compare_at_price: true, show_badges: true %}
+
+              {%- liquid
+                assign fv_social_proof_text = card_product.metafields.custom.social_proof_text
+              -%}
+              {%- if settings.fv_show_social_proof_tag and fv_social_proof_text != blank -%}
+                <p class="fv-social-proof-tag">{{ fv_social_proof_text }}</p>
+              {%- endif -%}
+              {%- if settings.fv_show_urgency_badge and settings.fv_urgency_badge_text != blank -%}
+                <span
+                  class="fv-urgency-badge"
+                  style="background-color: {{ settings.fv_urgency_badge_bg_color }}; color: {{ settings.fv_urgency_badge_text_color }};"
+                >
+                  {{- settings.fv_urgency_badge_text -}}
+                </span>
+              {%- endif -%}
               {%- if card_product.quantity_price_breaks_configured? -%}
                 {% if card_product.variants_count == 1 and quick_add == 'bulk' %}
                   {% liquid
