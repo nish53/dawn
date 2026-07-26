@@ -175,7 +175,7 @@
                 endif
               -%}
               <div
-                class="fv-reward-bar__tier{% if tier_unlocked %} is-unlocked{% endif %}"
+                class="fv-reward-bar__tier{% if tier_unlocked %} is-unlocked{% endif %}{% if tier == 1 %} fv-reward-bar__tier--start{% elsif tier == 4 %} fv-reward-bar__tier--end{% endif %}"
                 style="left: {{ tier_pct }}%;"
                 title="{{ tier_label }} at {{ tier_threshold | money }}"
               >
