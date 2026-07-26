@@ -1,0 +1,265 @@
+/* Furniva custom cart drawer additions: FBT sidebar, reward progress bar, discount code field */
+
+.cart-drawer.cart-drawer {
+  display: flex;
+  flex-direction: row;
+}
+
+.cart-drawer__sidebar {
+  width: 21rem;
+  max-width: 32vw;
+  height: 100%;
+  background: #152420;
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+  flex-shrink: 0;
+  transform: translateX(100%);
+  transition: transform var(--duration-default, 0.25s) ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.drawer.active .cart-drawer__sidebar {
+  transform: translateX(0);
+}
+
+cart-drawer.is-empty .cart-drawer__sidebar {
+  display: none;
+}
+
+.fv-fbt__heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+.fv-fbt__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fv-fbt__card {
+  text-align: center;
+}
+
+.fv-fbt__card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.fv-fbt__card img {
+  width: 100%;
+  border-radius: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.fv-fbt__title {
+  font-size: 1.3rem;
+  line-height: 1.3;
+  margin: 0 0 0.5rem;
+  color: #ffffff;
+}
+
+.fv-fbt__price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.6rem;
+}
+
+.fv-fbt__price s {
+  font-weight: 400;
+  opacity: 0.6;
+  margin-left: 0.5rem;
+}
+
+.fv-fbt__badge {
+  display: inline-block;
+  background: #f4a51c;
+  color: #152420;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.fv-fbt__add {
+  width: 100%;
+  background: #f4a51c;
+  color: #152420;
+  border: none;
+  font-weight: 700;
+  padding: 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+}
+
+.fv-fbt__add:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.fv-fbt__empty,
+.fv-fbt__loading {
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Reward progress bar */
+.fv-reward-bar {
+  padding: 1.2rem 0 2.8rem;
+}
+
+.fv-reward-bar__message {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 1.4rem;
+  color: #152420;
+}
+
+.fv-reward-bar__message--complete {
+  color: #b9790f;
+}
+
+.fv-reward-bar__track {
+  position: relative;
+  height: 0.6rem;
+  background: rgba(21, 36, 32, 0.12);
+  border-radius: 1rem;
+  margin: 0 1.2rem;
+}
+
+.fv-reward-bar__fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #f4a51c;
+  border-radius: 1rem;
+  transition: width 0.4s ease;
+}
+
+.fv-reward-bar__tier {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.fv-reward-bar__tier-icon {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 0.2rem solid rgba(21, 36, 32, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.fv-reward-bar__tier.is-unlocked .fv-reward-bar__tier-icon {
+  background: #f4a51c;
+  border-color: #f4a51c;
+}
+
+.fv-reward-bar__tier-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.fv-reward-bar__tier-label {
+  position: absolute;
+  top: 2.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #152420;
+}
+
+/* Discount code field */
+.fv-discount {
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
+}
+
+.fv-discount summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.fv-discount[open] summary .icon-caret {
+  transform: rotate(180deg);
+}
+
+.fv-discount__row {
+  display: flex;
+  gap: 0.8rem;
+  padding-bottom: 1.5rem;
+}
+
+.fv-discount__input {
+  flex: 1;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.3);
+  padding: 0 1rem;
+  font-size: 1.3rem;
+}
+
+.fv-discount__apply {
+  background: #152420;
+  color: #ffffff;
+  border: none;
+  padding: 0 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.fv-discount__status {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+
+.fv-discount__status.is-success {
+  color: #1a7a3c;
+}
+
+.fv-discount__status.is-error {
+  color: #c0392b;
+}
+
+.fv-continue-shopping {
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  margin-top: 1rem;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+@media screen and (max-width: 989px) {
+  .cart-drawer__sidebar {
+    display: none;
+  }
+}
