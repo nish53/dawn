@@ -134,6 +134,48 @@
 
   customElements.define('cart-recommendations', CartRecommendations);
 
+  // ---- Open the drawer from the real (custom) header cart icon ----
+  // Furniva's header is a custom-liquid block (not Dawn's stock header),
+  // so its cart link is `<a href="/cart" class="fv-icon-link">` with no
+  // id="cart-icon-bubble" — Dawn's own cart-drawer.js only knows how to
+  // find that id, so it silently no-ops and the link falls through to a
+  // normal page navigation. Wire it up ourselves instead.
+  function bindCustomCartIcon() {
+    var drawer = document.querySelector('cart-drawer');
+    if (!drawer) return;
+    var candidates = document.querySelectorAll('a.fv-icon-link[href="/cart"], a.fv-icon-link[href^="/cart"]');
+    candidates.forEach(function (link) {
+      if (link.dataset.fvBound) return;
+      link.dataset.fvBound = 'true';
+      link.setAttribute('role', 'button');
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (typeof drawer.open === 'function') drawer.open(link);
+      });
+    });
+  }
+
+  function updateCustomCartBadge(itemCount) {
+    if (typeof itemCount !== 'number') return;
+    var badges = document.querySelectorAll('a.fv-icon-link[href="/cart"] span, a.fv-icon-link[href^="/cart"] span');
+    badges.forEach(function (badge) {
+      badge.textContent = itemCount;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    bindCustomCartIcon();
+    if (window.subscribe && window.PUB_SUB_EVENTS) {
+      subscribe(PUB_SUB_EVENTS.cartUpdate, function (event) {
+        bindCustomCartIcon();
+        if (event && event.cartData && typeof event.cartData.item_count === 'number') {
+          updateCustomCartBadge(event.cartData.item_count);
+        }
+      });
+    }
+  });
+
   // ---- Free gift auto add/remove at the ₹70,000 tier ----
   var FREE_GIFT_VARIANT_ID = 43687974174833; // Furniva Penny Cube Bed Side Table - Sandalwood
   var FREE_GIFT_THRESHOLD_CENTS = 7000000; // ₹70,000
