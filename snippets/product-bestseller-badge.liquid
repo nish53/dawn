@@ -1,0 +1,15 @@
+{% comment %}
+  Furniva bestseller rank badge.
+  Renders only when product.metafields.custom.bestseller_rank is set
+  (Shopify admin > Product > Metafields > "Bestseller rank"), e.g.
+  "#3 Bestseller in Storage Units".
+{% endcomment %}
+{%- liquid
+  assign fv_rank = product.metafields.custom.bestseller_rank
+-%}
+{%- if settings.fv_show_bestseller_badge and fv_rank != blank -%}
+  <p class="fv-pdp-bestseller">
+    <span class="fv-pdp-bestseller__icon" aria-hidden="true">&#9733;</span>
+    {{- fv_rank -}}
+  </p>
+{%- endif -%}

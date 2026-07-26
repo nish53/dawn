@@ -1,0 +1,59 @@
+{% comment %}
+  Furniva pincode delivery checker + wishlist toggle, shown right below the
+  buy buttons. Pincode check is client-side only: it looks at an optional
+  per-product "Non-serviceable pincodes" metafield, otherwise assumes
+  deliverable with the store-wide default ETA (Theme settings > Furniva
+  Product Page). Wishlist is stored in the browser (no login required) and
+  synced with the header wishlist icon.
+{% endcomment %}
+{%- liquid
+  assign fv_non_serviceable = product.metafields.custom.non_serviceable_pincodes
+-%}
+{%- if settings.fv_show_pincode_checker or settings.fv_show_wishlist_button -%}
+  {{ 'furniva-product-page.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'furniva-product-page.js' | asset_url }}" defer="defer"></script>
+  <div class="fv-pdp-utility-row">
+    {%- if settings.fv_show_pincode_checker -%}
+      <div
+        class="fv-pincode"
+        data-fv-pincode
+        data-non-serviceable="{{ fv_non_serviceable | escape }}"
+        data-eta="{{ settings.fv_default_delivery_eta | escape }}"
+      >
+        <label class="fv-pincode__label" for="fv-pincode-input-{{ product.id }}">
+          Check delivery at your pincode
+        </label>
+        <div class="fv-pincode__row">
+          <input
+            type="tel"
+            inputmode="numeric"
+            maxlength="6"
+            pattern="[0-9]*"
+            class="fv-pincode__input"
+            id="fv-pincode-input-{{ product.id }}"
+            placeholder="e.g. 302020"
+          >
+          <button type="button" class="fv-pincode__button">Check</button>
+        </div>
+        <p class="fv-pincode__result" role="status"></p>
+      </div>
+    {%- endif -%}
+    {%- if settings.fv_show_wishlist_button -%}
+      <button
+        type="button"
+        class="fv-wishlist-button"
+        data-fv-wishlist-toggle
+        data-product-id="{{ product.id }}"
+        data-product-handle="{{ product.handle }}"
+        data-product-title="{{ product.title | escape }}"
+        data-product-image="{{ product.featured_image | image_url: width: 300 }}"
+        data-product-price="{{ product.selected_or_first_available_variant.price | money | replace: 'Rs.', '₹' | replace: 'Rs', '₹' | escape }}"
+        data-product-url="{{ product.url }}"
+        aria-pressed="false"
+      >
+        <span class="fv-wishlist-button__icon" aria-hidden="true">&#9825;</span>
+        <span class="fv-wishlist-button__label">Add to Wishlist</span>
+      </button>
+    {%- endif -%}
+  </div>
+{%- endif -%}

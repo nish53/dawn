@@ -1,0 +1,23 @@
+{% comment %}
+  Furniva PDP deal badges: reuses the same theme settings and product
+  metafield already used on collection/carousel cards, so the messaging
+  matches everywhere (Theme settings > Furniva Product Badges).
+{% endcomment %}
+{%- liquid
+  assign fv_social_proof_text = product.metafields.custom.social_proof_text
+-%}
+{%- if settings.fv_show_social_proof_tag and fv_social_proof_text != blank or settings.fv_show_urgency_badge and settings.fv_urgency_badge_text != blank -%}
+  <div class="fv-pdp-deal-badges">
+    {%- if settings.fv_show_social_proof_tag and fv_social_proof_text != blank -%}
+      <p class="fv-pdp-social-proof">{{ fv_social_proof_text }}</p>
+    {%- endif -%}
+    {%- if settings.fv_show_urgency_badge and settings.fv_urgency_badge_text != blank -%}
+      <span
+        class="fv-pdp-urgency-badge"
+        style="background-color: {{ settings.fv_urgency_badge_bg_color }}; color: {{ settings.fv_urgency_badge_text_color }};"
+      >
+        {{- settings.fv_urgency_badge_text -}}
+      </span>
+    {%- endif -%}
+  </div>
+{%- endif -%}

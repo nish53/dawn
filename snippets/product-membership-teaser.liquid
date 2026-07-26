@@ -1,0 +1,13 @@
+{% comment %}
+  Furniva membership / perks teaser banner. Off by default (Theme settings >
+  Furniva Product Page) until there's a real program to point it at - avoids
+  advertising a membership tier or exclusive pricing that doesn't exist yet.
+{% endcomment %}
+{%- if settings.fv_show_membership_teaser and settings.fv_membership_teaser_text != blank -%}
+  <div class="fv-pdp-membership">
+    <p class="fv-pdp-membership__heading">
+      {{- settings.fv_membership_teaser_heading | default: 'Furniva Insiders' -}}
+    </p>
+    <p class="fv-pdp-membership__text">{{ settings.fv_membership_teaser_text }}</p>
+  </div>
+{%- endif -%}

@@ -1,0 +1,47 @@
+{% comment %}
+  Furniva EMI + bank offers panel.
+  EMI figures are computed live from the selected variant's price (illustrative
+  only - actual availability/interest depends on the customer's card issuer).
+  Bank offer text is fully merchant-editable via Theme settings > Furniva
+  Product Page, and is off by default until a real, confirmed offer is entered.
+{% endcomment %}
+{%- liquid
+  assign fv_variant_price = product.selected_or_first_available_variant.price
+  assign fv_tenures = '3,6,9,12' | split: ','
+-%}
+{%- if settings.fv_show_emi and fv_variant_price > 0 or settings.fv_show_bank_offers and settings.fv_bank_offers_text != blank -%}
+  <div class="fv-pdp-offers">
+    {%- if settings.fv_show_emi and fv_variant_price > 0 -%}
+      <details class="fv-pdp-emi" open>
+        <summary>
+          <span class="fv-pdp-offers__icon" aria-hidden="true">&#128179;</span>
+          <span>EMI options</span>
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </summary>
+        <ul class="fv-pdp-emi__list">
+          {%- for t in fv_tenures -%}
+            {%- assign t_num = t | plus: 0 -%}
+            {%- assign fv_per_month = fv_variant_price | times: 1.0 | divided_by: t_num | round -%}
+            <li>
+              <span class="fv-pdp-emi__tenure">{{ t_num }} months</span>
+              <span class="fv-pdp-emi__amount">
+                {{- fv_per_month | money | replace: 'Rs.', '₹' | replace: 'Rs', '₹' -}}/mo
+              </span>
+            </li>
+          {%- endfor -%}
+        </ul>
+        <p class="fv-pdp-emi__note">Indicative EMI on major bank credit cards. Actual terms, interest and processing fees are set by your card issuer at checkout.</p>
+      </details>
+    {%- endif -%}
+    {%- if settings.fv_show_bank_offers and settings.fv_bank_offers_text != blank -%}
+      <details class="fv-pdp-bank-offers" open>
+        <summary>
+          <span class="fv-pdp-offers__icon" aria-hidden="true">&#127974;</span>
+          <span>Bank offers</span>
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </summary>
+        <div class="fv-pdp-bank-offers__body rte">{{ settings.fv_bank_offers_text }}</div>
+      </details>
+    {%- endif -%}
+  </div>
+{%- endif -%}

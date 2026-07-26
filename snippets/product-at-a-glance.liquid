@@ -1,0 +1,55 @@
+{% comment %}
+  Furniva "At a Glance" spec table. Fill in per product via Shopify admin >
+  Product > Metafields (Spec: Material / Dimensions / Weight-Capacity /
+  Warranty / Assembly). Renders nothing if none are set.
+{% endcomment %}
+{%- liquid
+  assign fv_material = product.metafields.custom.spec_material
+  assign fv_dimensions = product.metafields.custom.spec_dimensions
+  assign fv_weight_capacity = product.metafields.custom.spec_weight_capacity
+  assign fv_warranty = product.metafields.custom.spec_warranty
+  assign fv_assembly = product.metafields.custom.spec_assembly
+  assign fv_has_specs = false
+  if fv_material != blank or fv_dimensions != blank or fv_weight_capacity != blank or fv_warranty != blank or fv_assembly != blank
+    assign fv_has_specs = true
+  endif
+-%}
+{%- if fv_has_specs -%}
+  <div class="fv-at-a-glance">
+    <h2 class="fv-at-a-glance__heading h4">At a Glance</h2>
+    <table class="fv-at-a-glance__table">
+      <tbody>
+        {%- if fv_dimensions != blank -%}
+          <tr>
+            <th scope="row">Dimensions</th>
+            <td>{{ fv_dimensions }}</td>
+          </tr>
+        {%- endif -%}
+        {%- if fv_material != blank -%}
+          <tr>
+            <th scope="row">Material</th>
+            <td>{{ fv_material }}</td>
+          </tr>
+        {%- endif -%}
+        {%- if fv_weight_capacity != blank -%}
+          <tr>
+            <th scope="row">Capacity</th>
+            <td>{{ fv_weight_capacity }}</td>
+          </tr>
+        {%- endif -%}
+        {%- if fv_assembly != blank -%}
+          <tr>
+            <th scope="row">Assembly</th>
+            <td>{{ fv_assembly }}</td>
+          </tr>
+        {%- endif -%}
+        {%- if fv_warranty != blank -%}
+          <tr>
+            <th scope="row">Warranty</th>
+            <td>{{ fv_warranty }}</td>
+          </tr>
+        {%- endif -%}
+      </tbody>
+    </table>
+  </div>
+{%- endif -%}
