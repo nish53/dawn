@@ -6,7 +6,7 @@
 {% endcomment %}
 {{ 'furniva-product-page.css' | asset_url | stylesheet_tag }}
 {%- liquid
-  assign fv_images = product.metafields.custom.infographic_images
+  assign fv_images = product.metafields.custom.infographic_images.value
   assign fv_story = product.metafields.custom.brand_story
   assign fv_image_count = fv_images.size
 -%}
@@ -40,7 +40,7 @@
 
 {% schema %}
 {
-  "name": "Furniva: Product infographic",
+  "name": "Furniva: Infographic",
   "settings": [
     {
       "type": "color_scheme",

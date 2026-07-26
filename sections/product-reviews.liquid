@@ -6,7 +6,7 @@
 {% endcomment %}
 {{ 'furniva-product-page.css' | asset_url | stylesheet_tag }}
 {%- liquid
-  assign fv_reviews = product.metafields.custom.reviews_list
+  assign fv_reviews = product.metafields.custom.reviews_list.value
   assign fv_review_count = fv_reviews.size
 -%}
 {%- if fv_review_count > 0 -%}
