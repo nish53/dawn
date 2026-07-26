@@ -1501,5 +1501,92 @@
         "default": "#FFFFFF"
       }
     ]
+  },
+  {
+    "name": "Furniva Product Page",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Extra converting features on the product page. Anything metafield-driven (bestseller rank, at-a-glance specs, infographic images, reviews) only shows once you fill it in per product in Shopify admin."
+      },
+      {
+        "type": "header",
+        "content": "Bestseller & wishlist"
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_bestseller_badge",
+        "label": "Show bestseller rank badge",
+        "info": "Set the text per product: Product > Metafields > \"Bestseller rank\", e.g. \"#3 Bestseller in Storage Units\".",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_wishlist_button",
+        "label": "Show \"Add to Wishlist\" button",
+        "info": "Saved in the customer's browser (no account needed) and viewable from the header wishlist icon.",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "EMI, bank offers & membership"
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_emi",
+        "label": "Show EMI options",
+        "info": "Figures are computed automatically from the product price (illustrative; actual terms are set by the customer's card issuer).",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_bank_offers",
+        "label": "Show bank offers panel",
+        "info": "Off by default. Only enable once you've entered a real, confirmed offer below.",
+        "default": false
+      },
+      {
+        "type": "textarea",
+        "id": "fv_bank_offers_text",
+        "label": "Bank offers text",
+        "info": "Plain text or basic HTML, e.g. \"10% instant discount up to Rs.1,000 on HDFC Bank Cards\"."
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_membership_teaser",
+        "label": "Show membership / perks teaser banner",
+        "info": "Off by default — there's no live membership program yet. Enable once you have real perks to advertise.",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "fv_membership_teaser_heading",
+        "label": "Membership teaser heading",
+        "default": "Furniva Insiders"
+      },
+      {
+        "type": "textarea",
+        "id": "fv_membership_teaser_text",
+        "label": "Membership teaser text",
+        "default": "Sign up for early access to new drops and member-only prices. Coming soon."
+      },
+      {
+        "type": "header",
+        "content": "Delivery / pincode checker"
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_pincode_checker",
+        "label": "Show pincode delivery checker",
+        "info": "Client-side only. Optionally list non-serviceable pincodes per product via Product > Metafields > \"Non-serviceable pincodes\".",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "fv_default_delivery_eta",
+        "label": "Default delivery estimate",
+        "default": "5-9 business days"
+      }
+    ]
   }
 ]
