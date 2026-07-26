@@ -1461,5 +1461,45 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Furniva Product Badges",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Extra badges shown on product cards across collections, carousels, and search results."
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_social_proof_tag",
+        "label": "Show social proof tag (e.g. \"50+ bought in past month\")",
+        "info": "Text is set per product: open the product in Shopify admin, scroll to Metafields, and fill in \"Social proof tag\". Leave it blank on a product to hide the tag on that product only.",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_urgency_badge",
+        "label": "Show urgency badge on product cards",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "fv_urgency_badge_text",
+        "label": "Urgency badge text",
+        "default": "Limited time deal"
+      },
+      {
+        "type": "color",
+        "id": "fv_urgency_badge_bg_color",
+        "label": "Urgency badge background color",
+        "default": "#C0392B"
+      },
+      {
+        "type": "color",
+        "id": "fv_urgency_badge_text_color",
+        "label": "Urgency badge text color",
+        "default": "#FFFFFF"
+      }
+    ]
   }
 ]
