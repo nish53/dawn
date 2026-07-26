@@ -225,6 +225,26 @@ cart-drawer.is-empty .cart-drawer__sidebar {
   color: #152420;
 }
 
+/* First/last tiers: keep the icon on the track's edge but let the label
+   hang inward instead of overflowing past the drawer's edge */
+.fv-reward-bar__tier--start {
+  align-items: flex-start;
+  transform: translate(0, -50%);
+}
+
+.fv-reward-bar__tier--start .fv-reward-bar__tier-label {
+  left: 0;
+}
+
+.fv-reward-bar__tier--end {
+  align-items: flex-end;
+  transform: translate(-100%, -50%);
+}
+
+.fv-reward-bar__tier--end .fv-reward-bar__tier-label {
+  right: 0;
+}
+
 /* Discount code field: clean single-pill combo input + button */
 .fv-discount {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.1);
