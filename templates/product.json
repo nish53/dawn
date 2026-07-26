@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "fv_bestseller_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'product-bestseller-badge' %}"
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -13,8 +19,29 @@
         "title": {
           "type": "title"
         },
+        "rating": {
+          "type": "rating"
+        },
         "price": {
           "type": "price"
+        },
+        "fv_deal_badges": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'product-deal-badges' %}"
+          }
+        },
+        "fv_offers_emi": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'product-offers-emi' %}"
+          }
+        },
+        "fv_membership_teaser": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'product-membership-teaser' %}"
+          }
         },
         "sku": {
           "type": "sku",
@@ -29,6 +56,13 @@
             "swatch_shape": "circle"
           }
         },
+        "fv_size_guide": {
+          "type": "popup",
+          "settings": {
+            "text": "Size Guide",
+            "page": "111139389553"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector"
         },
@@ -37,6 +71,12 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
+          }
+        },
+        "fv_pincode_wishlist": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'product-pincode-wishlist' %}"
           }
         },
         "trust_badges": {
@@ -49,6 +89,12 @@
             "heading_2": "Free installation included",
             "icon_3": "return",
             "heading_3": "3-day easy returns"
+          }
+        },
+        "fv_at_a_glance": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'product-at-a-glance' %}"
           }
         },
         "description": {
@@ -78,6 +124,34 @@
             "content": "<p>Backed by a manufacturer warranty (see product specifications for duration). 3-day return window from delivery if something isn't right.</p>"
           }
         },
+        "fv_faq_emi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "EMI & Payment Options",
+            "icon": "check_mark",
+            "content": "<p>Pay via BHIM UPI, Netbanking, Credit/Debit card, or Cash on Delivery. No-cost/standard EMI conversion is available on most major bank credit cards directly from your bank - select it at checkout or convert the transaction afterwards from your card issuer's app, subject to their terms.</p>"
+          }
+        },
+        "fv_faq_delivery": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Delivery Areas & COD",
+            "icon": "truck",
+            "content": "<p>We deliver across India with free shipping and free installation. Cash on Delivery (COD) is available on eligible orders. Use the pincode checker above to confirm delivery to your area before you order.</p>"
+          }
+        },
+        "complementary": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Frequently Bought Together",
+            "make_collapsible_row": false,
+            "products_per_page": 4,
+            "image_ratio": "square",
+            "enable_quick_add": true,
+            "pagination_style": "dots",
+            "product_list_limit": 10
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -86,18 +160,29 @@
         }
       },
       "block_order": [
+        "fv_bestseller_badge",
         "vendor",
         "title",
+        "rating",
         "price",
+        "fv_deal_badges",
+        "fv_offers_emi",
+        "fv_membership_teaser",
         "sku",
         "variant_picker",
+        "fv_size_guide",
         "quantity_selector",
         "buy_buttons",
+        "fv_pincode_wishlist",
         "trust_badges",
+        "fv_at_a_glance",
         "description",
         "shipping_tab",
         "installation_tab",
         "warranty_tab",
+        "fv_faq_emi",
+        "fv_faq_delivery",
+        "complementary",
         "share"
       ],
       "settings": {
@@ -114,6 +199,22 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "fv-infographic": {
+      "type": "product-infographic",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "fv-reviews": {
+      "type": "product-reviews",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "disclosures": {
@@ -144,6 +245,8 @@
   },
   "order": [
     "main",
+    "fv-infographic",
+    "fv-reviews",
     "disclosures",
     "related-products"
   ]
