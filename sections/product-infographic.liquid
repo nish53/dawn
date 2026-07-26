@@ -1,0 +1,73 @@
+{% comment %}
+  Furniva product "A+ content" / infographic section.
+  Fill in per product via Shopify admin > Product > Metafields:
+  "Infographic images" (1-4 photos) and "Brand story" (short paragraph).
+  Renders nothing if neither is set.
+{% endcomment %}
+{{ 'furniva-product-page.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign fv_images = product.metafields.custom.infographic_images
+  assign fv_story = product.metafields.custom.brand_story
+  assign fv_image_count = fv_images.size
+-%}
+{%- if fv_image_count > 0 or fv_story != blank -%}
+  <div
+    class="fv-infographic color-{{ section.settings.color_scheme }} gradient"
+    style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;"
+  >
+    <div class="page-width">
+      {%- if fv_story != blank -%}
+        <p class="fv-infographic__story">{{ fv_story }}</p>
+      {%- endif -%}
+      {%- if fv_image_count > 0 -%}
+        <div class="fv-infographic__grid fv-infographic__grid--{{ fv_image_count }}">
+          {%- for img in fv_images -%}
+            <div class="fv-infographic__item">
+              <img
+                src="{{ img | image_url: width: 1200 }}"
+                alt="{{ img.alt | default: product.title | escape }}"
+                loading="lazy"
+                width="{{ img.width }}"
+                height="{{ img.height }}"
+              >
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Furniva: Product infographic",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}
