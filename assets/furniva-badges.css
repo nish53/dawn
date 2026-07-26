@@ -1,0 +1,23 @@
+/* Furniva product card badges: social proof tag + configurable urgency badge.
+   Text/colors for the urgency badge come from theme settings (Theme settings
+   > Furniva Product Badges) and are applied inline; this file only holds the
+   structural styling. */
+
+.fv-social-proof-tag {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: rgba(var(--color-foreground), 0.62);
+  margin: 0.5rem 0 0;
+  text-align: center;
+}
+
+.fv-urgency-badge {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 0.4rem;
+  margin: 0.6rem 0 0;
+}

@@ -35,6 +35,14 @@ cart-drawer.is-empty .cart-drawer__sidebar {
   display: none;
 }
 
+/* Reward bar (and anything else we add inside cart-drawer-items) must not
+   show when the cart has nothing in it — it lives inside cart-drawer-items,
+   which Dawn doesn't hide outright on its own since stock Dawn never had
+   content there besides the (conditionally rendered) item table. */
+cart-drawer-items.is-empty .fv-reward-bar {
+  display: none;
+}
+
 .fv-fbt__heading {
   font-size: 1.26rem;
   font-weight: 600;
