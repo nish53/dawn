@@ -7,9 +7,11 @@
 
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'furniva-cart-drawer.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'furniva-cart-drawer.js' | asset_url }}" defer="defer"></script>
 
 <style>
   .drawer {
@@ -20,6 +22,16 @@
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
+
+    <div class="cart-drawer__sidebar" id="CartDrawer-Sidebar">
+      <p class="fv-fbt__heading">{{ 'sections.cart.frequently_bought_together' | t: default: 'Frequently Bought Together' }}</p>
+      <cart-recommendations data-context="cart-drawer">
+        <div class="fv-fbt__list">
+          <p class="fv-fbt__loading">Loading suggestions&hellip;</p>
+        </div>
+      </cart-recommendations>
+    </div>
+
     <div
       class="drawer__inner gradient color-{{ settings.cart_color_scheme }}"
       role="dialog"
@@ -81,6 +93,105 @@
           class=" is-empty"
         {% endif %}
       >
+        {%- comment -%} Furniva reward progress bar {%- endcomment -%}
+        {%- liquid
+          assign fv_subtotal = cart.total_price
+          assign fv_tier1 = 1000000
+          assign fv_tier2 = 1400000
+          assign fv_tier3 = 2000000
+          assign fv_tier4 = 7000000
+          assign fv_next_threshold = 0
+          assign fv_next_label = ''
+          assign fv_progress_pct = 0
+
+          if fv_subtotal < fv_tier1
+            assign fv_next_threshold = fv_tier1
+            assign fv_next_label = '₹200 off'
+            assign fv_pct_into = fv_subtotal | times: 25.0
+            assign fv_progress_pct = fv_pct_into | divided_by: fv_tier1
+          elsif fv_subtotal < fv_tier2
+            assign fv_next_threshold = fv_tier2
+            assign fv_next_label = '₹500 off'
+            assign fv_range = fv_tier2 | minus: fv_tier1
+            assign fv_into = fv_subtotal | minus: fv_tier1
+            assign fv_pct_into = fv_into | times: 25.0
+            assign fv_progress_pct = fv_pct_into | divided_by: fv_range | plus: 25
+          elsif fv_subtotal < fv_tier3
+            assign fv_next_threshold = fv_tier3
+            assign fv_next_label = '₹1,000 off'
+            assign fv_range = fv_tier3 | minus: fv_tier2
+            assign fv_into = fv_subtotal | minus: fv_tier2
+            assign fv_pct_into = fv_into | times: 25.0
+            assign fv_progress_pct = fv_pct_into | divided_by: fv_range | plus: 50
+          elsif fv_subtotal < fv_tier4
+            assign fv_next_threshold = fv_tier4
+            assign fv_next_label = 'a free gift'
+            assign fv_range = fv_tier4 | minus: fv_tier3
+            assign fv_into = fv_subtotal | minus: fv_tier3
+            assign fv_pct_into = fv_into | times: 25.0
+            assign fv_progress_pct = fv_pct_into | divided_by: fv_range | plus: 75
+          else
+            assign fv_next_threshold = 0
+            assign fv_progress_pct = 100
+          endif
+
+          assign fv_remaining = fv_next_threshold | minus: fv_subtotal
+        -%}
+        <div class="fv-reward-bar" id="CartDrawer-RewardBar">
+          {%- if fv_next_threshold > 0 -%}
+            <p class="fv-reward-bar__message">
+              Add items worth <strong>{{ fv_remaining | money }}</strong> more to unlock {{ fv_next_label }}!
+            </p>
+          {%- else -%}
+            <p class="fv-reward-bar__message fv-reward-bar__message--complete">
+              You've unlocked every reward, including your free gift!
+            </p>
+          {%- endif -%}
+          <div class="fv-reward-bar__track">
+            <div class="fv-reward-bar__fill" style="width: {{ fv_progress_pct | at_most: 100 }}%;"></div>
+            {%- for tier in (1..4) -%}
+              {%- liquid
+                case tier
+                  when 1
+                    assign tier_threshold = fv_tier1
+                    assign tier_label = '₹200 off'
+                    assign tier_pct = 25
+                  when 2
+                    assign tier_threshold = fv_tier2
+                    assign tier_label = '₹500 off'
+                    assign tier_pct = 50
+                  when 3
+                    assign tier_threshold = fv_tier3
+                    assign tier_label = '₹1,000 off'
+                    assign tier_pct = 75
+                  when 4
+                    assign tier_threshold = fv_tier4
+                    assign tier_label = 'Free Gift'
+                    assign tier_pct = 100
+                endcase
+                assign tier_unlocked = false
+                if fv_subtotal >= tier_threshold
+                  assign tier_unlocked = true
+                endif
+              -%}
+              <div
+                class="fv-reward-bar__tier{% if tier_unlocked %} is-unlocked{% endif %}"
+                style="left: {{ tier_pct }}%;"
+                title="{{ tier_label }} at {{ tier_threshold | money }}"
+              >
+                <span class="fv-reward-bar__tier-icon">
+                  {%- if tier_unlocked -%}
+                    {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  {%- else -%}
+                    &#128274;
+                  {%- endif -%}
+                </span>
+                <span class="fv-reward-bar__tier-label">{{ tier_label }}</span>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+
         <form
           action="{{ routes.cart_url }}"
           id="CartDrawer-Form"
@@ -124,6 +235,7 @@
                         id="CartDrawer-Item-{{ item.index | plus: 1 }}"
                         class="cart-item{% if item.parent_relationship.parent != null %} cart-item__nested-line{% endif %}"
                         role="row"
+                        data-product-id="{{ item.product_id }}"
                         {% if item.parent_relationship.parent != null %}
                           aria-label="{{- 'products.product.nested_label' | t: title: item.product.title, parent_title: item.parent_relationship.parent.title | escape -}}"
                         {% endif %}
@@ -508,6 +620,26 @@
           </details>
         {%- endif -%}
 
+        <details class="fv-discount" id="Details-CartDrawer-Discount">
+          <summary>
+            <span class="summary__title">Got a discount code?</span>
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </summary>
+          <form class="fv-discount__form" onsubmit="return false;">
+            <div class="fv-discount__row">
+              <input
+                type="text"
+                class="fv-discount__input"
+                name="discount_code"
+                placeholder="Coupon Code"
+                autocomplete="off"
+              >
+              <button type="submit" class="fv-discount__apply">Apply</button>
+            </div>
+            <p class="fv-discount__status" role="status"></p>
+          </form>
+        </details>
+
         <!-- Start blocks -->
         <!-- Subtotals -->
 
@@ -588,6 +720,10 @@
             {{ 'sections.cart.checkout' | t }}
           </button>
         </div>
+
+        <a href="{{ routes.all_products_collection_url }}" class="fv-continue-shopping">
+          {{ 'general.continue_shopping' | t }}
+        </a>
       </div>
     </div>
   </div>
