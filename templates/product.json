@@ -1,14 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "fv_bestseller_badge": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% render 'product-bestseller-badge' %}"
-          }
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -17,30 +20,17 @@
           }
         },
         "title": {
-          "type": "title"
-        },
-        "rating": {
-          "type": "rating"
+          "type": "title",
+          "settings": {}
         },
         "price": {
-          "type": "price"
+          "type": "price",
+          "settings": {}
         },
-        "fv_deal_badges": {
+        "fv_badges": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'product-deal-badges' %}"
-          }
-        },
-        "fv_offers_emi": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% render 'product-offers-emi' %}"
-          }
-        },
-        "fv_membership_teaser": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% render 'product-membership-teaser' %}"
+            "custom_liquid": "{% render 'product-bestseller-badge' %}\n{% render 'product-deal-badges' %}"
           }
         },
         "sku": {
@@ -56,15 +46,9 @@
             "swatch_shape": "circle"
           }
         },
-        "fv_size_guide": {
-          "type": "popup",
-          "settings": {
-            "text": "Size Guide",
-            "page": "111139389553"
-          }
-        },
         "quantity_selector": {
-          "type": "quantity_selector"
+          "type": "quantity_selector",
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -73,10 +57,10 @@
             "show_gift_card_recipient": true
           }
         },
-        "fv_pincode_wishlist": {
+        "fv_utility": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'product-pincode-wishlist' %}"
+            "custom_liquid": "{% render 'product-offers-emi' %}\n{% render 'product-membership-teaser' %}\n{% render 'product-pincode-wishlist' %}"
           }
         },
         "trust_badges": {
@@ -91,14 +75,15 @@
             "heading_3": "3-day easy returns"
           }
         },
-        "fv_at_a_glance": {
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "fv_specs": {
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "{% render 'product-at-a-glance' %}"
           }
-        },
-        "description": {
-          "type": "description"
         },
         "shipping_tab": {
           "type": "collapsible_tab",
@@ -124,34 +109,6 @@
             "content": "<p>Backed by a manufacturer warranty (see product specifications for duration). 3-day return window from delivery if something isn't right.</p>"
           }
         },
-        "fv_faq_emi": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "EMI & Payment Options",
-            "icon": "check_mark",
-            "content": "<p>Pay via BHIM UPI, Netbanking, Credit/Debit card, or Cash on Delivery. No-cost/standard EMI conversion is available on most major bank credit cards directly from your bank - select it at checkout or convert the transaction afterwards from your card issuer's app, subject to their terms.</p>"
-          }
-        },
-        "fv_faq_delivery": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Delivery Areas & COD",
-            "icon": "truck",
-            "content": "<p>We deliver across India with free shipping and free installation. Cash on Delivery (COD) is available on eligible orders. Use the pincode checker above to confirm delivery to your area before you order.</p>"
-          }
-        },
-        "complementary": {
-          "type": "complementary",
-          "settings": {
-            "block_heading": "Frequently Bought Together",
-            "make_collapsible_row": false,
-            "products_per_page": 4,
-            "image_ratio": "square",
-            "enable_quick_add": true,
-            "pagination_style": "dots",
-            "product_list_limit": 10
-          }
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -160,61 +117,37 @@
         }
       },
       "block_order": [
-        "fv_bestseller_badge",
         "vendor",
         "title",
-        "rating",
         "price",
-        "fv_deal_badges",
-        "fv_offers_emi",
-        "fv_membership_teaser",
+        "fv_badges",
         "sku",
         "variant_picker",
-        "fv_size_guide",
         "quantity_selector",
         "buy_buttons",
-        "fv_pincode_wishlist",
+        "fv_utility",
         "trust_badges",
-        "fv_at_a_glance",
         "description",
+        "fv_specs",
         "shipping_tab",
         "installation_tab",
         "warranty_tab",
-        "fv_faq_emi",
-        "fv_faq_delivery",
-        "complementary",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_position": "left",
-        "gallery_layout": "stacked",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "image_zoom": "lightbox",
+        "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
-      }
-    },
-    "fv-infographic": {
-      "type": "product-infographic",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "fv-reviews": {
-      "type": "product-reviews",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "disclosures": {
@@ -231,13 +164,13 @@
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
       }
@@ -245,8 +178,6 @@
   },
   "order": [
     "main",
-    "fv-infographic",
-    "fv-reviews",
     "disclosures",
     "related-products"
   ]
