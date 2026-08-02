@@ -9,13 +9,13 @@
   gap: 0.4rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #b9790f;
+  color: #B5602F;
   margin: 0 0 0.6rem;
   letter-spacing: 0.01em;
 }
 
 .fv-pdp-bestseller__icon {
-  color: #f4a51c;
+  color: #B5602F;
 }
 
 /* ---------- Deal badges (urgency + social proof) ---------- */
@@ -128,7 +128,7 @@
   margin: 1.6rem 0;
   padding: 1.6rem 1.8rem;
   border-radius: 0.6rem;
-  background: #152420;
+  background: #3B2A20;
   color: #ffffff;
 }
 
@@ -136,7 +136,7 @@
   margin: 0 0 0.4rem;
   font-weight: 700;
   font-size: 1.4rem;
-  color: #f4a51c;
+  color: #B5602F;
 }
 
 .fv-pdp-membership__text {
@@ -175,7 +175,7 @@
 }
 
 .fv-pincode__row:focus-within {
-  border-color: #f4a51c;
+  border-color: #B5602F;
 }
 
 .fv-pincode__input {
@@ -193,7 +193,7 @@
 }
 
 .fv-pincode__button {
-  background: #152420;
+  background: #3B2A20;
   color: #ffffff;
   border: none;
   padding: 0 1.6rem;
@@ -238,7 +238,7 @@
 }
 
 .fv-wishlist-button:hover {
-  border-color: #152420;
+  border-color: #3B2A20;
 }
 
 .fv-wishlist-button__icon {
@@ -336,7 +336,7 @@
 
 .fv-reviews__stars,
 .fv-review-card__stars {
-  color: #f4a51c;
+  color: #B5602F;
   letter-spacing: 0.15rem;
 }
 

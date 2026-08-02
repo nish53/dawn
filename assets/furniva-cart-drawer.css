@@ -15,7 +15,7 @@ cart-drawer .drawer__inner {
   width: 22rem;
   max-width: 30vw;
   height: 100%;
-  background: #152420;
+  background: #3B2A20;
   color: #ffffff;
   padding: 2.6rem 2rem;
   overflow-y: auto;
@@ -107,8 +107,8 @@ cart-drawer-items.is-empty .fv-reward-bar {
 .fv-fbt__badge {
   display: inline-block;
   background: transparent;
-  color: #f4a51c;
-  border: 0.1rem solid rgba(244, 165, 28, 0.55);
+  color: #B5602F;
+  border: 0.1rem solid rgba(181, 96, 47, 0.55);
   font-size: 0.84rem;
   font-weight: 600;
   padding: 0.15rem 0.6rem;
@@ -119,8 +119,8 @@ cart-drawer-items.is-empty .fv-reward-bar {
 
 .fv-fbt__add {
   width: 100%;
-  background: #f4a51c;
-  color: #152420;
+  background: #B5602F;
+  color: #ffffff;
   border: none;
   border-radius: 0.4rem;
   font-weight: 600;
@@ -158,7 +158,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
   font-size: 1.22rem;
   font-weight: 500;
   margin: 0 0 1.6rem;
-  color: rgba(21, 36, 32, 0.85);
+  color: rgba(59, 42, 32, 0.85);
   letter-spacing: 0.01em;
 }
 
@@ -167,14 +167,14 @@ cart-drawer-items.is-empty .fv-reward-bar {
 }
 
 .fv-reward-bar__message--complete {
-  color: #b9790f;
+  color: #B5602F;
   font-weight: 600;
 }
 
 .fv-reward-bar__track {
   position: relative;
   height: 0.4rem;
-  background: rgba(21, 36, 32, 0.1);
+  background: rgba(59, 42, 32, 0.1);
   border-radius: 1rem;
   margin: 0 1rem;
 }
@@ -184,7 +184,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
   left: 0;
   top: 0;
   height: 100%;
-  background: #f4a51c;
+  background: #B5602F;
   border-radius: 1rem;
   transition: width 0.4s ease;
 }
@@ -203,7 +203,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
   height: 1.4rem;
   border-radius: 50%;
   background: #ffffff;
-  border: 0.15rem solid rgba(21, 36, 32, 0.18);
+  border: 0.15rem solid rgba(59, 42, 32, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,8 +211,8 @@ cart-drawer-items.is-empty .fv-reward-bar {
 }
 
 .fv-reward-bar__tier.is-unlocked .fv-reward-bar__tier-icon {
-  background: #f4a51c;
-  border-color: #f4a51c;
+  background: #B5602F;
+  border-color: #B5602F;
 }
 
 .fv-reward-bar__tier-icon svg {
@@ -226,12 +226,12 @@ cart-drawer-items.is-empty .fv-reward-bar {
   font-size: 0.94rem;
   font-weight: 600;
   white-space: nowrap;
-  color: rgba(21, 36, 32, 0.65);
+  color: rgba(59, 42, 32, 0.65);
   letter-spacing: 0.01em;
 }
 
 .fv-reward-bar__tier.is-unlocked .fv-reward-bar__tier-label {
-  color: #152420;
+  color: #3B2A20;
 }
 
 /* First/last tiers: keep the icon on the track's edge but let the label
@@ -296,7 +296,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
 }
 
 .fv-discount__row:focus-within {
-  border-color: #f4a51c;
+  border-color: #B5602F;
 }
 
 .fv-discount__input {
@@ -315,7 +315,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
 
 .fv-discount__apply {
   background: transparent;
-  color: #152420;
+  color: #3B2A20;
   border: none;
   border-left: 0.1rem solid rgba(var(--color-foreground), 0.15);
   padding: 0 1.3rem;
