@@ -1507,55 +1507,39 @@
     "settings": [
       {
         "type": "paragraph",
-        "content": "Extra converting features on the product page. Anything metafield-driven (bestseller rank, at-a-glance specs, infographic images, reviews) only shows once you fill it in per product in Shopify admin."
-      },
-      {
-        "type": "header",
-        "content": "Bestseller & wishlist"
+        "content": "Controls for the extra product-page modules (bestseller badge, EMI, bank offers, membership teaser, pincode checker, wishlist button, at-a-glance spec table)."
       },
       {
         "type": "checkbox",
         "id": "fv_show_bestseller_badge",
         "label": "Show bestseller rank badge",
-        "info": "Set the text per product: Product > Metafields > \"Bestseller rank\", e.g. \"#3 Bestseller in Storage Units\".",
+        "info": "Text is set per product: Shopify admin > Product > Metafields > \"Bestseller rank\" (e.g. \"#3 Bestseller in Storage Units\"). Blank on a product hides it for that product only.",
         "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "fv_show_wishlist_button",
-        "label": "Show \"Add to Wishlist\" button",
-        "info": "Saved in the customer's browser (no account needed) and viewable from the header wishlist icon.",
-        "default": true
-      },
-      {
-        "type": "header",
-        "content": "EMI, bank offers & membership"
       },
       {
         "type": "checkbox",
         "id": "fv_show_emi",
-        "label": "Show EMI options",
-        "info": "Figures are computed automatically from the product price (illustrative; actual terms are set by the customer's card issuer).",
+        "label": "Show EMI options panel",
+        "info": "Indicative EMI is computed automatically from the product price. Illustrative only — actual interest/tenure depends on the customer's card issuer.",
         "default": true
       },
       {
         "type": "checkbox",
         "id": "fv_show_bank_offers",
         "label": "Show bank offers panel",
-        "info": "Off by default. Only enable once you've entered a real, confirmed offer below.",
+        "info": "Off by default — turn on only once a real, confirmed bank offer is entered below.",
         "default": false
       },
       {
-        "type": "textarea",
+        "type": "richtext",
         "id": "fv_bank_offers_text",
-        "label": "Bank offers text",
-        "info": "Plain text or basic HTML, e.g. \"10% instant discount up to Rs.1,000 on HDFC Bank Cards\"."
+        "label": "Bank offers text"
       },
       {
         "type": "checkbox",
         "id": "fv_show_membership_teaser",
         "label": "Show membership / perks teaser banner",
-        "info": "Off by default — there's no live membership program yet. Enable once you have real perks to advertise.",
+        "info": "Off by default — turn on only once there's a real program to point it at.",
         "default": false
       },
       {
@@ -1565,27 +1549,27 @@
         "default": "Furniva Insiders"
       },
       {
-        "type": "textarea",
+        "type": "text",
         "id": "fv_membership_teaser_text",
-        "label": "Membership teaser text",
-        "default": "Sign up for early access to new drops and member-only prices. Coming soon."
-      },
-      {
-        "type": "header",
-        "content": "Delivery / pincode checker"
+        "label": "Membership teaser text"
       },
       {
         "type": "checkbox",
         "id": "fv_show_pincode_checker",
-        "label": "Show pincode delivery checker",
-        "info": "Client-side only. Optionally list non-serviceable pincodes per product via Product > Metafields > \"Non-serviceable pincodes\".",
+        "label": "Show delivery pincode checker",
         "default": true
       },
       {
         "type": "text",
         "id": "fv_default_delivery_eta",
-        "label": "Default delivery estimate",
-        "default": "5-9 business days"
+        "label": "Default delivery ETA (used when a pincode isn't on the non-serviceable list)",
+        "default": "5-8 business days"
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_wishlist_button",
+        "label": "Show wishlist button on product page",
+        "default": true
       }
     ]
   }
