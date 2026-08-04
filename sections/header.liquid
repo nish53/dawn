@@ -1,15 +1,46 @@
 {% comment %}
-  Section: Dynamic Header & Navigation (With Preset Inline Icons)
+  Section: Dynamic Header & Navigation (Fixed Mega Menu Match & Font Weight Override)
   File Location: sections/header.liquid
 {% endcomment %}
 
 {{ 'furniva-product-page.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'furniva-product-page.js' | asset_url }}" defer="defer"></script>
 
+<style>
+  /* Sticky Header Parent Enforcer */
+  #shopify-section-{{ section.id }} {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+  }
+
+  /* Force Font Weight and Line Stroke across all nested links & CSS overrides */
+  #shopify-section-{{ section.id }} .fv-nav-link,
+  #shopify-section-{{ section.id }} .fv-nav-link span,
+  #shopify-section-{{ section.id }} .fv-dropdown-link,
+  #shopify-section-{{ section.id }} a {
+    font-weight: {{ section.settings.nav_font_weight }} !important;
+  }
+
+  .fv-header-wrapper {
+    position: relative;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .fv-header-wrapper.fv-is-stuck {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .fv-nav-item.fv-menu-open .fv-dropdown { display: block !important; }
+  .fv-dropdown-link:hover { opacity: 1 !important; color: {{ section.settings.accent_color }} !important; }
+  .fv-nav-link:hover { opacity: 0.8; color: {{ section.settings.accent_color }} !important; }
+  .fv-icon-link:hover { color: {{ section.settings.accent_color }} !important; }
+</style>
+
 <div id="fv-main-header" class="fv-header-wrapper" style="
   background: {{ section.settings.bg_color }};
   border-bottom: 1px solid {{ section.settings.border_color }};
-  --fv-header-fw: {{ section.settings.nav_font_weight }};
   --fv-icon-stroke: {{ section.settings.icon_stroke_width }};
 ">
   <div class="page-width" style="position:relative; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; padding-top:{{ section.settings.padding_v }}px; padding-bottom:{{ section.settings.padding_v }}px;">
@@ -28,26 +59,25 @@
       {%- assign main_menu = linklists[section.settings.menu] -%}
       {%- if main_menu.links.size > 0 -%}
         {%- for link in main_menu.links -%}
+          {%- assign link_handle = link.title | handleize -%}
           {%- assign has_dropdown = false -%}
           {%- if link.links.size > 0 -%}
             {%- assign has_dropdown = true -%}
           {%- endif -%}
 
+          {%- comment -%} Robust Handle Match for Mega Menu Trigger {%- endcomment -%}
           {%- assign mega_block = null -%}
           {%- for block in section.blocks -%}
-            {%- assign trigger_clean = block.settings.menu_trigger | strip | downcase -%}
-            {%- assign link_clean = link.title | strip | downcase -%}
-            {%- if block.type == 'mega_menu' and trigger_clean == link_clean -%}
+            {%- assign trigger_handle = block.settings.menu_trigger | handleize -%}
+            {%- if block.type == 'mega_menu' and trigger_handle == link_handle -%}
               {%- assign mega_block = block -%}
             {%- endif -%}
           {%- endfor -%}
 
-          {%- assign link_handle = link.title | handleize -%}
-
           <div class="fv-nav-item" style="position:relative; display:flex; align-items:center;">
-            <a href="{{ link.url }}" class="fv-nav-link" style="display:flex; align-items:center; gap:6px; color:{{ section.settings.text_color }}; text-decoration:none; font-weight:var(--fv-header-fw); font-size:14.5px;">
+            <a href="{{ link.url }}" class="fv-nav-link" style="display:flex; align-items:center; gap:6px; color:{{ section.settings.text_color }}; text-decoration:none; font-size:14.5px;">
               
-              {%- comment -%} Exact SVG Icons Matched to Menu Titles {%- endcomment -%}
+              {%- comment -%} Matched Preset SVG Icons {%- endcomment -%}
               {%- case link_handle -%}
                 {%- when 'beds' -%}
                   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="var(--fv-icon-stroke)"><path d="M2 18v-6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6M2 18v2M22 18v2M2 12V9a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1"/></svg>
@@ -80,12 +110,12 @@
                   {%- if link.links.size > 0 -%}
                     {%- for child_link in link.links -%}
                       <div>
-                        <div style="font-family:var(--fv-heading-font, inherit); font-weight:600; font-size:14px; color:{{ section.settings.text_color }}; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:10px; margin-bottom:14px; letter-spacing:0.02em;">
+                        <div style="font-family:var(--fv-heading-font, inherit); font-weight:700; font-size:14px; color:{{ section.settings.text_color }}; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:10px; margin-bottom:14px; letter-spacing:0.02em;">
                           <a href="{{ child_link.url }}" style="color:inherit; text-decoration:none;">{{ child_link.title }}</a>
                         </div>
                         {%- if child_link.links.size > 0 -%}
                           {%- for grandchild_link in child_link.links -%}
-                            <a href="{{ grandchild_link.url }}" class="fv-dropdown-link" style="display:block; padding:6px 0; color:{{ section.settings.text_color }}; text-decoration:none; font-size:13.5px; opacity:0.75; font-weight:var(--fv-header-fw);">
+                            <a href="{{ grandchild_link.url }}" class="fv-dropdown-link" style="display:block; padding:6px 0; color:{{ section.settings.text_color }}; text-decoration:none; font-size:13.5px; opacity:0.75;">
                               {{ grandchild_link.title }}
                             </a>
                           {%- endfor -%}
@@ -116,7 +146,7 @@
               {%- comment -%} Standard Dropdown {%- endcomment -%}
               <div class="fv-dropdown fv-standard-dropdown" style="display:none; position:absolute; top:100%; left:0; background:{{ section.settings.bg_color }}; box-shadow:0 20px 30px rgba(0,0,0,0.45); border:1px solid {{ section.settings.border_color }}; border-radius:6px; padding:12px 0; min-width:200px; z-index:10; margin-top:10px;">
                 {%- for child_link in link.links -%}
-                  <a href="{{ child_link.url }}" class="fv-dropdown-link" style="display:block; padding:8px 20px; color:{{ section.settings.text_color }}; text-decoration:none; font-size:13.5px; font-weight:var(--fv-header-fw);">
+                  <a href="{{ child_link.url }}" class="fv-dropdown-link" style="display:block; padding:8px 20px; color:{{ section.settings.text_color }}; text-decoration:none; font-size:13.5px;">
                     {{ child_link.title }}
                   </a>
                 {%- endfor -%}
@@ -150,29 +180,6 @@
 
   </div>
 </div>
-
-<style>
-  #shopify-section-{{ section.id }} {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 1000 !important;
-  }
-
-  .fv-header-wrapper {
-    position: relative;
-    width: 100%;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .fv-header-wrapper.fv-is-stuck {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  }
-
-  .fv-nav-item.fv-menu-open .fv-dropdown { display: block !important; }
-  .fv-dropdown-link:hover { opacity: 1 !important; color: {{ section.settings.accent_color }} !important; }
-  .fv-nav-link:hover { opacity: 0.8; color: {{ section.settings.accent_color }} !important; }
-  .fv-icon-link:hover { color: {{ section.settings.accent_color }} !important; }
-</style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
