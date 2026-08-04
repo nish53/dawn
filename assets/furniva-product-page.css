@@ -9,13 +9,13 @@
   gap: 0.4rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #B5602F;
+  color: var(--fv-accent);
   margin: 0 0 0.6rem;
   letter-spacing: 0.01em;
 }
 
 .fv-pdp-bestseller__icon {
-  color: #B5602F;
+  color: var(--fv-accent);
 }
 
 /* ---------- Deal badges (urgency + social proof) ---------- */
@@ -128,7 +128,7 @@
   margin: 1.6rem 0;
   padding: 1.6rem 1.8rem;
   border-radius: 0.6rem;
-  background: #3B2A20;
+  background: var(--fv-primary);
   color: #ffffff;
 }
 
@@ -136,7 +136,7 @@
   margin: 0 0 0.4rem;
   font-weight: 700;
   font-size: 1.4rem;
-  color: #B5602F;
+  color: var(--fv-accent);
 }
 
 .fv-pdp-membership__text {
@@ -175,7 +175,7 @@
 }
 
 .fv-pincode__row:focus-within {
-  border-color: #B5602F;
+  border-color: var(--fv-accent);
 }
 
 .fv-pincode__input {
@@ -193,7 +193,7 @@
 }
 
 .fv-pincode__button {
-  background: #3B2A20;
+  background: var(--fv-primary);
   color: #ffffff;
   border: none;
   padding: 0 1.6rem;
@@ -240,7 +240,7 @@
 
 .fv-wishlist-button:hover,
 .fv-compare-button:hover {
-  border-color: #3B2A20;
+  border-color: var(--fv-primary);
 }
 
 .fv-wishlist-button__icon,
@@ -259,8 +259,8 @@
 }
 
 .fv-compare-button.is-active {
-  border-color: #B5602F;
-  color: #B5602F;
+  border-color: var(--fv-accent);
+  color: var(--fv-accent);
 }
 
 /* ---------- At a Glance spec table ---------- */
@@ -344,7 +344,7 @@
 
 .fv-reviews__stars,
 .fv-review-card__stars {
-  color: #B5602F;
+  color: var(--fv-accent);
   letter-spacing: 0.15rem;
 }
 
@@ -548,7 +548,7 @@
 }
 
 .fv-compare-count {
-  background: #B5602F;
+  background: var(--fv-accent);
 }
 
 /* ---------- Compare bar (floating, sitewide) ---------- */
@@ -557,7 +557,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #3B2A20;
+  background: var(--fv-primary);
   color: #fff;
   z-index: 999;
   display: flex;
@@ -613,7 +613,7 @@
   height: 1.8rem;
   border-radius: 50%;
   background: #fff;
-  color: #3B2A20;
+  color: var(--fv-primary);
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -638,7 +638,7 @@
 }
 
 .fv-compare-bar__cta {
-  background: #B5602F;
+  background: var(--fv-accent);
   color: #fff;
   border: none;
   padding: 1rem 1.8rem;

@@ -15,7 +15,7 @@ cart-drawer .drawer__inner {
   width: 22rem;
   max-width: 30vw;
   height: 100%;
-  background: #3B2A20;
+  background: var(--fv-primary);
   color: #ffffff;
   padding: 2.6rem 2rem;
   overflow-y: auto;
@@ -107,7 +107,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
 .fv-fbt__badge {
   display: inline-block;
   background: transparent;
-  color: #B5602F;
+  color: var(--fv-accent);
   border: 0.1rem solid rgba(181, 96, 47, 0.55);
   font-size: 0.84rem;
   font-weight: 600;
@@ -119,7 +119,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
 
 .fv-fbt__add {
   width: 100%;
-  background: #B5602F;
+  background: var(--fv-accent);
   color: #ffffff;
   border: none;
   border-radius: 0.4rem;
@@ -167,7 +167,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
 }
 
 .fv-reward-bar__message--complete {
-  color: #B5602F;
+  color: var(--fv-accent);
   font-weight: 600;
 }
 
@@ -184,7 +184,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
   left: 0;
   top: 0;
   height: 100%;
-  background: #B5602F;
+  background: var(--fv-accent);
   border-radius: 1rem;
   transition: width 0.4s ease;
 }
@@ -211,8 +211,8 @@ cart-drawer-items.is-empty .fv-reward-bar {
 }
 
 .fv-reward-bar__tier.is-unlocked .fv-reward-bar__tier-icon {
-  background: #B5602F;
-  border-color: #B5602F;
+  background: var(--fv-accent);
+  border-color: var(--fv-accent);
 }
 
 .fv-reward-bar__tier-icon svg {
@@ -231,7 +231,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
 }
 
 .fv-reward-bar__tier.is-unlocked .fv-reward-bar__tier-label {
-  color: #3B2A20;
+  color: var(--fv-primary);
 }
 
 /* First/last tiers: keep the icon on the track's edge but let the label
@@ -296,7 +296,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
 }
 
 .fv-discount__row:focus-within {
-  border-color: #B5602F;
+  border-color: var(--fv-accent);
 }
 
 .fv-discount__input {
@@ -315,7 +315,7 @@ cart-drawer-items.is-empty .fv-reward-bar {
 
 .fv-discount__apply {
   background: transparent;
-  color: #3B2A20;
+  color: var(--fv-primary);
   border: none;
   border-left: 0.1rem solid rgba(var(--color-foreground), 0.15);
   padding: 0 1.3rem;
