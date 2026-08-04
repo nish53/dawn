@@ -200,6 +200,7 @@
       "fv_show_pincode_checker": true,
       "fv_default_delivery_eta": "5-8 business days",
       "fv_show_wishlist_button": true,
+      "fv_show_compare_button": true,
       "sections": {
         "main-password-header": {
           "type": "main-password-header",
