@@ -1,0 +1,25 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 60,
+        "custom_liquid": "<div class=\"page-width\">\n  <h1 style=\"font-family:'Red Hat Display',sans-serif;font-size:28px;font-weight:700;color:#3B2A20;margin:0 0 6px;\">Your Wishlist</h1>\n  <p style=\"font-size:14px;color:#8A8378;margin:0 0 28px;\">Saved on this device. Tap the heart on any product to add or remove it.</p>\n  <div id=\"fv-wishlist-page\"></div>\n</div>\n\n<style>\n  .fv-wl-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:20px; }\n  .fv-wl-card { border:1px solid #EDEBE5; border-radius:10px; overflow:hidden; background:#fff; position:relative; }\n  .fv-wl-card__image { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; background:#F7F3EC; }\n  .fv-wl-card__body { padding:14px; }\n  .fv-wl-card__title { font-size:14px; font-weight:600; color:#2B2B2B; text-decoration:none; display:block; margin-bottom:6px; }\n  .fv-wl-card__price { font-size:14px; font-weight:700; color:#3B2A20; }\n  .fv-wl-card__remove { position:absolute; top:10px; right:10px; width:28px; height:28px; border-radius:50%; background:rgba(255,255,255,0.9); border:none; cursor:pointer; font-size:13px; color:#8A8378; }\n  .fv-wl-card__remove:hover { color:#c0392b; }\n  .fv-wl-empty { text-align:center; padding:60px 20px; color:#8A8378; }\n  .fv-wl-empty a { color:#B5602F; font-weight:600; text-decoration:none; }\n</style>\n\n<script>\n(function () {\n  function getWishlist() {\n    try {\n      var raw = window.localStorage.getItem('furniva_wishlist');\n      var parsed = raw ? JSON.parse(raw) : [];\n      return Array.isArray(parsed) ? parsed : [];\n    } catch (e) { return []; }\n  }\n  function saveWishlist(items) {\n    try { window.localStorage.setItem('furniva_wishlist', JSON.stringify(items)); } catch (e) {}\n  }\n  function render() {\n    var root = document.getElementById('fv-wishlist-page');\n    var items = getWishlist();\n    if (!items.length) {\n      root.innerHTML = '<div class=\"fv-wl-empty\">Your wishlist is empty. <a href=\"/collections/all\">Browse products</a> and tap the heart to save items here.</div>';\n      return;\n    }\n    var html = '<div class=\"fv-wl-grid\">';\n    items.forEach(function (item) {\n      html += '<div class=\"fv-wl-card\" data-id=\"' + item.id + '\">' +\n        '<button type=\"button\" class=\"fv-wl-card__remove\" data-remove-id=\"' + item.id + '\" aria-label=\"Remove\">&#10005;</button>' +\n        '<a href=\"' + item.url + '\">' + (item.image ? '<img class=\"fv-wl-card__image\" src=\"' + item.image + '\" alt=\"\">' : '<div class=\"fv-wl-card__image\"></div>') + '</a>' +\n        '<div class=\"fv-wl-card__body\">' +\n        '<a class=\"fv-wl-card__title\" href=\"' + item.url + '\">' + item.title + '</a>' +\n        '<div class=\"fv-wl-card__price\">' + (item.price || '') + '</div>' +\n        '</div></div>';\n    });\n    html += '</div>';\n    root.innerHTML = html;\n    root.querySelectorAll('[data-remove-id]').forEach(function (btn) {\n      btn.addEventListener('click', function () {\n        var remaining = getWishlist().filter(function (i) { return String(i.id) !== String(btn.dataset.removeId); });\n        saveWishlist(remaining);\n        render();\n      });\n    });\n  }\n  document.addEventListener('DOMContentLoaded', render);\n})();\n</script>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
