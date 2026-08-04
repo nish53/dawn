@@ -94,6 +94,26 @@
       },
       {
         "type": "header",
+        "content": "Button color"
+      },
+      {
+        "type": "paragraph",
+        "content": "Controls the background/text color of every button on the site — Add to Cart, Buy it now, Subscribe, Send Message, Compare, and every other custom Furniva button — regardless of which section color scheme it's in. One change here updates all of them."
+      },
+      {
+        "type": "color",
+        "id": "fv_color_button_bg",
+        "label": "Button background",
+        "default": "#B5602F"
+      },
+      {
+        "type": "color",
+        "id": "fv_color_button_text",
+        "label": "Button text",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "header",
         "content": "Heading font"
       },
       {
