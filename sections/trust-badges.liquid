@@ -1,0 +1,208 @@
+{% comment %}
+  Section: Dynamic Trust Badges
+  File Location: sections/trust-badges.liquid
+{% endcomment %}
+
+<div class="fv-trust-badges-wrapper" style="padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; background: {{ section.settings.bg_color }}; border-top: 1px solid {{ section.settings.border_color }}; border-bottom: 1px solid {{ section.settings.border_color }};">
+  <div class="page-width">
+    <div class="fv-trust-grid" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      
+      {%- if section.blocks.size > 0 -%}
+        {%- for block in section.blocks -%}
+          <div class="fv-trust-card" style="flex: 1; min-width: 180px; text-align: center; padding: 12px 16px;" {{ block.shopify_attributes }}>
+            
+            <!-- Icon Container -->
+            <div style="color: {{ section.settings.icon_color }}; margin-bottom: 10px; display: flex; justify-content: center; align-items: center;">
+              {%- if block.settings.custom_icon_svg != blank -%}
+                {{ block.settings.custom_icon_svg }}
+              {%- else -%}
+                {%- case block.settings.icon_preset -%}
+                  {%- when 'delivery' -%}
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{{ section.settings.icon_stroke }}"><path d="M1 3h13v13H1z"/><path d="M14 8h4l3 3v5h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                  {%- when 'installation' -%}
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{{ section.settings.icon_stroke }}"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L2 19l3 3 7.3-7.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2z"/></svg>
+                  {%- when 'cod' -%}
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{{ section.settings.icon_stroke }}"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+                  {%- when 'warranty' -%}
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{{ section.settings.icon_stroke }}"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                  {%- when 'customization' -%}
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{{ section.settings.icon_stroke }}"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                {%- endcase -%}
+              {%- endif -%}
+            </div>
+
+            <!-- Title & Subtitle -->
+            {%- if block.settings.title != blank -%}
+              <div style="font-size: 14px; font-weight: {{ section.settings.text_weight }}; color: {{ section.settings.title_color }}; letter-spacing: 0.01em;">
+                {{ block.settings.title }}
+              </div>
+            {%- endif -%}
+            
+            {%- if block.settings.subtitle != blank -%}
+              <div style="font-size: 11px; color: {{ section.settings.subtitle_color }}; margin-top: 3px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase;">
+                {{ block.settings.subtitle }}
+              </div>
+            {%- endif -%}
+
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .fv-trust-grid .fv-trust-card:not(:last-child) {
+    border-right: 1px solid {{ section.settings.border_color }};
+  }
+
+  @media (max-width: 768px) {
+    .fv-trust-grid .fv-trust-card {
+      border-right: none !important;
+      border-bottom: 1px solid {{ section.settings.border_color }};
+    }
+    .fv-trust-grid .fv-trust-card:last-child {
+      border-bottom: none !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Trust Badges",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#2D2926"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle Color",
+      "default": "#7A7267"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon Color",
+      "default": "#B5602F"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "rgba(181, 96, 47, 0.2)"
+    },
+    {
+      "type": "header",
+      "content": "Style Controls"
+    },
+    {
+      "type": "select",
+      "id": "text_weight",
+      "label": "Title Font Weight",
+      "options": [
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi-Bold (600)" },
+        { "value": "700", "label": "Bold (700)" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "select",
+      "id": "icon_stroke",
+      "label": "Icon Stroke Thickness",
+      "options": [
+        { "value": "1.2", "label": "Thin (1.2px)" },
+        { "value": "1.5", "label": "Regular (1.5px)" },
+        { "value": "1.8", "label": "Medium (1.8px)" },
+        { "value": "2.2", "label": "Bold (2.2px)" }
+      ],
+      "default": "1.5"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 8,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 8,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Trust Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon_preset",
+          "label": "Icon Preset",
+          "options": [
+            { "value": "delivery", "label": "Delivery Truck" },
+            { "value": "installation", "label": "Installation Wrench" },
+            { "value": "cod", "label": "COD Cash Card" },
+            { "value": "warranty", "label": "Warranty Shield" },
+            { "value": "customization", "label": "Bespoke Design" }
+          ],
+          "default": "delivery"
+        },
+        {
+          "type": "html",
+          "id": "custom_icon_svg",
+          "label": "Custom SVG Code",
+          "info": "Paste custom SVG code here to override the preset icon above."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Badge Title",
+          "default": "Free Delivery"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle / Micro Details",
+          "default": "Across India"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust Badges",
+      "blocks": [
+        { "type": "badge", "settings": { "icon_preset": "delivery", "title": "Free Delivery", "subtitle": "Across India" } },
+        { "type": "badge", "settings": { "icon_preset": "installation", "title": "Free Installation", "subtitle": "At Delivery Time" } },
+        { "type": "badge", "settings": { "icon_preset": "cod", "title": "COD Available", "subtitle": "Pay On Arrival" } },
+        { "type": "badge", "settings": { "icon_preset": "warranty", "title": "1-Year Warranty", "subtitle": "Brand Guarantee" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
