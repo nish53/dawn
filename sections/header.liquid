@@ -6,7 +6,7 @@
 {{ 'furniva-product-page.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'furniva-product-page.js' | asset_url }}" defer="defer"></script>
 
-<div id="fv-sticky-header" class="fv-sticky-header" style="background: {{ section.settings.bg_color }}; border-bottom: 1px solid {{ section.settings.border_color }};">
+<div id="fv-main-header" class="fv-header-wrapper" style="background: {{ section.settings.bg_color }}; border-bottom: 1px solid {{ section.settings.border_color }};">
   <div class="page-width" style="position:relative; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; padding-top:{{ section.settings.padding_v }}px; padding-bottom:{{ section.settings.padding_v }}px;">
 
     <!-- Logo -->
@@ -28,12 +28,12 @@
             {%- assign has_dropdown = true -%}
           {%- endif -%}
 
-          {%- comment -%} Check if this link matches a Mega Menu block {%- endcomment -%}
+          {%- comment -%} Check if this link matches a Mega Menu block by handle or title {%- endcomment -%}
           {%- assign mega_block = null -%}
           {%- for block in section.blocks -%}
-            {%- assign trigger_handle = block.settings.menu_trigger | handleize -%}
-            {%- assign link_handle = link.title | handleize -%}
-            {%- if block.type == 'mega_menu' and trigger_handle == link_handle -%}
+            {%- assign trigger_clean = block.settings.menu_trigger | strip | downcase -%}
+            {%- assign link_clean = link.title | strip | downcase -%}
+            {%- if block.type == 'mega_menu' and trigger_clean == link_clean -%}
               {%- assign mega_block = block -%}
             {%- endif -%}
           {%- endfor -%}
@@ -46,16 +46,16 @@
               {%- endif -%}
             </a>
 
-            {%- comment -%} Render Mega Menu if matched {%- endcomment -%}
+            {%- comment -%} OPTION A: Mega Menu (If block matches item name) {%- endcomment -%}
             {%- if mega_block != null -%}
-              <div class="fv-dropdown fv-mega-dropdown" style="display:none; position:absolute; top:100%; left:0; right:0; margin:0 auto; background:{{ section.settings.bg_color }}; box-shadow:0 25px 50px -10px rgba(0,0,0,0.5); border:1px solid {{ section.settings.border_color }}; border-radius:8px; padding:40px; z-index:20; width:min(92vw, 1100px);">
-                <div style="display:grid; grid-template-columns: repeat(4, 1fr) auto; gap:32px;">
+              <div class="fv-dropdown fv-mega-dropdown" style="display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); background:{{ section.settings.bg_color }}; box-shadow:0 25px 50px -10px rgba(0,0,0,0.5); border:1px solid {{ section.settings.border_color }}; border-radius:8px; padding:40px; z-index:20; width:min(92vw, 1100px); margin-top:10px;">
+                <div style="display:grid; grid-template-columns: repeat({{ link.links.size | default: 1 }}, minmax(0, 1fr)){% if mega_block.settings.promo_heading != blank or mega_block.settings.promo_image != blank %} auto{% endif %}; gap:32px;">
                   
                   {%- if link.links.size > 0 -%}
                     {%- for child_link in link.links -%}
                       <div>
                         <div style="font-family:var(--fv-heading-font, inherit); font-weight:600; font-size:14px; color:{{ section.settings.text_color }}; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:10px; margin-bottom:14px; letter-spacing:0.02em;">
-                          {{ child_link.title }}
+                          <a href="{{ child_link.url }}" style="color:inherit; text-decoration:none;">{{ child_link.title }}</a>
                         </div>
                         {%- if child_link.links.size > 0 -%}
                           {%- for grandchild_link in child_link.links -%}
@@ -68,16 +68,18 @@
                     {%- endfor -%}
                   {%- endif -%}
 
-                  {%- comment -%} Promo Card Side Column {%- endcomment -%}
-                  {%- if mega_block.settings.promo_heading != blank -%}
+                  {%- comment -%} Optional Promo Card Column {%- endcomment -%}
+                  {%- if mega_block.settings.promo_heading != blank or mega_block.settings.promo_image != blank -%}
                     <a href="{{ mega_block.settings.promo_url }}" style="display:block; width:200px; text-decoration:none;" {{ mega_block.shopify_attributes }}>
                       <div style="background:rgba(255,255,255,0.03); height:240px; border-radius:6px; position:relative; overflow:hidden; border:1px solid {{ section.settings.border_color }}; display:flex; align-items:flex-end;">
                         {%- if mega_block.settings.promo_image != blank -%}
                           <img src="{{ mega_block.settings.promo_image | image_url: width: 400 }}" alt="{{ mega_block.settings.promo_heading }}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;" loading="lazy">
                         {%- endif -%}
-                        <div style="width:100%; background:{{ section.settings.accent_color }}; color:#FFFFFF; padding:12px; font-size:11px; font-weight:700; letter-spacing:0.06em; text-align:center; text-transform:uppercase; position:relative; z-index:2;">
-                          {{ mega_block.settings.promo_heading }}
-                        </div>
+                        {%- if mega_block.settings.promo_heading != blank -%}
+                          <div style="width:100%; background:{{ section.settings.accent_color }}; color:#FFFFFF; padding:12px; font-size:11px; font-weight:700; letter-spacing:0.06em; text-align:center; text-transform:uppercase; position:relative; z-index:2;">
+                            {{ mega_block.settings.promo_heading }}
+                          </div>
+                        {%- endif -%}
                       </div>
                     </a>
                   {%- endif -%}
@@ -85,9 +87,9 @@
                 </div>
               </div>
 
+            {%- comment -%} OPTION B: Standard Dropdown (If child links exist but no mega block) {%- endcomment -%}
             {%- elsif has_dropdown -%}
-              {%- comment -%} Standard Dropdown {%- endcomment -%}
-              <div class="fv-dropdown" style="display:none; position:absolute; top:100%; left:0; background:{{ section.settings.bg_color }}; box-shadow:0 20px 30px rgba(0,0,0,0.45); border:1px solid {{ section.settings.border_color }}; border-radius:6px; padding:12px 0; min-width:200px; z-index:10; margin-top:12px;">
+              <div class="fv-dropdown fv-standard-dropdown" style="display:none; position:absolute; top:100%; left:0; background:{{ section.settings.bg_color }}; box-shadow:0 20px 30px rgba(0,0,0,0.45); border:1px solid {{ section.settings.border_color }}; border-radius:6px; padding:12px 0; min-width:200px; z-index:10; margin-top:10px;">
                 {%- for child_link in link.links -%}
                   <a href="{{ child_link.url }}" class="fv-dropdown-link" style="display:block; padding:8px 20px; color:{{ section.settings.text_color }}; text-decoration:none; font-size:13.5px;">
                     {{ child_link.title }}
@@ -125,14 +127,16 @@
 </div>
 
 <style>
-  .fv-sticky-header {
-    transition: all 0.3s ease;
+  /* Keeps only the main header sticky */
+  .fv-header-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     width: 100%;
-    position: relative;
-    z-index: 20;
+    transition: box-shadow 0.3s ease;
   }
   
-  .fv-sticky-header.fv-is-stuck {
+  .fv-header-wrapper.fv-is-stuck {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
 
@@ -172,21 +176,18 @@
         dropdown.addEventListener('mouseleave', scheduleClose);
       }
     });
-  });
 
-  (function () {
-    var stickyParent = document.getElementById('fv-sticky-header');
-    if (!stickyParent) return;
-    function onScroll() {
-      if (window.scrollY > 4) {
-        stickyParent.classList.add('fv-is-stuck');
-      } else {
-        stickyParent.classList.remove('fv-is-stuck');
-      }
+    var headerEl = document.getElementById('fv-main-header');
+    if (headerEl) {
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 10) {
+          headerEl.classList.add('fv-is-stuck');
+        } else {
+          headerEl.classList.remove('fv-is-stuck');
+        }
+      }, { passive: true });
     }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  })();
+  });
 </script>
 
 {% schema %}
@@ -256,13 +257,13 @@
   "blocks": [
     {
       "type": "mega_menu",
-      "name": "Mega Menu Block",
+      "name": "Mega Menu Trigger",
       "settings": [
         {
           "type": "text",
           "id": "menu_trigger",
           "label": "Menu Item Title",
-          "info": "Enter the exact name of the parent menu item (e.g. Storage Units)"
+          "info": "Enter the exact name of the top-level menu link (e.g. Storage Units or Dining)"
         },
         {
           "type": "text",
