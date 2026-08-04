@@ -193,8 +193,8 @@
 }
 
 .fv-pincode__button {
-  background: var(--fv-primary);
-  color: #ffffff;
+  background: var(--fv-button-bg);
+  color: var(--fv-button-text);
   border: none;
   padding: 0 1.6rem;
   font-weight: 600;
@@ -638,8 +638,8 @@
 }
 
 .fv-compare-bar__cta {
-  background: var(--fv-accent);
-  color: #fff;
+  background: var(--fv-button-bg);
+  color: var(--fv-button-text);
   border: none;
   padding: 1rem 1.8rem;
   border-radius: 0.5rem;

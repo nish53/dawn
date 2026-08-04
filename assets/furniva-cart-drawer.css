@@ -119,8 +119,8 @@ cart-drawer-items.is-empty .fv-reward-bar {
 
 .fv-fbt__add {
   width: 100%;
-  background: var(--fv-accent);
-  color: #ffffff;
+  background: var(--fv-button-bg);
+  color: var(--fv-button-text);
   border: none;
   border-radius: 0.4rem;
   font-weight: 600;
