@@ -12,6 +12,16 @@
   "presets": {
     "Dawn": {
       "logo_width": 90,
+      "fv_color_primary": "#3B2A20",
+      "fv_color_accent": "#B5602F",
+      "fv_color_surface": "#F7F3EC",
+      "fv_color_text": "#2B2B2B",
+      "fv_color_muted": "#8A8378",
+      "fv_color_border": "#EDEBE5",
+      "fv_color_accent_tint": "#E8D5B0",
+      "fv_color_muted_tint": "#D8C8B8",
+      "fv_body_font_name": "Varta",
+      "fv_body_font_weights": "400,500,600,700",
       "color_schemes": {
         "scheme-1": {
           "settings": {
