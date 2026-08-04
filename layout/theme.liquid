@@ -20,11 +20,21 @@
       assign fv_font_weights = settings.fv_body_font_weights | default: '400,500,600,700' | strip
       assign fv_font_url_name = fv_font_name | url_param_escape | replace: '%20', '+'
       assign fv_font_url_weights = fv_font_weights | remove: ' '
+
+      assign fv_heading_name = settings.fv_heading_font_name | strip
+      assign fv_heading_weights = settings.fv_heading_font_weights | default: '400,700' | strip
+      assign fv_heading_url_name = fv_heading_name | url_param_escape | replace: '%20', '+'
+      assign fv_heading_url_weights = fv_heading_weights | remove: ' '
     -%}
     {%- if fv_font_name != blank -%}
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family={{ fv_font_url_name }}:wght@{{ fv_font_url_weights }}&display=swap" rel="stylesheet">
+    {%- endif -%}
+    {%- if fv_heading_name != blank -%}
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family={{ fv_heading_url_name }}:wght@{{ fv_heading_url_weights }}&display=swap" rel="stylesheet">
     {%- endif -%}
 
     <title>
@@ -136,7 +146,7 @@
            Furniva brand tokens — sourced from Theme Settings > Furniva
            Brand. Every custom Furniva section/snippet reads these
            variables instead of hardcoding hex values, so changing a
-           color or the body font here updates the whole site instantly.
+           color or font here updates the whole site instantly.
            ------------------------------------------------------------- */
         --fv-primary: {{ settings.fv_color_primary }};
         --fv-accent: {{ settings.fv_color_accent }};
@@ -154,9 +164,9 @@
         --font-body-weight: 400;
         --font-body-weight-bold: 700;
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
-        --font-heading-style: {{ settings.type_header_font.style }};
-        --font-heading-weight: {{ settings.type_header_font.weight }};
+        --font-heading-family: {% if fv_heading_name != blank %}'{{ fv_heading_name }}', {{ settings.type_header_font.fallback_families }}{% else %}{{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }}{% endif %};
+        --font-heading-style: {% if fv_heading_name != blank %}normal{% else %}{{ settings.type_header_font.style }}{% endif %};
+        --font-heading-weight: {% if fv_heading_name != blank %}{{ fv_heading_weights | split: ',' | first }}{% else %}{{ settings.type_header_font.weight }}{% endif %};
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -314,7 +324,7 @@
       {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
-    {%- unless settings.type_header_font.system? -%}
+    {%- unless settings.type_header_font.system? or fv_heading_name != blank -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
       {% comment %}theme-check-enable AssetPreload{% endcomment %}
