@@ -9,12 +9,51 @@
  */
 {
   "sections": {
-    "hero_new": {
-      "type": "custom-liquid",
+    "hero_product_grid_YCGwFh": {
+      "type": "hero-product-grid",
+      "blocks": {
+        "side_banner_XGjEC7": {
+          "type": "side_banner",
+          "settings": {
+            "image": "shopify://shop_images/Regal-Best-6-Drawer-Chest-of-Drawers-800x800.webp",
+            "url": "",
+            "heading": "Shop Storage",
+            "subtext": "Utility cabinets for home & office",
+            "bg_fallback": "#EDE6D8"
+          }
+        },
+        "side_banner_LKqabf": {
+          "type": "side_banner",
+          "settings": {
+            "image": "shopify://shop_images/901_copy.jpg",
+            "url": "",
+            "heading": "Bestsellers",
+            "subtext": "Up to 60% off",
+            "bg_fallback": "#EDE6D8"
+          }
+        }
+      },
+      "block_order": [
+        "side_banner_XGjEC7",
+        "side_banner_LKqabf"
+      ],
+      "name": "Hero Promo Grid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n  <div style=\"display:grid;grid-template-columns:2fr 1fr;gap:12px;\">\n    <a href=\"/collections/dining-kitchen\" class=\"fv-hero-tile\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:420px;background:#EFE9DD url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-QuattroDine-Solid-Wood-4-Seater-Dining-Table-Set-Four-Seater-Dining-Table-Set-for-Homes-Free-Assembly-White-Cushion-Dark-Walnut-Finish-1-800x813.jpg?v=1784275500') center/cover;\">\n      <div style=\"position:absolute;inset:0;background:linear-gradient(90deg, rgba(59,42,32,0.55) 0%, rgba(59,42,32,0.05) 60%);\"></div>\n      <div style=\"position:relative;padding:36px;color:#fff;max-width:340px;\">\n        <div style=\"font-family:var(--fv-heading-font);font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:var(--fv-accent-tint);margin-bottom:6px;\">GIF 2026 Early Access</div>\n        <div style=\"font-family:var(--fv-heading-font);font-size:30px;font-weight:600;line-height:1.2;margin-bottom:10px;\">Dining Sets</div>\n        <div style=\"font-size:14px;background:rgba(0,0,0,0.35);display:inline-block;padding:6px 14px;border-radius:4px;\">Starting from &#8377;11,999</div>\n      </div>\n    </a>\n    <div style=\"display:flex;flex-direction:column;gap:12px;\">\n      <a href=\"/collections/storage-units\" class=\"fv-hero-tile\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:204px;background:#EDE6D8 url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/Furniva-Skyline-6-Feet-Wooden-Two-Door-Utility-Shoe-Rack-for-Home-EntrancesHallways-Engineered-Wood-Nine-Adjustable-Shelves-with-Airflow-Slots-Multipurpose-Shoe-Cabinet-Organizer-Weng_281de8bf-191f-4b83-857c-937e895ebf5f.webp?v=1784275549') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(59,42,32,0.05) 30%, rgba(59,42,32,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:var(--fv-heading-font);font-size:16px;font-weight:600;\">Shop Storage</div>\n          <div style=\"font-size:12px;\">Shoe racks &amp; cabinets</div>\n        </div>\n      </a>\n      <a href=\"/collections/bestsellers\" class=\"fv-hero-tile\" style=\"position:relative;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;display:block;min-height:204px;background:#EFE4DC url('https://cdn.shopify.com/s/files/1/0695/6387/5441/files/1202-800x800.jpg?v=1784275793') center/cover;\">\n        <div style=\"position:absolute;inset:0;background:linear-gradient(180deg, rgba(59,42,32,0.05) 30%, rgba(59,42,32,0.55) 100%);\"></div>\n        <div style=\"position:relative;padding:16px;color:#fff;position:absolute;bottom:0;\">\n          <div style=\"font-family:var(--fv-heading-font);font-size:16px;font-weight:600;\">Bestsellers</div>\n          <div style=\"font-size:12px;\">Up to 60% off</div>\n        </div>\n      </a>\n    </div>\n  </div>\n</div>",
-        "color_scheme": "scheme-2",
-        "padding_top": 24,
+        "main_image": "shopify://shop_images/4_Seater_Dining_Sets.jpg",
+        "main_url": "",
+        "main_eyebrow": "Diwali SALE EARLY ACCESS",
+        "main_eyebrow_color": "#EFE4DC",
+        "main_heading": "Dining Sets",
+        "main_heading_size": 32,
+        "main_price_tag": "Starting from ₹11,999",
+        "main_bg_color": "#A4A4A4",
+        "main_overlay_gradient": "linear-gradient(90deg, rgba(22, 29, 36, 0.7) 0%, rgba(22, 29, 36, 0.1) 65%)",
+        "min_height_desktop": 420,
+        "card_radius": 0,
+        "grid_gap": 16,
+        "section_bg": "#F9F9F9",
+        "border_color": "#F9F9F9",
+        "padding_top": 32,
         "padding_bottom": 32
       }
     },
@@ -56,13 +95,23 @@
             "title": "1-Year Warranty",
             "subtitle": "Brand Guarantee"
           }
+        },
+        "badge_7tMBVU": {
+          "type": "badge",
+          "settings": {
+            "icon_preset": "delivery",
+            "custom_icon_svg": "",
+            "title": "Free Delivery",
+            "subtitle": "Across India"
+          }
         }
       },
       "block_order": [
         "badge_ewMcTY",
         "badge_tFXLyr",
         "badge_cPEXEB",
-        "badge_hCJcr8"
+        "badge_hCJcr8",
+        "badge_7tMBVU"
       ],
       "name": "Trust Badges",
       "settings": {
@@ -519,7 +568,7 @@
     }
   },
   "order": [
-    "hero_new",
+    "hero_product_grid_YCGwFh",
     "trust_badges_yUALWU",
     "as_seen_on",
     "category_grid_mHz4hk",
