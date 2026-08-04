@@ -15,9 +15,17 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varta:wght@400;500;600;700&display=swap" rel="stylesheet">
+    {%- liquid
+      assign fv_font_name = settings.fv_body_font_name | default: 'Varta' | strip
+      assign fv_font_weights = settings.fv_body_font_weights | default: '400,500,600,700' | strip
+      assign fv_font_url_name = fv_font_name | url_param_escape | replace: '%20', '+'
+      assign fv_font_url_weights = fv_font_weights | remove: ' '
+    -%}
+    {%- if fv_font_name != blank -%}
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family={{ fv_font_url_name }}:wght@{{ fv_font_url_weights }}&display=swap" rel="stylesheet">
+    {%- endif -%}
 
     <title>
       {{ page_title }}
@@ -76,10 +84,6 @@
     %}
 
     {% style %}
-      {{ settings.type_body_font | font_face: font_display: 'swap' }}
-      {{ body_font_bold | font_face: font_display: 'swap' }}
-      {{ body_font_italic | font_face: font_display: 'swap' }}
-      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       {% for scheme in settings.color_schemes -%}
@@ -128,7 +132,24 @@
       }
 
       :root {
-        --font-body-family: 'Varta', {{ settings.type_body_font.fallback_families }};
+        /* ---------------------------------------------------------------
+           Furniva brand tokens — sourced from Theme Settings > Furniva
+           Brand. Every custom Furniva section/snippet reads these
+           variables instead of hardcoding hex values, so changing a
+           color or the body font here updates the whole site instantly.
+           ------------------------------------------------------------- */
+        --fv-primary: {{ settings.fv_color_primary }};
+        --fv-accent: {{ settings.fv_color_accent }};
+        --fv-surface: {{ settings.fv_color_surface }};
+        --fv-text: {{ settings.fv_color_text }};
+        --fv-muted: {{ settings.fv_color_muted }};
+        --fv-border: {{ settings.fv_color_border }};
+        --fv-accent-tint: {{ settings.fv_color_accent_tint }};
+        --fv-muted-tint: {{ settings.fv_color_muted_tint }};
+        --fv-heading-font: var(--font-heading-family);
+        --fv-body-font: '{{ fv_font_name }}', {{ settings.type_body_font.fallback_families }};
+
+        --font-body-family: var(--fv-body-font);
         --font-body-style: normal;
         --font-body-weight: 400;
         --font-body-weight-bold: 700;
