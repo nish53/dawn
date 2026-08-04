@@ -34,6 +34,88 @@
     ]
   },
   {
+    "name": "Furniva Brand",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Global brand colors and body font used throughout every custom Furniva section (header, footer, homepage, collection pages, PDP modules, wishlist/compare, policy pages). Change a value here and Save — it updates everywhere automatically, no code edits needed. Heading font is controlled separately below under Typography > Heading font."
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "fv_color_primary",
+        "label": "Primary (dark walnut)",
+        "default": "#3B2A20"
+      },
+      {
+        "type": "color",
+        "id": "fv_color_accent",
+        "label": "Accent (terracotta)",
+        "default": "#B5602F"
+      },
+      {
+        "type": "color",
+        "id": "fv_color_surface",
+        "label": "Surface (ivory background)",
+        "default": "#F7F3EC"
+      },
+      {
+        "type": "color",
+        "id": "fv_color_text",
+        "label": "Body text (charcoal)",
+        "default": "#2B2B2B"
+      },
+      {
+        "type": "color",
+        "id": "fv_color_muted",
+        "label": "Muted text (warm grey)",
+        "default": "#8A8378"
+      },
+      {
+        "type": "color",
+        "id": "fv_color_border",
+        "label": "Border (light neutral)",
+        "default": "#EDEBE5"
+      },
+      {
+        "type": "color",
+        "id": "fv_color_accent_tint",
+        "label": "Accent tint (text on dark backgrounds)",
+        "default": "#E8D5B0"
+      },
+      {
+        "type": "color",
+        "id": "fv_color_muted_tint",
+        "label": "Muted tint (subtext on dark backgrounds)",
+        "default": "#D8C8B8"
+      },
+      {
+        "type": "header",
+        "content": "Body font"
+      },
+      {
+        "type": "paragraph",
+        "content": "Heading font uses Typography > Heading font below (Shopify's built-in picker). Body font is loaded from Google Fonts here because not every font is in Shopify's native library."
+      },
+      {
+        "type": "text",
+        "id": "fv_body_font_name",
+        "label": "Body font name (must match a Google Fonts family name exactly)",
+        "default": "Varta"
+      },
+      {
+        "type": "text",
+        "id": "fv_body_font_weights",
+        "label": "Body font weights to load",
+        "info": "Comma-separated, e.g. 400,500,600,700",
+        "default": "400,500,600,700"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
