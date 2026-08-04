@@ -129,6 +129,36 @@
     "as_seen_on": {
       "type": "shoppable-videos",
       "blocks": {
+        "video_UmiCHU": {
+          "type": "video",
+          "settings": {
+            "view_count": "1.2K",
+            "custom_badge": "",
+            "video_type": "iframe",
+            "video_url": "",
+            "product": ""
+          }
+        },
+        "video_EeGFBq": {
+          "type": "video",
+          "settings": {
+            "view_count": "1.2K",
+            "custom_badge": "",
+            "video_type": "iframe",
+            "video_url": "",
+            "product": ""
+          }
+        },
+        "video_ACzGac": {
+          "type": "video",
+          "settings": {
+            "view_count": "1.2K",
+            "custom_badge": "",
+            "video_type": "iframe",
+            "video_url": "",
+            "product": ""
+          }
+        },
         "video_XUiWGf": {
           "type": "video",
           "settings": {
@@ -153,6 +183,9 @@
         }
       },
       "block_order": [
+        "video_UmiCHU",
+        "video_EeGFBq",
+        "video_ACzGac",
         "video_XUiWGf",
         "video-1"
       ],
