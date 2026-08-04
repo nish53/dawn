@@ -1,15 +1,18 @@
 {% comment %}
-  Furniva pincode delivery checker + wishlist toggle, shown right below the
-  buy buttons. Pincode check is client-side only: it looks at an optional
-  per-product "Non-serviceable pincodes" metafield, otherwise assumes
-  deliverable with the store-wide default ETA (Theme settings > Furniva
-  Product Page). Wishlist is stored in the browser (no login required) and
-  synced with the header wishlist icon.
+  Furniva pincode delivery checker + wishlist + compare toggle, shown right
+  below the buy buttons. Pincode check is client-side only: it looks at an
+  optional per-product "Non-serviceable pincodes" metafield, otherwise
+  assumes deliverable with the store-wide default ETA (Theme settings >
+  Furniva Product Page). Wishlist and compare are stored in the browser (no
+  login required) and synced with the header icons + a floating compare bar.
+  Compare data is pulled from the same spec metafields used by the
+  "At a Glance" table (product-at-a-glance.liquid) so nothing is fabricated.
 {% endcomment %}
 {%- liquid
   assign fv_non_serviceable = product.metafields.custom.non_serviceable_pincodes
+  assign fv_price_formatted = product.selected_or_first_available_variant.price | money | replace: 'Rs.', '₹' | replace: 'Rs', '₹'
 -%}
-{%- if settings.fv_show_pincode_checker or settings.fv_show_wishlist_button -%}
+{%- if settings.fv_show_pincode_checker or settings.fv_show_wishlist_button or settings.fv_show_compare_button -%}
   {{ 'furniva-product-page.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'furniva-product-page.js' | asset_url }}" defer="defer"></script>
   <div class="fv-pdp-utility-row">
@@ -47,12 +50,34 @@
         data-product-handle="{{ product.handle }}"
         data-product-title="{{ product.title | escape }}"
         data-product-image="{{ product.featured_image | image_url: width: 300 }}"
-        data-product-price="{{ product.selected_or_first_available_variant.price | money | replace: 'Rs.', '₹' | replace: 'Rs', '₹' | escape }}"
+        data-product-price="{{ fv_price_formatted | escape }}"
         data-product-url="{{ product.url }}"
         aria-pressed="false"
       >
         <span class="fv-wishlist-button__icon" aria-hidden="true">&#9825;</span>
         <span class="fv-wishlist-button__label">Add to Wishlist</span>
+      </button>
+    {%- endif -%}
+    {%- if settings.fv_show_compare_button -%}
+      <button
+        type="button"
+        class="fv-compare-button"
+        data-fv-compare-toggle
+        data-product-id="{{ product.id }}"
+        data-product-handle="{{ product.handle }}"
+        data-product-title="{{ product.title | escape }}"
+        data-product-image="{{ product.featured_image | image_url: width: 300 }}"
+        data-product-price="{{ fv_price_formatted | escape }}"
+        data-product-url="{{ product.url }}"
+        data-spec-dimensions="{{ product.metafields.custom.spec_dimensions | escape }}"
+        data-spec-material="{{ product.metafields.custom.spec_material | escape }}"
+        data-spec-capacity="{{ product.metafields.custom.spec_weight_capacity | escape }}"
+        data-spec-assembly="{{ product.metafields.custom.spec_assembly | escape }}"
+        data-spec-warranty="{{ product.metafields.custom.spec_warranty | escape }}"
+        aria-pressed="false"
+      >
+        <span class="fv-compare-button__icon" aria-hidden="true">&#8644;</span>
+        <span class="fv-compare-button__label">Add to Compare</span>
       </button>
     {%- endif -%}
   </div>
