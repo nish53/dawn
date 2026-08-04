@@ -1507,7 +1507,7 @@
     "settings": [
       {
         "type": "paragraph",
-        "content": "Controls for the extra product-page modules (bestseller badge, EMI, bank offers, membership teaser, pincode checker, wishlist button, at-a-glance spec table)."
+        "content": "Controls for the extra product-page modules (bestseller badge, EMI, bank offers, membership teaser, pincode checker, wishlist button, compare button, at-a-glance spec table)."
       },
       {
         "type": "checkbox",
@@ -1569,6 +1569,13 @@
         "type": "checkbox",
         "id": "fv_show_wishlist_button",
         "label": "Show wishlist button on product page",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "fv_show_compare_button",
+        "label": "Show compare button on product page",
+        "info": "Compare data (price, dimensions, material, capacity, assembly, warranty) is pulled from the same Metafields used by the At a Glance table. Up to 4 products can be compared at once.",
         "default": true
       }
     ]
