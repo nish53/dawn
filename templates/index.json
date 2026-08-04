@@ -66,11 +66,11 @@
       ],
       "name": "Trust Badges",
       "settings": {
-        "bg_color": "transparent",
-        "title_color": "#2D2926",
-        "subtitle_color": "#7A7267",
-        "icon_color": "#B5602F",
-        "border_color": "rgba(181, 96, 47, 0.2)",
+        "bg_color": "rgba(0,0,0,0)",
+        "title_color": "#2d2926",
+        "subtitle_color": "#7a7267",
+        "icon_color": "#b5602f",
+        "border_color": "#b5602f33",
         "text_weight": "700",
         "icon_stroke": "1.5",
         "padding_top": 24,
@@ -119,20 +119,156 @@
         "padding_bottom": 72
       }
     },
-    "category_grid": {
-      "type": "custom-liquid",
+    "category_grid_mHz4hk": {
+      "type": "category-grid",
+      "blocks": {
+        "category_8RC9We": {
+          "type": "category",
+          "settings": {
+            "collection": "storage-units",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_fyyGGY": {
+          "type": "category",
+          "settings": {
+            "collection": "wardrobes",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_BpjDQj": {
+          "type": "category",
+          "settings": {
+            "collection": "work-study",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_3WXi6W": {
+          "type": "category",
+          "settings": {
+            "collection": "coffee-tables",
+            "custom_image": "shopify://shop_images/901.jpg",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_CV6VB9": {
+          "type": "category",
+          "settings": {
+            "collection": "side-tables",
+            "custom_image": "shopify://shop_images/3_1.jpg",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_qEqjLe": {
+          "type": "category",
+          "settings": {
+            "collection": "6-seater-dining-sets",
+            "custom_image": "shopify://shop_images/6_Seater.jpg",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_MD3RBn": {
+          "type": "category",
+          "settings": {
+            "collection": "4-seater-dining-sets",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_MQrL8G": {
+          "type": "category",
+          "settings": {
+            "collection": "bookshelves",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_JcLaPp": {
+          "type": "category",
+          "settings": {
+            "collection": "beds",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_rftV4G": {
+          "type": "category",
+          "settings": {
+            "collection": "chest-of-drawers",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_TcDgxQ": {
+          "type": "category",
+          "settings": {
+            "collection": "kitchen-cabinets",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        },
+        "category_QFKHDR": {
+          "type": "category",
+          "settings": {
+            "collection": "tv-entertainment-units",
+            "custom_title": "",
+            "custom_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_8RC9We",
+        "category_fyyGGY",
+        "category_BpjDQj",
+        "category_3WXi6W",
+        "category_CV6VB9",
+        "category_qEqjLe",
+        "category_MD3RBn",
+        "category_MQrL8G",
+        "category_JcLaPp",
+        "category_rftV4G",
+        "category_TcDgxQ",
+        "category_QFKHDR"
+      ],
+      "name": "Category Grid",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n  <p style=\"font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--fv-accent);margin-bottom:6px;\">Browse by category</p>\n  <h2 style=\"font-family:var(--fv-heading-font);font-size:28px;font-weight:700;margin:0 0 4px;display:inline-block;\">Shop every room</h2>\n  <div style=\"width:70px;height:5px;background:var(--fv-accent);border-radius:3px;margin:8px 0 18px 0;display:block;\"></div>\n  <p style=\"font-size:14px;color:var(--fv-muted);margin-bottom:24px;\">Curated furniture for every corner of your home</p>\n\n  <div class=\"fv-category-grid-6x2\" style=\"display:grid;grid-template-columns:repeat(6, 1fr);gap:20px;\">\n    {% assign cats = 'beds,shoe-racks,wardrobes,bookshelves,4-seater-dining-sets,6-seater-dining-sets,tv-entertainment-units,work-study,chest-of-drawers,side-tables,coffee-tables,kitchen-cabinets' | split: ',' %}\n    {% assign cat_labels = 'Beds,Shoe Racks,Wardrobes,Bookshelves,4 Seater Dining,6 Seater Dining,TV Units,Study,Chest of Drawers,Side Tables,Coffee Tables,Kitchen Cabinets' | split: ',' %}\n    {% for handle in cats %}\n      {% assign collection = collections[handle] %}\n      {% if collection %}\n      <a href=\"{{ collection.url }}\" class=\"fv-category-tile\" style=\"text-decoration:none;color:inherit;text-align:center;\">\n        <div style=\"border-radius:16px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.12);aspect-ratio:1/1;\">\n          {% if collection.image %}\n            <img src=\"{{ collection.image | image_url: width: 500 }}\" alt=\"{{ collection.title }}\" style=\"width:100%;height:100%;object-fit:cover;display:block;\">\n          {% else %}\n            <div style=\"width:100%;height:100%;background:var(--fv-surface);\"></div>\n          {% endif %}\n        </div>\n        <div style=\"font-family:var(--fv-heading-font);font-size:14px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--fv-primary);margin-top:16px;\">{{ cat_labels[forloop.index0] }}</div>\n      </a>\n      {% endif %}\n    {% endfor %}\n  </div>\n</div>",
-        "color_scheme": "scheme-2",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "eyebrow": "BROWSE BY CATEGORY",
+        "heading": "Shop Every Room",
+        "heading_size": 28,
+        "show_accent_bar": true,
+        "subheading": "Curated furniture for every corner of your home",
+        "text_alignment": "center",
+        "columns_desktop": 6,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 20,
+        "card_radius": 16,
+        "shadow_blur": 12,
+        "shadow_opacity": 12,
+        "title_size": 14,
+        "title_weight": "600",
+        "section_bg": "#F9F9F9",
+        "heading_color": "#2D2926",
+        "subheading_color": "#7A7267",
+        "accent_color": "#B5602F",
+        "card_border_color": "rgba(0,0,0,0.05)",
+        "card_fallback_bg": "#F5F1EA",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "edit_banners": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n  <div style=\"display:grid;grid-template-columns:1fr 1fr;gap:10px;\">\n    <a href=\"/collections/beds\" class=\"fv-edit-tile\" style=\"text-decoration:none;color:inherit;background:#F0E8D8;border-radius:8px;padding:28px 24px;display:block;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--fv-accent);margin-bottom:8px;\">Bedroom Edit</div>\n      <div style=\"font-family:var(--fv-heading-font);font-size:16px;font-weight:600;line-height:1.3;margin-bottom:10px;\">Sleep in style.<br>Wake up inspired.</div>\n      <div style=\"font-size:12px;font-weight:600;color:var(--fv-accent);\">Shop Beds &rarr;</div>\n    </a>\n    <a href=\"/collections/storage-units\" class=\"fv-edit-tile\" style=\"text-decoration:none;color:inherit;background:#EAE6DC;border-radius:8px;padding:28px 24px;display:block;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6E7B58;margin-bottom:8px;\">Storage Edit</div>\n      <div style=\"font-family:var(--fv-heading-font);font-size:16px;font-weight:600;line-height:1.3;margin-bottom:10px;\">Storage that looks<br>like it belongs.</div>\n      <div style=\"font-size:12px;font-weight:600;color:#6E7B58;\">Shop Shoe Racks &amp; Cabinets &rarr;</div>\n    </a>\n  </div>\n</div>",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "padding_top": 24,
         "padding_bottom": 24
       }
@@ -384,7 +520,7 @@
     "hero_new",
     "trust_badges_yUALWU",
     "as_seen_on",
-    "category_grid",
+    "category_grid_mHz4hk",
     "edit_banners",
     "bestsellers",
     "shoe_racks",
