@@ -12,15 +12,13 @@
     "logo_width": 90,
     "fv_color_primary": "#000000",
     "fv_color_accent": "#B5602F",
-    "fv_color_surface": "#F7F3EC",
+    "fv_color_surface": "#FFFFFF",
     "fv_color_text": "#2B2B2B",
     "fv_color_muted": "#8A8378",
     "fv_color_border": "#EDEBE5",
     "fv_color_accent_tint": "#E8D5B0",
     "fv_color_muted_tint": "#D8C8B8",
-    "fv_color_button_bg": "#B5602F",
-    "fv_color_button_text": "#FFFFFF",
-    "fv_heading_font_name": "",
+    "fv_heading_font_name": "Antic Didone",
     "fv_heading_font_weights": "400,700",
     "fv_body_font_name": "Jost",
     "fv_body_font_weights": "400,500,600,700",
@@ -170,6 +168,54 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement_ja4K6E": {
+            "type": "announcement",
+            "settings": {
+              "text": "Free delivery across India · Free installation · COD available"
+            }
+          },
+          "announcement_ViEq3w": {
+            "type": "announcement",
+            "settings": {
+              "text": "Free delivery across India · Free installation · COD available"
+            }
+          }
+        },
+        "block_order": [
+          "announcement_ja4K6E",
+          "announcement_ViEq3w"
+        ],
+        "settings": {
+          "bg_color": "#2F1000",
+          "text_color": "#FFFCF2",
+          "marquee_text_color": "#FFFFFF",
+          "border_color": "#b5602f33",
+          "padding_vertical": 10,
+          "marquee_speed": 25,
+          "show_left_link": true,
+          "left_link_text": "Track Order",
+          "left_link_url": "",
+          "show_right_link": true,
+          "right_link_text": "+91 8769325140",
+          "right_link_url": ""
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify://shop_images/Logo.png",
+          "logo_height": 38,
+          "menu": "main-menu-1",
+          "bg_color": "#FFFFFF",
+          "text_color": "#000000",
+          "accent_color": "#b5602f",
+          "border_color": "#b5602f40",
+          "padding_v": 16
+        }
       }
     },
     "content_for_index": [],
@@ -227,6 +273,17 @@
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "#000000"
+        }
+      },
+      "scheme-822b19b3-0d76-4bdf-b5db-e067006f9195": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#2b2b2b",
+          "button": "#3b2a20",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#3b2a20",
+          "shadow": "#2b2b2b"
         }
       }
     }
