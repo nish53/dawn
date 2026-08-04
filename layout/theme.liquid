@@ -15,27 +15,12 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    {%- liquid
-      assign fv_font_name = settings.fv_body_font_name | default: 'Varta' | strip
-      assign fv_font_weights = settings.fv_body_font_weights | default: '400,500,600,700' | strip
-      assign fv_font_url_name = fv_font_name | url_param_escape | replace: '%20', '+'
-      assign fv_font_url_weights = fv_font_weights | remove: ' '
-
-      assign fv_heading_name = settings.fv_heading_font_name | strip
-      assign fv_heading_weights = settings.fv_heading_font_weights | default: '400,700' | strip
-      assign fv_heading_url_name = fv_heading_name | url_param_escape | replace: '%20', '+'
-      assign fv_heading_url_weights = fv_heading_weights | remove: ' '
-    -%}
-    {%- if fv_font_name != blank -%}
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family={{ fv_font_url_name }}:wght@{{ fv_font_url_weights }}&display=swap" rel="stylesheet">
-    {%- endif -%}
-    {%- if fv_heading_name != blank -%}
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family={{ fv_heading_url_name }}:wght@{{ fv_heading_url_weights }}&display=swap" rel="stylesheet">
-    {%- endif -%}
+    {%- comment -%}
+      Google Fonts: Explicitly loading Red Hat Display (400-900) and Antic Didone (400)
+    {%- endcomment -%}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Red+Hat+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>
       {{ page_title }}
@@ -138,11 +123,7 @@
 
       /* ---------------------------------------------------------------
          Furniva global button color — overrides Dawn's native
-         per-color-scheme button variables everywhere (Add to Cart,
-         Buy it now, quick-add, and every custom Furniva CTA), so a
-         single Theme Editor color controls every button on the site
-         regardless of which section color scheme it's in. Placed
-         after the per-scheme loop above so it wins the cascade.
+         per-color-scheme button variables everywhere.
          ------------------------------------------------------------- */
       :root,
       [class^="color-"],
@@ -158,10 +139,7 @@
 
       :root {
         /* ---------------------------------------------------------------
-           Furniva brand tokens — sourced from Theme Settings > Furniva
-           Brand. Every custom Furniva section/snippet reads these
-           variables instead of hardcoding hex values, so changing a
-           color or font here updates the whole site instantly.
+           Furniva brand tokens
            ------------------------------------------------------------- */
         --fv-primary: {{ settings.fv_color_primary }};
         --fv-accent: {{ settings.fv_color_accent }};
@@ -173,17 +151,18 @@
         --fv-muted-tint: {{ settings.fv_color_muted_tint }};
         --fv-button-bg: {{ settings.fv_color_button_bg }};
         --fv-button-text: {{ settings.fv_color_button_text }};
-        --fv-heading-font: var(--font-heading-family);
-        --fv-body-font: '{{ fv_font_name }}', {{ settings.type_body_font.fallback_families }};
 
-        --font-body-family: var(--fv-body-font);
+        --font-body-family: 'Red Hat Display', sans-serif;
         --font-body-style: normal;
         --font-body-weight: 400;
         --font-body-weight-bold: 700;
 
-        --font-heading-family: {% if fv_heading_name != blank %}'{{ fv_heading_name }}', {{ settings.type_header_font.fallback_families }}{% else %}{{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }}{% endif %};
-        --font-heading-style: {% if fv_heading_name != blank %}normal{% else %}{{ settings.type_header_font.style }}{% endif %};
-        --font-heading-weight: {% if fv_heading_name != blank %}{{ fv_heading_weights | split: ',' | first }}{% else %}{{ settings.type_header_font.weight }}{% endif %};
+        --font-heading-family: 'Antic Didone', serif;
+        --font-heading-style: normal;
+        --font-heading-weight: 400;
+
+        --fv-heading-font: var(--font-heading-family);
+        --fv-body-font: var(--font-body-family);
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -341,12 +320,6 @@
       {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
-    {%- unless settings.type_header_font.system? or fv_heading_name != blank -%}
-      {% comment %}theme-check-disable AssetPreload{% endcomment %}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
-      {% comment %}theme-check-enable AssetPreload{% endcomment %}
-    {%- endunless -%}
-
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
       <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
@@ -378,7 +351,7 @@
     {%- endif -%}
 
     {% section 'announcement-bar' %}
-{% section 'header' %}
+    {% section 'header' %}
 
     <main
       id="MainContent"
