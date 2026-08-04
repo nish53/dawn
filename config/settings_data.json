@@ -175,13 +175,13 @@
           "announcement_ja4K6E": {
             "type": "announcement",
             "settings": {
-              "text": "Free delivery across India · Free installation · COD available"
+              "text": "🇮🇳 Free delivery across India  •  Free installation  •  5% Off FOR NEW USERS USING CODE Furniva5"
             }
           },
           "announcement_ViEq3w": {
             "type": "announcement",
             "settings": {
-              "text": "Free delivery across India · Free installation · COD available"
+              "text": "🇮🇳 Free delivery across India  •  Free installation  •  5% Off FOR NEW USERS USING CODE Furniva5"
             }
           }
         },
@@ -195,7 +195,7 @@
           "marquee_text_color": "#ffffff",
           "border_color": "#b5602f33",
           "padding_vertical": 10,
-          "marquee_speed": 25,
+          "marquee_speed": 15,
           "show_left_link": true,
           "left_link_text": "Track Order",
           "left_link_url": "",

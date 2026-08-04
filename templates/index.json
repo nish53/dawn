@@ -105,7 +105,9 @@
         "video_XUiWGf",
         "video-1"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "h2 {padding-bottom: 20px;}"
+      ],
       "settings": {
         "eyebrow": "As seen on",
         "heading": "Real unboxings. Real homes.",
@@ -115,8 +117,8 @@
         "subheading_color": "#7a7267",
         "accent_color": "#b5602f",
         "border_color": "#b5602f40",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "category_grid_mHz4hk": {
@@ -253,12 +255,12 @@
         "shadow_opacity": 12,
         "title_size": 14,
         "title_weight": "600",
-        "section_bg": "#F9F9F9",
-        "heading_color": "#2D2926",
-        "subheading_color": "#7A7267",
-        "accent_color": "#B5602F",
-        "card_border_color": "rgba(0,0,0,0.05)",
-        "card_fallback_bg": "#F5F1EA",
+        "section_bg": "#f9f9f9",
+        "heading_color": "#2d2926",
+        "subheading_color": "#7a7267",
+        "accent_color": "#b5602f",
+        "card_border_color": "#0000000d",
+        "card_fallback_bg": "#f5f1ea",
         "padding_top": 100,
         "padding_bottom": 100
       }
