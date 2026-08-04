@@ -136,6 +136,21 @@
       }
       {% endfor %}
 
+      /* ---------------------------------------------------------------
+         Furniva global button color — overrides Dawn's native
+         per-color-scheme button variables everywhere (Add to Cart,
+         Buy it now, quick-add, and every custom Furniva CTA), so a
+         single Theme Editor color controls every button on the site
+         regardless of which section color scheme it's in. Placed
+         after the per-scheme loop above so it wins the cascade.
+         ------------------------------------------------------------- */
+      :root,
+      [class^="color-"],
+      [class*=" color-"] {
+        --color-button: {{ settings.fv_color_button_bg | color_extract: 'red' }},{{ settings.fv_color_button_bg | color_extract: 'green' }},{{ settings.fv_color_button_bg | color_extract: 'blue' }};
+        --color-button-text: {{ settings.fv_color_button_text | color_extract: 'red' }},{{ settings.fv_color_button_text | color_extract: 'green' }},{{ settings.fv_color_button_text | color_extract: 'blue' }};
+      }
+
       {{ scheme_classes | prepend: 'body' }} {
         color: rgba(var(--color-foreground), 0.75);
         background-color: rgb(var(--color-background));
@@ -156,6 +171,8 @@
         --fv-border: {{ settings.fv_color_border }};
         --fv-accent-tint: {{ settings.fv_color_accent_tint }};
         --fv-muted-tint: {{ settings.fv_color_muted_tint }};
+        --fv-button-bg: {{ settings.fv_color_button_bg }};
+        --fv-button-text: {{ settings.fv_color_button_text }};
         --fv-heading-font: var(--font-heading-family);
         --fv-body-font: '{{ fv_font_name }}', {{ settings.type_body_font.fallback_families }};
 
