@@ -1,5 +1,5 @@
 {% comment %}
-  Section: Dynamic Header & Navigation
+  Section: Dynamic Header & Navigation (With Preset Inline Icons)
   File Location: sections/header.liquid
 {% endcomment %}
 
@@ -42,15 +42,37 @@
             {%- endif -%}
           {%- endfor -%}
 
+          {%- assign link_handle = link.title | handleize -%}
+
           <div class="fv-nav-item" style="position:relative; display:flex; align-items:center;">
             <a href="{{ link.url }}" class="fv-nav-link" style="display:flex; align-items:center; gap:6px; color:{{ section.settings.text_color }}; text-decoration:none; font-weight:var(--fv-header-fw); font-size:14.5px;">
-              {{ link.title }}
+              
+              {%- comment -%} Exact SVG Icons Matched to Menu Titles {%- endcomment -%}
+              {%- case link_handle -%}
+                {%- when 'beds' -%}
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="var(--fv-icon-stroke)"><path d="M2 18v-6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6M2 18v2M22 18v2M2 12V9a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1"/></svg>
+                {%- when 'dining' or '4-seater-dining-sets' or '6-seater-dining-sets' -%}
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="var(--fv-icon-stroke)"><path d="M3 9h18M6 9v10M18 9v10M9 3v3M15 3v3"/></svg>
+                {%- when 'tv-units' or 'tv-entertainment-units' -%}
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="var(--fv-icon-stroke)"><rect x="2" y="4" width="20" height="13" rx="1"/><path d="M9 21h6M12 17v4"/></svg>
+                {%- when 'storage-units' or 'shoe-racks' -%}
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="var(--fv-icon-stroke)"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M4 8h16M4 14h16"/></svg>
+                {%- when 'study' or 'work-study' -%}
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="var(--fv-icon-stroke)"><path d="M4 19V5a1 1 0 0 1 1-1h4v16M13 19V4h6a1 1 0 0 1 1 1v14M4 19h16"/></svg>
+              {%- endcase -%}
+
+              <span>{{ link.title }}</span>
+
+              {%- if link_handle == 'storage-units' -%}
+                <span style="background:{{ section.settings.accent_color }}; color:#FFFFFF; font-size:9.5px; font-weight:700; padding:2px 6px; border-radius:3px;">NEW</span>
+              {%- endif -%}
+
               {%- if has_dropdown or mega_block != null -%}
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="var(--fv-icon-stroke)"><path d="M6 9l6 6 6-6"/></svg>
               {%- endif -%}
             </a>
 
-            {%- comment -%} Mega Menu {%- endcomment -%}
+            {%- comment -%} Mega Menu Dropdown {%- endcomment -%}
             {%- if mega_block != null -%}
               <div class="fv-dropdown fv-mega-dropdown" style="display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%); background:{{ section.settings.bg_color }}; box-shadow:0 25px 50px -10px rgba(0,0,0,0.5); border:1px solid {{ section.settings.border_color }}; border-radius:8px; padding:40px; z-index:20; width:min(92vw, 1100px); margin-top:10px;">
                 <div style="display:grid; grid-template-columns: repeat({{ link.links.size | default: 1 }}, minmax(0, 1fr)){% if mega_block.settings.promo_heading != blank or mega_block.settings.promo_image != blank %} auto{% endif %}; gap:32px;">
@@ -106,7 +128,7 @@
       {%- endif -%}
     </nav>
 
-    <!-- Dynamic Action Icons -->
+    <!-- Action Icons -->
     <div style="display:flex; align-items:center; gap:20px;">
       <a href="/search" class="fv-icon-link" style="color:{{ section.settings.text_color }};" title="Search" aria-label="Search">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="var(--fv-icon-stroke)"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
@@ -130,7 +152,6 @@
 </div>
 
 <style>
-  /* Fix sticky behavior by overriding parent container overflow */
   #shopify-section-{{ section.id }} {
     position: sticky !important;
     top: 0 !important;
@@ -236,7 +257,7 @@
         { "value": "600", "label": "Semi-Bold (600)" },
         { "value": "700", "label": "Bold (700)" }
       ],
-      "default": "500"
+      "default": "600"
     },
     {
       "type": "select",
@@ -245,10 +266,10 @@
       "options": [
         { "value": "1.2", "label": "Thin (1.2px)" },
         { "value": "1.5", "label": "Regular (1.5px)" },
-        { "value": "1.8", "label": "Medium (1.8px)" },
-        { "value": "2.2", "label": "Bold (2.2px)" }
+        { "value": "1.6", "label": "Medium (1.6px)" },
+        { "value": "2.0", "label": "Bold (2.0px)" }
       ],
-      "default": "1.5"
+      "default": "1.6"
     },
     {
       "type": "header",
@@ -298,7 +319,7 @@
           "type": "text",
           "id": "menu_trigger",
           "label": "Menu Item Title",
-          "info": "Enter exact top-level menu link name (e.g., Storage Units or Dining)"
+          "info": "Enter exact top-level menu link name (e.g. Storage Units or Dining)"
         },
         {
           "type": "text",
