@@ -1,68 +1,191 @@
 {% comment %}
-  Section: Dynamic Shoppable Videos
+  Section: Advanced Shoppable Videos
   File Location: sections/shoppable-videos.liquid
 {% endcomment %}
 
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
+<style>
+  #shopify-section-{{ section.id }} .fv-video-scroll-track::-webkit-scrollbar {
+    height: 6px;
+  }
+  #shopify-section-{{ section.id }} .fv-video-scroll-track::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.03);
+    border-radius: 10px;
+  }
+  #shopify-section-{{ section.id }} .fv-video-scroll-track::-webkit-scrollbar-thumb {
+    background: {{ section.settings.border_color }};
+    border-radius: 10px;
+  }
+
+  {% if section.settings.enable_hover_zoom %}
+    #shopify-section-{{ section.id }} .fv-video-card:hover .fv-play-btn {
+      transform: scale(1.12);
+    }
+    #shopify-section-{{ section.id }} .fv-video-card:hover img {
+      transform: scale(1.05);
+    }
+    #shopify-section-{{ section.id }} .fv-video-card:hover .fv-card-canvas {
+      box-shadow: 0 16px 32px rgba(0,0,0,0.2) !important;
+    }
+  {% endif %}
+</style>
+
 <div class="fv-shoppable-videos-wrapper" style="padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px; background: {{ section.settings.section_bg }};">
-  <div class="page-width" style="text-align: center;">
+  <div class="page-width" style="text-align: {{ section.settings.text_alignment }};">
     
+    <!-- Header Controls -->
     {%- if section.settings.eyebrow != blank -%}
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: {{ section.settings.accent_color }}; margin-bottom: 6px;">
+      <p style="
+        font-size: {{ section.settings.eyebrow_size }}px;
+        font-weight: {{ section.settings.eyebrow_weight }};
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: {{ section.settings.accent_color }};
+        margin-bottom: 6px;
+      ">
         {{ section.settings.eyebrow }}
       </p>
     {%- endif -%}
     
     {%- if section.settings.heading != blank -%}
-      <h2 style="font-family: var(--fv-heading-font, inherit); font-size: 22px; font-weight: 600; color: {{ section.settings.text_color }}; margin: 0 0 8px; letter-spacing: -0.01em;">
+      <h2 style="
+        font-family: var(--fv-heading-font, inherit);
+        font-size: {{ section.settings.heading_size }}px;
+        font-weight: {{ section.settings.heading_weight }};
+        color: {{ section.settings.text_color }};
+        margin: 0 0 8px;
+        line-height: 1.2;
+      ">
         {{ section.settings.heading }}
       </h2>
     {%- endif -%}
     
     {%- if section.settings.subheading != blank -%}
-      <p style="font-size: 13.5px; color: {{ section.settings.subheading_color }}; margin: 0 0 32px; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.5;">
+      <p style="
+        font-size: {{ section.settings.subheading_size }}px;
+        color: {{ section.settings.subheading_color }};
+        margin: 0 0 32px;
+        max-width: 580px;
+        margin-left: {% if section.settings.text_alignment == 'center' %}auto{% else %}0{% endif %};
+        margin-right: {% if section.settings.text_alignment == 'center' %}auto{% else %}0{% endif %};
+        line-height: 1.5;
+      ">
         {{ section.settings.subheading }}
       </p>
     {%- endif -%}
 
     {%- if section.blocks.size > 0 -%}
       <!-- Video Grid Track -->
-      <div class="fv-video-scroll-track" style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 16px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; justify-content: {% if section.blocks.size < 5 %}center{% else %}flex-start{% endif %};">
+      <div class="fv-video-scroll-track" style="
+        display: flex;
+        gap: {{ section.settings.grid_gap }}px;
+        {% if section.settings.desktop_layout == 'carousel' %}
+          overflow-x: auto;
+          padding-bottom: 16px;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          justify-content: {% if section.blocks.size < 5 and section.settings.text_alignment == 'center' %}center{% else %}flex-start{% endif %};
+        {% else %}
+          flex-wrap: wrap;
+          justify-content: {% if section.settings.text_alignment == 'center' %}center{% else %}flex-start{% endif %};
+        {% endif %}
+      ">
         {%- for block in section.blocks -%}
           {%- assign product = block.settings.product -%}
           <div
             class="fv-video-card"
             data-video-modal="fv-video-{{ block.id }}"
-            style="cursor: pointer; width: 220px; flex-shrink: 0; text-align: left; scroll-snap-align: start;"
+            style="
+              cursor: pointer;
+              width: {{ section.settings.card_width }}px;
+              flex-shrink: 0;
+              text-align: left;
+              {% if section.settings.desktop_layout == 'carousel' %}scroll-snap-align: start;{% endif %}
+            "
             {{ block.shopify_attributes }}
           >
             <!-- Card Thumbnail Canvas -->
-            <div style="position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 9/16; background: #161D24; border: 1px solid {{ section.settings.border_color }}; box-shadow: 0 8px 20px rgba(0,0,0,0.06); transition: transform 0.3s ease;">
+            <div class="fv-card-canvas" style="
+              position: relative;
+              border-radius: {{ section.settings.card_radius }}px;
+              overflow: hidden;
+              aspect-ratio: {{ section.settings.card_aspect_ratio }};
+              background: #161D24;
+              border: {{ section.settings.card_border_width }}px solid {{ section.settings.border_color }};
+              box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+              transition: all 0.3s ease;
+            ">
               {%- if block.settings.thumbnail -%}
-                <img src="{{ block.settings.thumbnail | image_url: width: 500 }}" alt="{{ block.settings.thumbnail.alt | default: 'Video thumbnail' }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;" loading="lazy">
+                <img src="{{ block.settings.thumbnail | image_url: width: 600 }}" alt="{{ block.settings.thumbnail.alt | default: 'Video thumbnail' }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: transform 0.4s ease;" loading="lazy">
               {%- else -%}
                 <div style="width: 100%; height: 100%; background: #161D24; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 12px;">No Thumbnail</div>
               {%- endif -%}
 
               <!-- View Count Badge -->
               {%- if block.settings.view_count != blank -%}
-                <div style="position: absolute; top: 10px; left: 10px; background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(4px); color: #FFF; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; display: flex; align-items: center; gap: 5px; z-index: 2;">
+                <div style="
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  background: {{ section.settings.badge_bg }};
+                  color: {{ section.settings.badge_text_color }};
+                  font-size: 11px;
+                  font-weight: 600;
+                  padding: 4px 10px;
+                  border-radius: 20px;
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  z-index: 2;
+                  backdrop-filter: blur(4px);
+                ">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                   {{ block.settings.view_count }}
                 </div>
               {%- endif -%}
 
+              <!-- Custom Tag Badge (e.g. "HOT", "UNBOXING") -->
+              {%- if block.settings.custom_badge != blank -%}
+                <div style="
+                  position: absolute;
+                  top: 10px;
+                  right: 10px;
+                  background: {{ section.settings.accent_color }};
+                  color: #FFFFFF;
+                  font-size: 10px;
+                  font-weight: 700;
+                  padding: 3px 8px;
+                  border-radius: 4px;
+                  letter-spacing: 0.05em;
+                  text-transform: uppercase;
+                  z-index: 2;
+                ">
+                  {{ block.settings.custom_badge }}
+                </div>
+              {%- endif -%}
+
               <!-- Play Button Overlay -->
               <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 60%); z-index: 2;">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: transform 0.2s ease;" class="fv-play-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="{{ section.settings.accent_color }}" style="margin-left: 2px;"><path d="M8 5v14l11-7z"/></svg>
+                <div class="fv-play-btn" style="
+                  width: {{ section.settings.play_btn_size }}px;
+                  height: {{ section.settings.play_btn_size }}px;
+                  border-radius: 50%;
+                  background: {{ section.settings.play_btn_bg }};
+                  backdrop-filter: blur(4px);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+                  transition: transform 0.2s ease;
+                ">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="{{ section.settings.play_btn_icon_color }}" style="margin-left: 2px;"><path d="M8 5v14l11-7z"/></svg>
                 </div>
               </div>
             </div>
 
-            <!-- Product Tag Below Card -->
-            {%- if product != blank -%}
+            <!-- Product Info Below Card -->
+            {%- if product != blank and section.settings.show_product_info -%}
               <div style="margin-top: 10px; padding: 0 2px;">
                 <div style="font-size: 13px; font-weight: 600; color: {{ section.settings.text_color }}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ product.title }}</div>
                 <div style="font-size: 12px; color: {{ section.settings.subheading_color }}; margin-top: 2px; display: flex; align-items: center; gap: 6px;">
@@ -77,28 +200,64 @@
         {%- endfor -%}
       </div>
 
-      <!-- Video Modals -->
+      <!-- Video Pop-up Modals -->
       {%- for block in section.blocks -%}
         {%- assign product = block.settings.product -%}
         <div
           id="fv-video-{{ block.id }}"
           class="fv-video-modal-overlay"
           data-video-type="{{ block.settings.video_type }}"
-          style="display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center; padding: 20px;"
+          style="
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, {{ section.settings.modal_overlay_opacity | divided_by: 100.0 }});
+            backdrop-filter: blur({{ section.settings.modal_blur }}px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+          "
         >
-          <div style="background: #161D24; border: 1px solid {{ section.settings.border_color }}; border-radius: 16px; max-width: 380px; width: 100%; overflow: hidden; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.7);">
+          <div style="
+            background: #161D24;
+            border: 1px solid {{ section.settings.border_color }};
+            border-radius: 16px;
+            max-width: 380px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.7);
+          ">
             
             <!-- Modal Close Button -->
-            <button type="button" class="fv-video-close" style="position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.6); color: #FFF; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; width: 32px; height: 32px; font-size: 18px; line-height: 1; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center;">&times;</button>
+            <button type="button" class="fv-video-close" style="
+              position: absolute;
+              top: 12px;
+              right: 12px;
+              background: rgba(0,0,0,0.6);
+              color: #FFF;
+              border: 1px solid rgba(255,255,255,0.2);
+              border-radius: 50%;
+              width: 32px;
+              height: 32px;
+              font-size: 18px;
+              line-height: 1;
+              cursor: pointer;
+              z-index: 10;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            ">&times;</button>
             
-            <!-- Video Container Canvas -->
+            <!-- Video Canvas Slot -->
             {%- if block.settings.video_type == 'iframe' -%}
               <div class="fv-video-slot" data-iframe-src="{{ block.settings.video_url }}" style="width: 100%; height: 520px; background: #000; display: flex; align-items: center; justify-content: center;"></div>
             {%- else -%}
               <div class="fv-video-slot" data-video-src="{{ block.settings.video_url }}" style="width: 100%; height: 520px; background: #000;"></div>
             {%- endif -%}
 
-            <!-- Linked Product Bottom Drawer -->
+            <!-- Linked Product Drawer -->
             {%- if product != blank -%}
               <div style="padding: 14px 16px; display: flex; align-items: center; gap: 12px; background: #111827; border-top: 1px solid {{ section.settings.border_color }};">
                 {%- if product.featured_image -%}
@@ -127,29 +286,9 @@
   </div>
 </div>
 
-<style>
-  .fv-video-scroll-track::-webkit-scrollbar {
-    height: 6px;
-  }
-  .fv-video-scroll-track::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0.03);
-    border-radius: 10px;
-  }
-  .fv-video-scroll-track::-webkit-scrollbar-thumb {
-    background: {{ section.settings.border_color }};
-    border-radius: 10px;
-  }
-  .fv-video-card:hover .fv-play-btn {
-    transform: scale(1.1);
-  }
-  .fv-video-card:hover img {
-    transform: scale(1.03);
-  }
-</style>
-
 <script>
   (function () {
-    document.querySelectorAll('[data-video-modal]').forEach(function (card) {
+    document.querySelectorAll('#shopify-section-{{ section.id }} [data-video-modal]').forEach(function (card) {
       card.addEventListener('click', function () {
         var modalId = card.getAttribute('data-video-modal');
         var modal = document.getElementById(modalId);
@@ -166,7 +305,7 @@
         }
 
         modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Lock background scroll when open
+        document.body.style.overflow = 'hidden';
       });
     });
 
@@ -174,10 +313,10 @@
       var slot = overlay.querySelector('.fv-video-slot');
       if (slot) slot.innerHTML = '';
       overlay.style.display = 'none';
-      document.body.style.overflow = ''; // Restore background scroll
+      document.body.style.overflow = '';
     }
 
-    document.querySelectorAll('.fv-video-modal-overlay').forEach(function (overlay) {
+    document.querySelectorAll('#shopify-section-{{ section.id }} .fv-video-modal-overlay').forEach(function (overlay) {
       var closeBtn = overlay.querySelector('.fv-video-close');
       if (closeBtn) {
         closeBtn.addEventListener('click', function (e) {
@@ -197,10 +336,35 @@
   "name": "Shoppable Videos",
   "settings": [
     {
+      "type": "header",
+      "content": "Section Header & Typography"
+    },
+    {
       "type": "text",
       "id": "eyebrow",
       "label": "Eyebrow Text",
       "default": "AS SEEN ON"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Eyebrow Font Size",
+      "default": 11
+    },
+    {
+      "type": "select",
+      "id": "eyebrow_weight",
+      "label": "Eyebrow Font Weight",
+      "options": [
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
     },
     {
       "type": "text",
@@ -209,14 +373,194 @@
       "default": "Real Unboxings. Real Homes."
     },
     {
+      "type": "range",
+      "id": "heading_size",
+      "min": 18,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading Font Size",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Heading Font Weight",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "600", "label": "Semi-Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
       "type": "text",
       "id": "subheading",
       "label": "Subheading",
       "default": "Explore customer showcases and studio walkthroughs."
     },
     {
+      "type": "range",
+      "id": "subheading_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheading Font Size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+    {
       "type": "header",
-      "content": "Color Controls"
+      "content": "Layout & Card Geometry"
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "Desktop Layout Style",
+      "options": [
+        { "value": "carousel", "label": "Horizontal Scroll Carousel" },
+        { "value": "grid", "label": "Wrapping Grid" }
+      ],
+      "default": "carousel"
+    },
+    {
+      "type": "range",
+      "id": "card_width",
+      "min": 160,
+      "max": 320,
+      "step": 10,
+      "unit": "px",
+      "label": "Card Width",
+      "default": 220
+    },
+    {
+      "type": "select",
+      "id": "card_aspect_ratio",
+      "label": "Card Aspect Ratio",
+      "options": [
+        { "value": "9/16", "label": "9:16 Vertical Reel" },
+        { "value": "4/5", "label": "4:5 Portrait" },
+        { "value": "1/1", "label": "1:1 Square" }
+      ],
+      "default": "9/16"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 10,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "Grid Gap Space",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Card Corner Radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "card_border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Border Thickness",
+      "default": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_hover_zoom",
+      "label": "Enable Hover Zoom Effect",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_info",
+      "label": "Show Product Title/Price Below Card",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Play Button & Badge Customization"
+    },
+    {
+      "type": "range",
+      "id": "play_btn_size",
+      "min": 36,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Play Button Size",
+      "default": 48
+    },
+    {
+      "type": "color",
+      "id": "play_btn_bg",
+      "label": "Play Button Background",
+      "default": "rgba(255, 255, 255, 0.92)"
+    },
+    {
+      "type": "color",
+      "id": "play_btn_icon_color",
+      "label": "Play Icon Color",
+      "default": "#B5602F"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "View Count Badge Background",
+      "default": "rgba(0, 0, 0, 0.65)"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "View Count Badge Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Modal Pop-up Customization"
+    },
+    {
+      "type": "range",
+      "id": "modal_overlay_opacity",
+      "min": 40,
+      "max": 95,
+      "step": 5,
+      "unit": "%",
+      "label": "Modal Background Darkness",
+      "default": 85
+    },
+    {
+      "type": "range",
+      "id": "modal_blur",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Modal Backdrop Blur Intensity",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Section Colors & Padding"
     },
     {
       "type": "color",
@@ -239,7 +583,7 @@
     {
       "type": "color",
       "id": "accent_color",
-      "label": "Accent Color (Buttons & Eyebrow)",
+      "label": "Accent Color (CTA & Eyebrow)",
       "default": "#B5602F"
     },
     {
@@ -247,10 +591,6 @@
       "id": "border_color",
       "label": "Border Color",
       "default": "rgba(181, 96, 47, 0.25)"
-    },
-    {
-      "type": "header",
-      "content": "Section Padding"
     },
     {
       "type": "range",
@@ -289,6 +629,12 @@
           "label": "View Count Label",
           "info": "e.g. 2.4K, 12K - leave blank to hide",
           "default": "1.2K"
+        },
+        {
+          "type": "text",
+          "id": "custom_badge",
+          "label": "Top Right Badge Tag",
+          "info": "e.g. HOT, NEW, REVIEW - leave blank to hide"
         },
         {
           "type": "select",
