@@ -118,12 +118,11 @@
     });
     // Also try to badge the real header wishlist icon if one exists.
     document
-      .querySelectorAll('a.fv-icon-link[href*="wishlist" i], a.fv-icon-link[href*="Wishlist"]')
+      .querySelectorAll('a.fv-icon-link[href*="wishlist" i]')
       .forEach(function (link) {
-        var badge = link.querySelector('[data-fv-wishlist-count]');
+        var badge = link.querySelector('.fv-wishlist-count');
         if (!badge) {
           badge = document.createElement('span');
-          badge.dataset.fvWishlistCount = 'true';
           badge.className = 'fv-wishlist-count';
           link.style.position = link.style.position || 'relative';
           link.appendChild(badge);
@@ -162,12 +161,6 @@
         removeFromWishlist(button.dataset.removeId);
       });
     });
-  }
-
-  function renderAll() {
-    updateButtons();
-    updateCountBadges();
-    renderDrawerList();
   }
 
   function ensureDrawer() {
@@ -223,7 +216,7 @@
 
   function bindHeaderWishlistIcon() {
     document
-      .querySelectorAll('a.fv-icon-link[href*="wishlist" i], a.fv-icon-link[href*="Wishlist"]')
+      .querySelectorAll('a.fv-icon-link[href*="wishlist" i]')
       .forEach(function (link) {
         if (link.dataset.fvWishlistBound) return;
         link.dataset.fvWishlistBound = 'true';
@@ -235,11 +228,171 @@
       });
   }
 
+  // ---------------------------------------------------------------------
+  // Compare (browser-local, up to 4 products, real spec data only).
+  // ---------------------------------------------------------------------
+  var COMPARE_KEY = 'furniva_compare';
+  var COMPARE_MAX = 4;
+
+  function getCompare() {
+    try {
+      var raw = window.localStorage.getItem(COMPARE_KEY);
+      var parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function saveCompare(items) {
+    try {
+      window.localStorage.setItem(COMPARE_KEY, JSON.stringify(items));
+    } catch (error) {
+      // ignore storage errors
+    }
+  }
+
+  function isInCompare(id) {
+    return getCompare().some(function (item) {
+      return String(item.id) === String(id);
+    });
+  }
+
+  function addToCompare(item) {
+    var items = getCompare();
+    if (items.some(function (existing) {
+      return String(existing.id) === String(item.id);
+    })) {
+      renderAll();
+      return;
+    }
+    if (items.length >= COMPARE_MAX) {
+      window.alert('You can compare up to ' + COMPARE_MAX + ' products at a time. Remove one to add another.');
+      return;
+    }
+    items.push(item);
+    saveCompare(items);
+    renderAll();
+  }
+
+  function removeFromCompare(id) {
+    var items = getCompare().filter(function (item) {
+      return String(item.id) !== String(id);
+    });
+    saveCompare(items);
+    renderAll();
+  }
+
+  function updateCompareButtons() {
+    document.querySelectorAll('[data-fv-compare-toggle]').forEach(function (button) {
+      var active = isInCompare(button.dataset.productId);
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+      var label = button.querySelector('.fv-compare-button__label');
+      if (label) label.textContent = active ? 'Added to Compare' : 'Add to Compare';
+    });
+  }
+
+  function updateCompareCountBadges() {
+    var count = getCompare().length;
+    document
+      .querySelectorAll('a.fv-icon-link[href*="compare" i]')
+      .forEach(function (link) {
+        var badge = link.querySelector('.fv-compare-count');
+        if (!badge) {
+          badge = document.createElement('span');
+          badge.className = 'fv-compare-count';
+          link.style.position = link.style.position || 'relative';
+          link.appendChild(badge);
+        }
+        badge.textContent = count;
+        badge.style.display = count > 0 ? '' : 'none';
+      });
+  }
+
+  function renderCompareBar() {
+    var items = getCompare();
+    var bar = document.querySelector('.fv-compare-bar');
+    if (!items.length) {
+      if (bar) bar.classList.remove('is-active');
+      return;
+    }
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.className = 'fv-compare-bar';
+      document.body.appendChild(bar);
+    }
+    bar.innerHTML =
+      '<div class="fv-compare-bar__items"></div>' +
+      '<div class="fv-compare-bar__actions">' +
+      '<button type="button" class="fv-compare-bar__clear">Clear all</button>' +
+      '<a class="fv-compare-bar__cta" href="/pages/compare">Compare (' + items.length + ')</a>' +
+      '</div>';
+    var itemsWrap = bar.querySelector('.fv-compare-bar__items');
+    items.forEach(function (item) {
+      var el = document.createElement('div');
+      el.className = 'fv-compare-bar__item';
+      el.innerHTML =
+        (item.image
+          ? '<img src="' + item.image + '" alt="">'
+          : '<div class="fv-compare-bar__item-placeholder"></div>') +
+        '<button type="button" class="fv-compare-bar__item-remove" data-remove-id="' + item.id + '" aria-label="Remove">&#10005;</button>';
+      itemsWrap.appendChild(el);
+    });
+    bar.querySelectorAll('[data-remove-id]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        removeFromCompare(button.dataset.removeId);
+      });
+    });
+    bar.querySelector('.fv-compare-bar__clear').addEventListener('click', function () {
+      saveCompare([]);
+      renderAll();
+    });
+    bar.classList.add('is-active');
+  }
+
+  function bindCompareButtons() {
+    document.querySelectorAll('[data-fv-compare-toggle]').forEach(function (button) {
+      if (button.dataset.fvCompareBound) return;
+      button.dataset.fvCompareBound = 'true';
+      button.addEventListener('click', function () {
+        var id = button.dataset.productId;
+        if (isInCompare(id)) {
+          removeFromCompare(id);
+        } else {
+          addToCompare({
+            id: id,
+            handle: button.dataset.productHandle,
+            title: button.dataset.productTitle,
+            image: button.dataset.productImage,
+            price: button.dataset.productPrice,
+            url: button.dataset.productUrl,
+            dimensions: button.dataset.specDimensions,
+            material: button.dataset.specMaterial,
+            capacity: button.dataset.specCapacity,
+            assembly: button.dataset.specAssembly,
+            warranty: button.dataset.specWarranty,
+          });
+        }
+      });
+    });
+  }
+
+  function renderAll() {
+    updateButtons();
+    updateCountBadges();
+    renderDrawerList();
+    updateCompareButtons();
+    updateCompareCountBadges();
+    renderCompareBar();
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-fv-pincode]').forEach(initPincodeChecker);
     ensureDrawer();
     bindWishlistButtons();
     bindHeaderWishlistIcon();
+    bindCompareButtons();
     renderAll();
   });
 })();

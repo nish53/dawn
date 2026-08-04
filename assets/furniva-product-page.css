@@ -1,6 +1,6 @@
 /* Furniva product page revamp: bestseller/deal badges, EMI & bank offers,
-   membership teaser, pincode checker, wishlist, at-a-glance, infographic,
-   and reviews-with-photos. */
+   membership teaser, pincode checker, wishlist, compare, at-a-glance,
+   infographic, and reviews-with-photos. */
 
 /* ---------- Bestseller badge ---------- */
 .fv-pdp-bestseller {
@@ -145,7 +145,7 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* ---------- Pincode checker + wishlist row ---------- */
+/* ---------- Pincode checker + wishlist + compare row ---------- */
 .fv-pdp-utility-row {
   display: flex;
   flex-wrap: wrap;
@@ -222,7 +222,8 @@
   color: #c0392b;
 }
 
-.fv-wishlist-button {
+.fv-wishlist-button,
+.fv-compare-button {
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
@@ -237,11 +238,13 @@
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 
-.fv-wishlist-button:hover {
+.fv-wishlist-button:hover,
+.fv-compare-button:hover {
   border-color: #3B2A20;
 }
 
-.fv-wishlist-button__icon {
+.fv-wishlist-button__icon,
+.fv-compare-button__icon {
   font-size: 1.6rem;
   line-height: 1;
 }
@@ -253,6 +256,11 @@
 
 .fv-wishlist-button.is-active .fv-wishlist-button__icon {
   color: #c0392b;
+}
+
+.fv-compare-button.is-active {
+  border-color: #B5602F;
+  color: #B5602F;
 }
 
 /* ---------- At a Glance spec table ---------- */
@@ -520,11 +528,11 @@
   color: #c0392b;
 }
 
-.fv-wishlist-count {
+.fv-wishlist-count,
+.fv-compare-count {
   position: absolute;
   top: -0.4rem;
   right: -0.5rem;
-  background: #c0392b;
   color: #fff;
   font-size: 1rem;
   line-height: 1;
@@ -535,6 +543,116 @@
   font-weight: 700;
 }
 
+.fv-wishlist-count {
+  background: #c0392b;
+}
+
+.fv-compare-count {
+  background: #B5602F;
+}
+
+/* ---------- Compare bar (floating, sitewide) ---------- */
+.fv-compare-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #3B2A20;
+  color: #fff;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  padding: 1.2rem 2rem;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  flex-wrap: wrap;
+}
+
+.fv-compare-bar.is-active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fv-compare-bar__items {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.fv-compare-bar__item {
+  position: relative;
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.fv-compare-bar__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fv-compare-bar__item-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.fv-compare-bar__item-remove {
+  position: absolute;
+  top: -0.4rem;
+  right: -0.4rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: #fff;
+  color: #3B2A20;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  text-align: center;
+  padding: 0;
+}
+
+.fv-compare-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.fv-compare-bar__clear {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.fv-compare-bar__cta {
+  background: #B5602F;
+  color: #fff;
+  border: none;
+  padding: 1rem 1.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.fv-compare-bar__cta:hover {
+  opacity: 0.9;
+}
+
 @media screen and (max-width: 749px) {
   .fv-pdp-utility-row {
     flex-direction: column;
@@ -543,5 +661,9 @@
   .fv-pincode {
     min-width: 0;
     width: 100%;
+  }
+
+  .fv-compare-bar {
+    padding: 1rem 1.4rem;
   }
 }
