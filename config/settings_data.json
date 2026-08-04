@@ -210,7 +210,7 @@
           "mega_menu_UjWAHq": {
             "type": "mega_menu",
             "settings": {
-              "menu_trigger": "Storage",
+              "menu_trigger": "Storage Units",
               "promo_heading": "Zest Collection",
               "promo_url": "shopify://products/furniva-zest-style-two-door-shoe-rack-with-mirror-wenge",
               "promo_image": "shopify://shop_images/4_bc42c0c2-efb0-4ae4-b476-b31b20539ce0.jpg"
@@ -224,7 +224,7 @@
           "logo": "shopify://shop_images/Logo.png",
           "logo_height": 38,
           "menu": "main-menu-1",
-          "nav_font_weight": "500",
+          "nav_font_weight": "700",
           "icon_stroke_width": "1.5",
           "bg_color": "#ffffff",
           "text_color": "#000000",
