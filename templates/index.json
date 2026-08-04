@@ -19,7 +19,7 @@
             "url": "",
             "heading": "Shop Storage",
             "subtext": "Utility cabinets for home & office",
-            "bg_fallback": "#EDE6D8"
+            "bg_fallback": "#ede6d8"
           }
         },
         "side_banner_LKqabf": {
@@ -29,7 +29,7 @@
             "url": "",
             "heading": "Bestsellers",
             "subtext": "Up to 60% off",
-            "bg_fallback": "#EDE6D8"
+            "bg_fallback": "#ede6d8"
           }
         }
       },
@@ -42,17 +42,17 @@
         "main_image": "shopify://shop_images/4_Seater_Dining_Sets.jpg",
         "main_url": "",
         "main_eyebrow": "Diwali SALE EARLY ACCESS",
-        "main_eyebrow_color": "#EFE4DC",
+        "main_eyebrow_color": "#efe4dc",
         "main_heading": "Dining Sets",
         "main_heading_size": 32,
         "main_price_tag": "Starting from ₹11,999",
-        "main_bg_color": "#A4A4A4",
+        "main_bg_color": "#a4a4a4",
         "main_overlay_gradient": "linear-gradient(90deg, rgba(22, 29, 36, 0.7) 0%, rgba(22, 29, 36, 0.1) 65%)",
         "min_height_desktop": 420,
         "card_radius": 0,
         "grid_gap": 16,
-        "section_bg": "#F9F9F9",
-        "border_color": "#F9F9F9",
+        "section_bg": "#f9f9f9",
+        "border_color": "#f9f9f9",
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -134,6 +134,7 @@
           "settings": {
             "thumbnail": "shopify://shop_images/Two-Door-Modern-Two-Tone-Engineered-Wood-Shoe-Rack-for-Compact-and-Spacious-Storage-800x800.webp",
             "view_count": "500",
+            "custom_badge": "",
             "video_type": "iframe",
             "video_url": "https://www.instagram.com/p/DbDYISkD-Ik/embed",
             "product": "furniva-pop-two-door-shoe-rack-cabinet-yellow-brown"
@@ -144,6 +145,7 @@
           "settings": {
             "thumbnail": "shopify://shop_images/Furniva-Sera-5-Drawer-Chest-of-Drawers-Engineered-Wood-Secure-Lock-Organizer-Multipurpose-Storage-for-Valuables-Skincare-Bedding-and-Seasonal-Clothes-Mocha-Walnut-Matte-Finish-1-800x8.webp",
             "view_count": "2K",
+            "custom_badge": "",
             "video_type": "iframe",
             "video_url": "https://www.instagram.com/p/DIJZz-TSS-K/embed",
             "product": "furniva-sera-5-drawer-chest-of-drawers-mocha-walnut"
@@ -159,8 +161,29 @@
       ],
       "settings": {
         "eyebrow": "As seen on",
+        "eyebrow_size": 11,
+        "eyebrow_weight": "600",
         "heading": "Real unboxings. Real homes.",
+        "heading_size": 24,
+        "heading_weight": "600",
         "subheading": "",
+        "subheading_size": 14,
+        "text_alignment": "center",
+        "desktop_layout": "carousel",
+        "card_width": 220,
+        "card_aspect_ratio": "9/16",
+        "grid_gap": 36,
+        "card_radius": 2,
+        "card_border_width": 0,
+        "enable_hover_zoom": true,
+        "show_product_info": true,
+        "play_btn_size": 36,
+        "play_btn_bg": "#ffffffeb",
+        "play_btn_icon_color": "#b5602f",
+        "badge_bg": "#000000a6",
+        "badge_text_color": "#ffffff",
+        "modal_overlay_opacity": 65,
+        "modal_blur": 8,
         "section_bg": "#ffffff",
         "text_color": "#2d2926",
         "subheading_color": "#7a7267",
