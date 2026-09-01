@@ -423,7 +423,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "image_ratio": "landscape",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -479,7 +479,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "image_ratio": "landscape",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -554,7 +554,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "image_ratio": "landscape",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -599,7 +599,7 @@
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n  <div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:12px;\">\n    <div style=\"background:var(--fv-surface);border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--fv-accent);margin-bottom:4px;\">Amazon</div>\n      <div style=\"font-family:var(--fv-heading-font);font-size:18px;font-weight:600;\">Coming soon</div>\n      <div style=\"font-size:11px;color:var(--fv-muted);margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:var(--fv-primary);border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--fv-accent);margin-bottom:4px;\">Flipkart</div>\n      <div style=\"font-family:var(--fv-heading-font);font-size:18px;font-weight:600;color:#FFFFFF;\">Coming soon</div>\n      <div style=\"font-size:11px;color:#D8D3C8;margin-top:2px;\">Rating sync in progress</div>\n    </div>\n    <div style=\"background:var(--fv-surface);border-radius:8px;padding:20px;text-align:center;\">\n      <div style=\"font-family:var(--fv-heading-font);font-size:20px;font-weight:600;color:var(--fv-primary);\">0</div>\n      <div style=\"font-size:11px;color:var(--fv-muted);margin-top:2px;\">Reviews collected so far &middot; Since 2024</div>\n    </div>\n  </div>\n</div>",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -617,7 +617,7 @@
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n  <h2 style=\"font-family:var(--fv-heading-font);font-size:22px;font-weight:700;margin:0 0 16px;\">Buy Wooden Shoe Racks, Cabinets &amp; Wardrobes Online for Modern and Stylish Homes!</h2>\n  <div style=\"font-size:13px;line-height:22px;color:var(--fv-text);\">\n    <p style=\"margin:0 0 14px;\">Looking to upgrade your space with beautiful and bold furniture? Explore our handpicked yet exclusive collection of <strong>wooden and engineered wood furniture</strong> made for modern homes and busy offices. From <strong>wooden shoe racks</strong> to <strong>compact cabinets</strong> and <strong>spacious wardrobes</strong>, we have everything you need to stay organized in style.</p>\n    <p style=\"margin:0 0 14px;\">Are you a new Snicker head and in need of a stylish shoe organizer? Look no more! Our <strong>wooden shoe racks</strong> offer sleek solutions to keep your footwear in place while adding charm to your hallway or even your bedroom closets.</p>\n    <p style=\"margin:0 0 14px;\">In need of more storage in your living room or bedroom? Choose from our range of <strong>engineered wood cabinets</strong>&mdash;perfect for books, crockery, files, or everyday essentials.</p>\n    <p style=\"margin:0 0 14px;\">Planning a bedroom makeover? Check out our <strong>modern wooden wardrobes for home</strong> that combine style with smart storage. Whether you prefer a classic design or a sleek sliding-door wardrobe, you'll find plenty of options to match your space and taste.</p>\n    <p style=\"margin:0 0 14px;\">Our furniture is crafted from premium <strong>engineered wood</strong>, ensuring quality as well as durability without compromising on style. We offer multiple finishes and sizes &ndash; from bold geometric patterns to aesthetic yet simple pieces to suit all types of interiors&mdash;whether it's a cozy apartment or a spacious villa.</p>\n    <p style=\"margin:0 0 14px;\">Why shop with us? Along with top-notch collection and handpicked design, you get <strong>up to 60% off</strong>, fast delivery across India, and a smooth online shopping experience with our dedicated customer support. Each product is designed to fit right into your home.</p>\n    <p style=\"margin:0;\">So whether you're furnishing a new home or just adding that perfect cabinet or shoe rack, browse our range today. Your perfect piece is just a click away!</p>\n  </div>\n</div>",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "padding_top": 40,
         "padding_bottom": 60
       }
